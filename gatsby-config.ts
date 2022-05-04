@@ -17,7 +17,6 @@ const config: GatsbyConfig = {
         name: "blog",
         path: `${__dirname}/blog`,
       },
-      // __key: "images"
     },
     "gatsby-transformer-remark",
   ],
