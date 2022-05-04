@@ -132,7 +132,7 @@ const IndexPage = () => {
         />
 
         <StaticImage
-          className="w-full h-auto peer-hover:opacity-25 transition-all"
+          className="absolute bottom-0 left-0 w-full h-auto peer-hover:opacity-25 transition-all"
           src="../images/EmptyPoolC.png"
           alt=""
         />
