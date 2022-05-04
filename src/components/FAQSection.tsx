@@ -2,14 +2,20 @@ import React from "react";
 
 export const FAQSection = () => {
   return (
-    <section>
-      <h1>FAQ</h1>
+    <>
+      <div className="wave2"></div>
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eligendi
-        quos facere architecto cumque velit quo ab, fugit aliquam consequatur
-        minima expedita, quia saepe aut mollitia cum non reprehenderit illum.
-      </p>
-    </section>
+      <section className="bg-[#000067] flex flex-col items-center space-y-2">
+        <h1 className="text-7xl font-bold italic">FAQ</h1>
+        <p className="max-w-2xl text-center">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, sit
+          asperiores laudantium qui nesciunt possimus cum fuga eligendi,
+          accusamus ipsam doloribus iure ratione praesentium, totam neque vero?
+          Dolores, dolorem enim!
+        </p>
+      </section>
+
+      <div className="wave2 flip"></div>
+    </>
   );
 };

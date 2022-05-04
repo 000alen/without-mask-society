@@ -1,12 +1,12 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
+import { Nav } from "../components/Nav";
 import { AboutSection } from "../components/AboutSection";
 import { FAQSection } from "../components/FAQSection";
-import { Footer } from "../components/Footer";
-import { Nav } from "../components/Nav";
 import { RoadmapSection } from "../components/RoadmapSection";
 import { ShopSection } from "../components/ShopSection";
 import { TeamSection } from "../components/TeamSection";
+import { Footer } from "../components/Footer";
 
 const IndexPage = () => {
   return (
@@ -18,7 +18,6 @@ const IndexPage = () => {
       <Nav />
 
       <section className="flex flex-col items-center">
-        {/* <section className="items-center"> */}
         <StaticImage
           className="w-[50%] z-50"
           src="../images/logo.png"
@@ -47,10 +46,26 @@ const IndexPage = () => {
         </button>
 
         <div className="mt-24 flex flex-row space-x-2">
-          <StaticImage className="w-48 h-auto" src="../images/1.png" alt="" />
-          <StaticImage className="w-48 h-auto" src="../images/2.png" alt="" />
-          <StaticImage className="w-48 h-auto" src="../images/3.png" alt="" />
-          <StaticImage className="w-48 h-auto" src="../images/4.png" alt="" />
+          <StaticImage
+            className="glow w-48 h-auto"
+            src="../images/nfts/1.png"
+            alt=""
+          />
+          <StaticImage
+            className="glow w-48 h-auto"
+            src="../images/nfts/2.png"
+            alt=""
+          />
+          <StaticImage
+            className="glow w-48 h-auto"
+            src="../images/nfts/3.png"
+            alt=""
+          />
+          <StaticImage
+            className="glow w-48 h-auto"
+            src="../images/nfts/4.png"
+            alt=""
+          />
         </div>
       </section>
 
@@ -58,24 +73,70 @@ const IndexPage = () => {
 
       {/* <StaticImage
         className="w-full h-auto"
-        src="../images/poster2.jpg"
+        src="../images/posters/night.jpg"
         alt=""
       /> */}
 
-      <StaticImage className="w-full h-auto" src="../images/night.png" alt="" />
+      {/* <FAQSection /> */}
 
-      {/* <StaticImage className="w-full h-auto" src="../images/pool.png" alt="" /> */}
-      <StaticImage className="w-full h-auto" src="../images/pool2.png" alt="" />
+      {/* <StaticImage
+        className="w-full h-auto"
+        src="../images/posters/forest.jpg"
+        alt=""
+      /> */}
 
-      {/* <RoadmapSection />
+      {/* <RoadmapSection /> */}
+      {/* <TeamSection /> */}
 
-      <FAQSection />
+      <div className="relative bg-black">
+        <StaticImage
+          className="absolute peer z-50 bottom-0 w-[14.6%] left-[61%] hover:scale-125 hover:drop-shadow-xl transition-all"
+          src="../images/pool/P1.png"
+          alt=""
+        />
 
-      <TeamSection />
+        <StaticImage
+          className="absolute peer z-50 w-[3.2%] left-[81.0%] top-[49.4%] hover:scale-125 hover:drop-shadow-xl transition-all"
+          src="../images/pool/P4.png"
+          alt=""
+        />
 
-      <ShopSection />
+        <StaticImage
+          className="absolute peer z-50 w-[9%] left-[54.7%] top-[33.3%] hover:scale-125 hover:drop-shadow-xl transition-all"
+          src="../images/pool/P2.png"
+          alt=""
+        />
 
-      <Footer /> */}
+        <StaticImage
+          className="absolute peer z-50 w-[7.8%] left-[78.3%] top-[58%] hover:scale-125 hover:drop-shadow-xl transition-all"
+          src="../images/pool/P3.png"
+          alt=""
+        />
+
+        <StaticImage
+          className="absolute peer z-50 w-[17.5%] left-[33.9%] top-[61%] hover:scale-125 hover:drop-shadow-xl transition-all"
+          src="../images/pool/P5.png"
+          alt=""
+        />
+
+        <StaticImage
+          className="absolute peer z-50 w-[15.7%] left-[19.6%] bottom-0 hover:scale-125 hover:drop-shadow-xl transition-all"
+          src="../images/pool/P6.png"
+          alt=""
+        />
+
+        <StaticImage
+          className="absolute peer z-50 w-[13.8%] left-[6.1%] bottom-0 hover:scale-125 hover:drop-shadow-xl transition-all"
+          src="../images/pool/P7.png"
+          alt=""
+        />
+
+        <StaticImage
+          className="w-full h-auto peer-hover:opacity-25 transition-all"
+          src="../images/EmptyPoolC.png"
+          alt=""
+        />
+      </div>
     </>
   );
 };

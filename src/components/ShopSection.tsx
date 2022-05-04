@@ -2,14 +2,20 @@ import React from "react";
 
 export const ShopSection = () => {
   return (
-    <section>
-      <h1>SHOP</h1>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum,
-        quia, possimus nam nemo repellat debitis maiores, autem optio voluptates
-        sit repudiandae fuga? Voluptatem nihil debitis ipsum impedit cum vel
-        obcaecati.
-      </p>
-    </section>
+    <>
+      <div className="wave2"></div>
+
+      <section className="bg-[#000067] flex flex-col items-center space-y-2">
+        <h1 className="text-7xl font-bold italic">SHOP</h1>
+        <p className="max-w-2xl text-center">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, sit
+          asperiores laudantium qui nesciunt possimus cum fuga eligendi,
+          accusamus ipsam doloribus iure ratione praesentium, totam neque vero?
+          Dolores, dolorem enim!
+        </p>
+      </section>
+
+      <div className="wave2 flip"></div>
+    </>
   );
 };
