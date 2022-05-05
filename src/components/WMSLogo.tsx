@@ -9,7 +9,7 @@ export const WMSLogo: React.FC<Props> = ({ className = "" }) => {
   return (
     <StaticImage
       className={`${className} z-[1000] select-none`}
-      src="../images/logo.png"
+      src="../images/WMSLogo.png"
       alt="Without Mask Society Logo"
     />
   );

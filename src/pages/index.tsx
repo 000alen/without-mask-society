@@ -1,13 +1,12 @@
-import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import { Nav } from "../components/Nav";
 import { AboutSection } from "../components/AboutSection";
-import { OpenseaIcon } from "../components/icons/OpenseaIcon";
-import { DiscordIcon } from "../components/icons/DiscordIcon";
-import { FancyButton } from "../components/FancyButton";
-import { Showcase } from "../components/Showcase";
-import { WMSLogo } from "../components/WMSLogo";
+import { Footer } from "../components/Footer";
+import { City } from "../components/City";
+import { Forest } from "../components/Forest";
+import { Planets } from "../components/Planets";
 import { Pool } from "../components/Pool";
+import { Hero } from "../components/Hero";
 
 const IndexPage = () => {
   return (
@@ -18,55 +17,19 @@ const IndexPage = () => {
 
       <Nav />
 
-      <section className="flex flex-col items-center">
-        <WMSLogo className="w-[50%]" />
-
-        <p className="text-6xl font-bold text-center">
-          THE NFTS THAT <br /> CLEAN THE WORLD
-        </p>
-
-        <div className="flex flex-row justify-center space-x-2">
-          <FancyButton className="mt-24" label="Buy on OpenSea">
-            <OpenseaIcon />
-          </FancyButton>
-
-          <FancyButton className="mt-24" label="Go to Discord" color="#5865F2">
-            <DiscordIcon />
-          </FancyButton>
-        </div>
-
-        <Showcase className="mt-24" />
-      </section>
+      <Hero />
 
       <AboutSection />
 
-      <StaticImage
-        className="w-full h-auto"
-        src="../images/city_bg.png"
-        alt=""
-      />
+      <City />
 
-      <StaticImage
-        className="w-full h-auto"
-        src="../images/forest_bg.png"
-        alt=""
-      />
+      <Forest />
 
-      <StaticImage
-        className="w-full h-auto"
-        src="../images/planets_bg.png"
-        alt=""
-      />
+      <Planets />
 
-      <StaticImage
-        className="w-full h-auto"
-        src="../images/pool_bg.png"
-        alt=""
-      />
+      <Pool />
 
-      {/* TODO: Planets */}
-
-      {/* <Pool /> */}
+      <Footer />
     </>
   );
 };
