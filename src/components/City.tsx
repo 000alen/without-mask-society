@@ -59,20 +59,20 @@ export const City = () => {
 
         <div className="flex flex-col space-y-4">
           <div className="flex justify-center space-x-4">
-            <Avatar />
-            <Avatar />
-            <Avatar />
-            <Avatar />
+            <Avatar name="Juanito" description="3D Artist" />
+            <Avatar name="Juanito" description="3D Artist" />
+            <Avatar name="Juanito" description="3D Artist" />
+            <Avatar name="Juanito" description="3D Artist" />
           </div>
           <div className="flex justify-center space-x-4">
-            <Avatar />
-            <Avatar />
-            <Avatar />
-            <Avatar />
+            <Avatar name="Juanito" description="3D Artist" />
+            <Avatar name="Juanito" description="3D Artist" />
+            <Avatar name="Juanito" description="3D Artist" />
+            <Avatar name="Juanito" description="3D Artist" />
           </div>
           <div className="flex justify-center space-x-4">
-            <Avatar />
-            <Avatar />
+            <Avatar name="Juanito" description="3D Artist" />
+            <Avatar name="Juanito" description="3D Artist" />
           </div>
         </div>
       </div>

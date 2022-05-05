@@ -4,11 +4,12 @@
 
 @import "stars.css";
 @import "waves.css";
+@import "collapsible.css";
 
 body {
   color: white;
   overflow-x: hidden;
-  
+
   max-width: 19in;
   margin: auto;
 }

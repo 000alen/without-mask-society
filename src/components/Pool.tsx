@@ -1,13 +1,13 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Lorem } from "./Lorem";
+import { Question } from "./Question";
+import { RoadmapLeft } from "./RoadmapLeft";
+import { RoadmapRight } from "./RoadmapRight";
 
 export const Pool = () => {
   return (
-    // <section>
     <section className="relative">
-      {/* <div className="relative"> */}
-      {/* hover:scale-125 hover:drop-shadow-xl transition-all */}
       <StaticImage
         className="!absolute z-50 w-[6.3%] left-[40.2%] top-[55.8%]"
         src="../images/pool/P1.png"
@@ -50,14 +50,23 @@ export const Pool = () => {
         alt=""
       />
 
-      <Lorem />
+      <div className="absolute z-[100] w-full top-[10%] flex flex-col items-center">
+        <h1 className="mb-8 text-8xl max-w-3xl font-bold italic text-center">
+          FAQ
+        </h1>
+
+        <div className="flex flex-col space-y-4">
+          <Question question="What is lorem ipsum?" answer="AAA" />
+          <Question question="What is lorem ipsum ii?" answer="AAA" />
+          <Question question="What is lorem ipsum iii?" answer="AAA" />
+        </div>
+      </div>
 
       <StaticImage
         className="w-full h-auto"
         src="../images/pool/pool.png"
         alt=""
       />
-      {/* </div> */}
     </section>
   );
 };
