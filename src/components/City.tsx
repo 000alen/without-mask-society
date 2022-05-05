@@ -10,7 +10,7 @@ import { RoadmapRight } from "./RoadmapRight";
 export const City = () => {
   return (
     <section className="relative">
-      <div>
+      {/* <div>
         <StaticImage
           className="!absolute z-50 w-[34.3%] left-[5.9%] top-[60.2%]"
           src="../images/city/P1.png"
@@ -50,7 +50,7 @@ export const City = () => {
           src="../images/city/R3.png"
           alt=""
         />
-      </div>
+      </div> */}
 
       <div className="absolute z-[100] w-full top-0 flex flex-col justify-center">
         <h1 className="mb-8 text-8xl max-w-3xl font-bold italic text-center self-center">
@@ -62,10 +62,8 @@ export const City = () => {
             <Avatar name="Juanito" description="3D Artist" />
             <Avatar name="Juanito" description="3D Artist" />
             <Avatar name="Juanito" description="3D Artist" />
-            <Avatar name="Juanito" description="3D Artist" />
           </div>
           <div className="flex justify-center space-x-4">
-            <Avatar name="Juanito" description="3D Artist" />
             <Avatar name="Juanito" description="3D Artist" />
             <Avatar name="Juanito" description="3D Artist" />
             <Avatar name="Juanito" description="3D Artist" />
@@ -77,9 +75,15 @@ export const City = () => {
         </div>
       </div>
 
-      <StaticImage
+      {/* <StaticImage
         className="w-full left-0 top-0"
         src="../images/city/city.png"
+        alt=""
+      /> */}
+
+      <StaticImage
+        className="w-full left-0 top-0"
+        src="../images/city/static.png"
         alt=""
       />
     </section>

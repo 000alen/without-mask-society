@@ -4,11 +4,8 @@ import { Lorem } from "./Lorem";
 
 export const Planets = () => {
   return (
-    // <section>
     <section className="relative">
-      {/* <div className="relative"> */}
-      {/*  hover:scale-125 hover:drop-shadow-xl transition-all */}
-      <StaticImage
+      {/* <StaticImage
         className="!absolute z-[48] w-[24.5%] left-[7.1%] top-[48.9%]"
         src="../images/planets/P1.png"
         alt=""
@@ -30,16 +27,21 @@ export const Planets = () => {
         className="!absolute z-50 w-[87.7%] left-[4.7%] top-[7.1%]"
         src="../images/planets/moons.png"
         alt=""
-      />
+      /> */}
 
       <Lorem top="20%" />
 
-      <StaticImage
+      {/* <StaticImage
         className="w-full h-auto"
         src="../images/planets/planets.png"
         alt=""
+      /> */}
+
+      <StaticImage
+        className="w-full h-auto"
+        src="../images/planets/static.png"
+        alt=""
       />
-      {/* </div> */}
     </section>
   );
 };

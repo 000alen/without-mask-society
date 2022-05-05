@@ -9,7 +9,7 @@ import { RoadmapRight } from "./RoadmapRight";
 export const Forest = () => {
   return (
     <section className="relative">
-      <StaticImage
+      {/* <StaticImage
         className="!absolute z-50 w-[37.6%] left-0 top-[69.6%]"
         src="../images/forest/P1.png"
         alt=""
@@ -37,7 +37,7 @@ export const Forest = () => {
         className="!absolute z-[49] w-[31.9%] left-[68.3%] top-[72.3%]"
         src="../images/forest/P5.png"
         alt=""
-      />
+      /> */}
 
       <div className="absolute z-[100] w-full top-[10%] flex flex-col justify-center">
         <h1 className="mb-8 text-8xl max-w-3xl font-bold italic text-center self-center">
@@ -49,9 +49,15 @@ export const Forest = () => {
         <RoadmapRight title="AAA" paragraph="BBB" />
       </div>
 
-      <StaticImage
+      {/* <StaticImage
         className="w-full h-auto"
         src="../images/forest/forest.png"
+        alt=""
+      /> */}
+
+      <StaticImage
+        className="w-full h-auto"
+        src="../images/forest/static.png"
         alt=""
       />
     </section>

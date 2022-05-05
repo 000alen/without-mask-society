@@ -30,6 +30,7 @@ const IndexPage = () => {
 
       <Planets />
 
+      {/* FAQ */}
       <Pool />
 
       <Footer />

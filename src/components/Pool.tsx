@@ -8,7 +8,7 @@ import { RoadmapRight } from "./RoadmapRight";
 export const Pool = () => {
   return (
     <section className="relative">
-      <StaticImage
+      {/* <StaticImage
         className="!absolute z-50 w-[6.3%] left-[40.2%] top-[55.8%]"
         src="../images/pool/P1.png"
         alt=""
@@ -48,7 +48,7 @@ export const Pool = () => {
         className="!absolute z-50 w-[18.5%] left-[11.8%] top-[56.5%]"
         src="../images/pool/P7.png"
         alt=""
-      />
+      /> */}
 
       <div className="absolute z-[100] w-full top-[10%] flex flex-col items-center">
         <h1 className="mb-8 text-8xl max-w-3xl font-bold italic text-center">
@@ -62,9 +62,15 @@ export const Pool = () => {
         </div>
       </div>
 
-      <StaticImage
+      {/* <StaticImage
         className="w-full h-auto"
         src="../images/pool/pool.png"
+        alt=""
+      /> */}
+
+      <StaticImage
+        className="w-full h-auto"
+        src="../images/pool/static.png"
         alt=""
       />
     </section>
