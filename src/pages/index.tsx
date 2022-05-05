@@ -22,6 +22,7 @@ const IndexPage = () => {
 
       <City />
 
+      {/* Roadmap */}
       <Forest />
 
       <Stars />

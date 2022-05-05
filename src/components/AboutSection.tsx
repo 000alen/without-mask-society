@@ -6,7 +6,7 @@ export const AboutSection = () => {
       <div className="wave2"></div>
 
       <section className="bg-[#000067] flex flex-col items-center space-y-2">
-        <h1 className="text-7xl font-bold italic">ABOUT</h1>
+        <h1 className="text-7xl max-w-2xl font-bold italic">ABOUT</h1>
 
         <p className="max-w-2xl text-center">
           LOWER YOUR MASK. AND TAKE A DEEP BREATH.

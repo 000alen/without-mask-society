@@ -39,7 +39,10 @@ export const Forest = () => {
         alt=""
       />
 
-      <div className="absolute z-[100] w-full top-[10%] flex flex-col justify-center">
+      <div className="absolute z-[100] w-full top-[15%] flex flex-col justify-center">
+        <h1 className="mb-8 text-8xl max-w-3xl font-bold italic text-center self-center">
+          WITHOUT MASK SOCIETY ROADMAP
+        </h1>
         <RoadmapLeft title="AAA" paragraph="BBB" />
         <RoadmapRight title="AAA" paragraph="BBB" />
         <RoadmapLeft title="AAA" paragraph="BBB" />
