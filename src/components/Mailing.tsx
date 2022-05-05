@@ -10,7 +10,7 @@ export const Mailing = () => {
       </p>
       <div className="flex flex-row space-x-2">
         <input
-          className="px-6 py-4 w-96 rounded-full"
+          className="px-6 py-4 w-96 rounded-full text-black"
           placeholder="Get on the list! (email)"
         />
 
