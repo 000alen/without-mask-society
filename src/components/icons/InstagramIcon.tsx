@@ -7,7 +7,7 @@ interface Props {
 export const InstagramIcon: React.FC<Props> = ({ className = "w-6 h-6" }) => {
   return (
     <svg
-      className={`${className} inline`}
+      className={`${className} inline select-none`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 2476 2476"
       width="2500"

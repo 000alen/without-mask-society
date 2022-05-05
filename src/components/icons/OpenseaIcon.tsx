@@ -7,7 +7,7 @@ interface Props {
 export const OpenseaIcon: React.FC<Props> = ({ className = "w-6 h-6" }) => {
   return (
     <svg
-      className={`${className} inline`}
+      className={`${className} inline select-none`}
       width="90"
       height="90"
       viewBox="0 0 90 90"

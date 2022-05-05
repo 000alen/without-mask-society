@@ -7,7 +7,7 @@ interface Props {
 export const DiscordIcon: React.FC<Props> = ({ className = "w-6 h-6" }) => {
   return (
     <svg
-      className={`${className} inline`}
+      className={`${className} inline select-none`}
       width="2184"
       height="2500"
       viewBox="0 0 256 292.571"
