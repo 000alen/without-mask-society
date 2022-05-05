@@ -8,6 +8,9 @@
 body {
   color: white;
   overflow-x: hidden;
+  
+  max-width: 19in;
+  margin: auto;
 }
 
 .glow {

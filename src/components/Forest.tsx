@@ -1,13 +1,14 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import { FancyButton } from "./FancyButton";
+import { OpenseaIcon } from "./icons/OpenseaIcon";
 import { Lorem } from "./Lorem";
+import { RoadmapLeft } from "./RoadmapLeft";
+import { RoadmapRight } from "./RoadmapRight";
 
 export const Forest = () => {
   return (
-    // <section>
     <section className="relative">
-      {/* <div className="relative"> */}
-      {/* hover:scale-125 hover:drop-shadow-xl transition-all */}
       <StaticImage
         className="!absolute z-50 w-[37.6%] left-0 top-[69.6%]"
         src="../images/forest/P1.png"
@@ -38,17 +39,18 @@ export const Forest = () => {
         alt=""
       />
 
-      <Lorem top="10%" />
-      <Lorem top="18%" />
-      <Lorem top="26%" />
-      <Lorem top="34%" />
+      <div className="absolute z-[100] w-full top-[10%] flex flex-col justify-center">
+        <RoadmapLeft title="AAA" paragraph="BBB" />
+        <RoadmapRight title="AAA" paragraph="BBB" />
+        <RoadmapLeft title="AAA" paragraph="BBB" />
+        <RoadmapRight title="AAA" paragraph="BBB" />
+      </div>
 
       <StaticImage
         className="w-full h-auto"
         src="../images/forest/forest.png"
         alt=""
       />
-      {/* </div> */}
     </section>
   );
 };
