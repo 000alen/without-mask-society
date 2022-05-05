@@ -20,6 +20,7 @@ const IndexPage = () => {
 
       <AboutSection />
 
+      {/* Team */}
       <City />
 
       {/* Roadmap */}

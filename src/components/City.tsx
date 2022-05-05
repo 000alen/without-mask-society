@@ -1,15 +1,16 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import { Avatar } from "./Avatar";
+import { DiscordIcon } from "./icons/DiscordIcon";
+import { TwitterIcon } from "./icons/TwitterIcon";
 import { Lorem } from "./Lorem";
+import { RoadmapLeft } from "./RoadmapLeft";
+import { RoadmapRight } from "./RoadmapRight";
 
 export const City = () => {
   return (
-    // <section>
     <section className="relative">
-      {/* <div className="relative"> */}
-      {/* group */}
       <div>
-        {/* group-hover:scale-125 group-hover:drop-shadow-xl transition-all */}
         <StaticImage
           className="!absolute z-50 w-[34.3%] left-[5.9%] top-[60.2%]"
           src="../images/city/P1.png"
@@ -50,9 +51,31 @@ export const City = () => {
           alt=""
         />
       </div>
-      {/* </div> */}
 
-      <Lorem />
+      <div className="absolute z-[100] w-full top-0 flex flex-col justify-center">
+        <h1 className="mb-8 text-8xl max-w-3xl font-bold italic text-center self-center">
+          MEET THE TEAM
+        </h1>
+
+        <div className="flex flex-col space-y-4">
+          <div className="flex justify-center space-x-4">
+            <Avatar />
+            <Avatar />
+            <Avatar />
+            <Avatar />
+          </div>
+          <div className="flex justify-center space-x-4">
+            <Avatar />
+            <Avatar />
+            <Avatar />
+            <Avatar />
+          </div>
+          <div className="flex justify-center space-x-4">
+            <Avatar />
+            <Avatar />
+          </div>
+        </div>
+      </div>
 
       <StaticImage
         className="w-full left-0 top-0"
