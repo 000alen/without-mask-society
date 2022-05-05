@@ -1,8 +1,19 @@
 import React from "react";
 
-export const Lorem = () => {
+interface Props {
+  top?: string;
+}
+
+export const Lorem: React.FC<Props> = ({ top = "35%" }) => {
+  const style = {
+    top: top,
+  };
+
   return (
-    <div className="absolute z-[100] inset-x-0 top-[35%] flex justify-center">
+    <div
+      style={style}
+      className="absolute z-[100] inset-x-0 flex justify-center"
+    >
       <div className="bg-[#000067] p-8 rounded-lg glow flex flex-col items-center space-y-2">
         <h1 className="text-7xl font-bold italic">LOREM</h1>
 

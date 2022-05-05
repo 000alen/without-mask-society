@@ -38,7 +38,10 @@ export const Forest = () => {
         alt=""
       />
 
-      <Lorem />
+      <Lorem top="10%" />
+      <Lorem top="18%" />
+      <Lorem top="26%" />
+      <Lorem top="34%" />
 
       <StaticImage
         className="w-full h-auto"
