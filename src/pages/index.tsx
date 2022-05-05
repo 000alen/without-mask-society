@@ -7,13 +7,12 @@ import { Forest } from "../components/Forest";
 import { Planets } from "../components/Planets";
 import { Pool } from "../components/Pool";
 import { Hero } from "../components/Hero";
+import { Stars } from "../components/Stars";
 
 const IndexPage = () => {
   return (
     <>
-      <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
+      <Stars />
 
       <Nav />
 
@@ -24,6 +23,8 @@ const IndexPage = () => {
       <City />
 
       <Forest />
+
+      <Stars />
 
       <Planets />
 
