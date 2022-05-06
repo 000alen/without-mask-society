@@ -4,6 +4,7 @@ import { Lorem } from "./Lorem";
 import { Question } from "./Question";
 import { RoadmapLeft } from "./RoadmapLeft";
 import { RoadmapRight } from "./RoadmapRight";
+import { Title } from "./Title";
 
 export const Pool = () => {
   return (
@@ -51,9 +52,7 @@ export const Pool = () => {
       /> */}
 
       <div className="lg:absolute z-[100] w-full top-[10%] flex flex-col items-center">
-        <h1 className="mb-8 italic font-bold text-center lg:max-w-3xl lg:text-8xl">
-          FAQ
-        </h1>
+        <Title className="mb-8">FAQ</Title>
 
         <div className="flex flex-col space-y-4">
           <Question question="What is lorem ipsum?" answer="AAA" />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Title } from "./Title";
 
 interface Props {
   className?: string;
@@ -16,7 +17,7 @@ export const Lorem: React.FC<Props> = ({ className = "", top = "35%" }) => {
       className={`${className} lg:absolute z-[100] inset-x-0 flex justify-center`}
     >
       <div className="flex flex-col items-center p-8 space-y-2">
-        <h1 className="italic font-bold lg:text-8xl">LOREM</h1>
+        <Title>LOREM</Title>
 
         <p className="max-w-2xl text-center">
           LOREM IPSUM DOLOR, SIT AMET CONSECTETUR ADIPISICING ELIT.

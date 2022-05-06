@@ -1,26 +1,43 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { DiscordIcon } from "./icons/DiscordIcon";
+import { LinkedinIcon } from "./icons/LinkedinIcon";
 import { TwitterIcon } from "./icons/TwitterIcon";
+import { Subtitle } from "./Subtitle";
 
 interface Props {
   name: string;
   description: string;
+  id: string;
 }
 
-export const Avatar: React.FC<Props> = ({ name, description }) => {
+export const Avatar: React.FC<Props> = ({ name, description, id }) => {
   return (
     <div className="flex flex-col items-center">
       <div className="relative flex justify-center">
         <div className="absolute bottom-0 border-2 border-white w-[80%] h-[70%]"></div>
-        <StaticImage className="w-64" src="../images/avatars/1.png" alt="" />
+
+        {id === "1" ? (
+          <StaticImage className="w-64" src="../images/avatars/1.png" alt="" />
+        ) : id === "2" ? (
+          <StaticImage className="w-64" src="../images/avatars/2.png" alt="" />
+        ) : id === "3" ? (
+          <StaticImage className="w-64" src="../images/avatars/3.png" alt="" />
+        ) : id === "4" ? (
+          <StaticImage className="w-64" src="../images/avatars/4.png" alt="" />
+        ) : id === "5" ? (
+          <StaticImage className="w-64" src="../images/avatars/5.png" alt="" />
+        ) : id === "6" ? (
+          <StaticImage className="w-64" src="../images/avatars/6.png" alt="" />
+        ) : null}
       </div>
 
-      <h1 className="text-6xl max-w-3xl font-bold italic">{name}</h1>
+      <Subtitle>{name}</Subtitle>
+
       <p className="mb-8 italic">{description}</p>
-      <div className="flex flex-row space-x-1">
+      <div className="flex flex-row justify-center space-x-2">
         <TwitterIcon />
-        <DiscordIcon />
+        <LinkedinIcon />
       </div>
     </div>
   );

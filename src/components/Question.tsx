@@ -13,8 +13,7 @@ export const Question: React.FC<Props> = ({ id, question, answer }) => {
   return (
     <div>
       <input id={id} className="toggle" type="checkbox" />
-      {/* @ts-ignore */}
-      <label for={id} className="toggle-label">
+      <label htmlFor={id} className="toggle-label">
         {question}
       </label>
       <div className="collapsible-content">

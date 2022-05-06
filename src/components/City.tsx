@@ -6,6 +6,7 @@ import { TwitterIcon } from "./icons/TwitterIcon";
 import { Lorem } from "./Lorem";
 import { RoadmapLeft } from "./RoadmapLeft";
 import { RoadmapRight } from "./RoadmapRight";
+import { Title } from "./Title";
 
 export const City = () => {
   return (
@@ -53,19 +54,17 @@ export const City = () => {
       </div> */}
 
       <div className="lg:absolute z-[100] w-full top-0 justify-center flex flex-col">
-        <h1 className="self-center mb-8 italic font-bold text-center lg:max-w-3xl lg:text-8xl">
-          MEET THE TEAM
-        </h1>
+        <Title className="mb-8">MEET THE TEAM</Title>
 
         <div className="flex flex-col space-y-4">
-          <div className="flex justify-center space-x-4">
-            <Avatar name="Juanito" description="3D Artist" />
-            <Avatar name="Juanito" description="3D Artist" />
-            <Avatar name="Juanito" description="3D Artist" />
+          <div className="flex flex-col space-y-4 lg:space-x-4 lg:flex-row lg:justify-center">
+            <Avatar id="1" name="Juanito" description="3D Artist" />
+            <Avatar id="2" name="Pamela" description="3D Artist" />
+            <Avatar id="3" name="Jaime" description="3D Artist" />
           </div>
-          <div className="flex justify-center space-x-4">
-            <Avatar name="Juanito" description="3D Artist" />
-            <Avatar name="Juanito" description="3D Artist" />
+          <div className="flex flex-col space-y-4 lg:space-x-4 lg:flex-row lg:justify-center">
+            <Avatar id="4" name="Luchito" description="3D Artist" />
+            <Avatar id="5" name="Mario Hugo" description="3D Artist" />
           </div>
         </div>
       </div>

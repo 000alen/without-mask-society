@@ -1,10 +1,12 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import { lorem } from "../constants";
 import { FancyButton } from "./FancyButton";
 import { OpenseaIcon } from "./icons/OpenseaIcon";
 import { Lorem } from "./Lorem";
 import { RoadmapLeft } from "./RoadmapLeft";
 import { RoadmapRight } from "./RoadmapRight";
+import { Title } from "./Title";
 
 export const Forest = () => {
   return (
@@ -40,49 +42,17 @@ export const Forest = () => {
       /> */}
 
       <div className="lg:absolute z-[100] w-full top-[10%] justify-center flex flex-col">
-        <h1 className="self-center mb-8 italic font-bold text-center lg:max-w-3xl lg:text-8xl">
-          ROADMAP
-        </h1>
-        <RoadmapLeft
-          title="AAA"
-          paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
-        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
-        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
-        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
-        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
-        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
-        quaerat enim. Suscipit ipsum itaque quis vero molestias error!"
-        />
-        <RoadmapRight
-          title="AAA"
-          paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
-        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
-        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
-        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
-        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
-        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
-        quaerat enim. Suscipit ipsum itaque quis vero molestias error!"
-        />
-        <RoadmapLeft
-          title="AAA"
-          paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
-        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
-        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
-        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
-        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
-        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
-        quaerat enim. Suscipit ipsum itaque quis vero molestias error!"
-        />
-        <RoadmapRight
-          title="AAA"
-          paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
-        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
-        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
-        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
-        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
-        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
-        quaerat enim. Suscipit ipsum itaque quis vero molestias error!"
-        />
+        <Title className="mb-8">ROADMAP</Title>
+
+        <RoadmapLeft id="1" title="0%" paragraph={lorem} />
+        <RoadmapRight id="2" title="25%" paragraph={lorem}>
+          <FancyButton label="Go to OpenSea">
+            <OpenseaIcon />
+          </FancyButton>
+        </RoadmapRight>
+        <RoadmapLeft id="3" title="50%" paragraph={lorem} />
+        <RoadmapRight id="4" title="75%" paragraph={lorem} />
+        <RoadmapLeft id="1" title="100%" paragraph={lorem} />
       </div>
 
       {/* <StaticImage

@@ -5,6 +5,7 @@
 @import "stars.css";
 @import "waves.css";
 @import "collapsible.css";
+@import "slides.css";
 
 body {
   color: white;
