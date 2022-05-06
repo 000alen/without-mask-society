@@ -4,14 +4,11 @@ import React, { useEffect, useRef } from "react";
 import { lorem } from "../constants";
 import { FancyButton } from "./FancyButton";
 import { OpenseaIcon } from "./icons/OpenseaIcon";
-import { Lorem } from "./Lorem";
 import { RoadmapLeft } from "./RoadmapLeft";
 import { RoadmapRight } from "./RoadmapRight";
 import { Title } from "./Title";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const items = [
   {
@@ -151,6 +148,7 @@ export const Forest = () => {
         {items.map(({ direction, id, title, paragraph, children }, i) =>
           direction === "left" ? (
             <RoadmapLeft
+              key={i}
               ref={(e) => (itemsRef.current[i] = e)}
               className="gs_fromLeft"
               id={id}
@@ -161,6 +159,7 @@ export const Forest = () => {
             </RoadmapLeft>
           ) : (
             <RoadmapRight
+              key={i}
               ref={(e) => (itemsRef.current[i] = e)}
               className="gs_fromRight"
               id={id}

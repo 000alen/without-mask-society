@@ -9,6 +9,10 @@ import { Nav } from "../components/Nav";
 import { Planets } from "../components/Planets";
 import { Pool } from "../components/Pool";
 import { Stars } from "../components/Stars";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const IndexPage = () => {
   return (
