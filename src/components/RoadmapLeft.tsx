@@ -10,7 +10,7 @@ interface Props {
 
 export const RoadmapLeft: React.FC<Props> = ({ title, paragraph }) => {
   return (
-    <div className="p-8 flex flex-row justify-around items-center">
+    <div className="p-8 flex flex-row justify-center items-center space-x-8">
       <div className="w-[32rem]">
         <StaticImage className="w-64" src="../images/nfts/1.png" alt="" />
         <StaticImage className="w-64" src="../images/nfts/2.png" alt="" />

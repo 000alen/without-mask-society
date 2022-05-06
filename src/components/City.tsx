@@ -52,7 +52,7 @@ export const City = () => {
         />
       </div> */}
 
-      <div className="absolute z-[100] w-full top-0 flex flex-col justify-center">
+      <div className="absolute z-[100] w-full top-0 justify-center hidden lg:flex lg:flex-col">
         <h1 className="mb-8 text-8xl max-w-3xl font-bold italic text-center self-center">
           MEET THE TEAM
         </h1>

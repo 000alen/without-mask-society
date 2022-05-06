@@ -29,7 +29,7 @@ export const Planets = () => {
         alt=""
       /> */}
 
-      <Lorem top="20%" />
+      {/* <Lorem top="20%" /> */}
 
       {/* <StaticImage
         className="w-full h-auto"

@@ -39,7 +39,7 @@ export const Forest = () => {
         alt=""
       /> */}
 
-      <div className="absolute z-[100] w-full top-[10%] flex flex-col justify-center">
+      <div className="absolute z-[100] w-full top-[10%] justify-center hidden lg:flex lg:flex-col">
         <h1 className="mb-8 text-8xl max-w-3xl font-bold italic text-center self-center">
           ROADMAP
         </h1>

@@ -5,9 +5,10 @@ interface Props {
   className?: string;
 }
 
+// ! TODO Make it a carousel for sm and md screens
 export const Showcase: React.FC<Props> = ({ className = "" }) => {
   return (
-    <div className={`${className} flex flex-row space-x-2`}>
+    <div className={`${className} hidden lg:flex lg:flex-row lg:space-x-2`}>
       <StaticImage
         className="hover:glow transition-all w-48 h-auto"
         src="../images/nfts/1.png"

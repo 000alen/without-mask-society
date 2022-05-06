@@ -13,7 +13,7 @@ export const Footer = () => {
     <footer className="flex flex-col justify-around space-y-6">
       <Mailing />
 
-      <div className="flex flex-row justify-around">
+      <div className="p-12 space-y-2 flex flex-col lg:flex-row lg:justify-around lg:space-x-2">
         <WMSLogo className="w-24" />
 
         <a className="text-xl font-bold italic">ABOUT</a>
@@ -37,6 +37,7 @@ export const Footer = () => {
           </a>
         </div>
       </div>
+
       <div className="pb-24 flex flex-row justify-center items-center">
         <span>Brought to you by</span>
         <a>

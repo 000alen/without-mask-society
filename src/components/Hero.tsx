@@ -14,12 +14,12 @@ export const Hero = () => {
         THE NFTS THAT <br /> CLEAN THE WORLD
       </p>
 
-      <div className="flex flex-row justify-center space-x-2">
-        <FancyButton className="mt-24" label="Buy on OpenSea">
+      <div className="mt-24 flex flex-col justify-center space-y-2 lg:flex-row lg:space-x-2">
+        <FancyButton label="Buy on OpenSea">
           <OpenseaIcon />
         </FancyButton>
 
-        <FancyButton className="mt-24" label="Go to Discord" color="#5865F2">
+        <FancyButton label="Go to Discord" color="#5865F2">
           <DiscordIcon />
         </FancyButton>
       </div>

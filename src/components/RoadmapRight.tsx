@@ -10,7 +10,7 @@ interface Props {
 
 export const RoadmapRight: React.FC<Props> = ({ title, paragraph }) => {
   return (
-    <div className="p-8 flex flex-row justify-around items-center">
+    <div className="p-8 flex flex-row justify-center items-center space-x-8">
       <div className="w-[32rem] p-8 border-t-2 border-r-2 flex flex-col space-y-2 text-right items-end">
         <h1 className="text-7xl font-bold italic">{title}</h1>
 
