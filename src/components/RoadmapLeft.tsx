@@ -10,14 +10,15 @@ interface Props {
 
 export const RoadmapLeft: React.FC<Props> = ({ title, paragraph }) => {
   return (
-    <div className="p-8 flex flex-row justify-center items-center space-x-8">
-      <div className="w-[32rem]">
-        <StaticImage className="w-64" src="../images/nfts/1.png" alt="" />
-        <StaticImage className="w-64" src="../images/nfts/2.png" alt="" />
-      </div>
+    <div className="flex flex-col justify-center p-8 space-y-8 lg:space-x-8 lg:flex-row">
+      <StaticImage
+        className="lg:w-[30%] min-w-min max-w-[24rem]"
+        src="../images/nfts/1.png"
+        alt=""
+      />
 
-      <div className="w-[32rem] p-8 border-t-2 border-l-2 flex flex-col space-y-2">
-        <h1 className="text-7xl font-bold italic">{title}</h1>
+      <div className="lg:w-[70%] p-8 border-l-2 flex flex-col space-y-2">
+        <h1 className="italic font-bold text-7xl">{title}</h1>
 
         <p>{paragraph}</p>
 

@@ -50,8 +50,8 @@ export const Pool = () => {
         alt=""
       /> */}
 
-      <div className="absolute z-[100] w-full top-[10%] flex flex-col items-center">
-        <h1 className="mb-8 text-8xl max-w-3xl font-bold italic text-center">
+      <div className="lg:absolute z-[100] w-full top-[10%] flex flex-col items-center">
+        <h1 className="mb-8 italic font-bold text-center lg:max-w-3xl lg:text-8xl">
           FAQ
         </h1>
 

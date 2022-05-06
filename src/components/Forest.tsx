@@ -39,14 +39,50 @@ export const Forest = () => {
         alt=""
       /> */}
 
-      <div className="absolute z-[100] w-full top-[10%] justify-center hidden lg:flex lg:flex-col">
-        <h1 className="mb-8 text-8xl max-w-3xl font-bold italic text-center self-center">
+      <div className="lg:absolute z-[100] w-full top-[10%] justify-center flex flex-col">
+        <h1 className="self-center mb-8 italic font-bold text-center lg:max-w-3xl lg:text-8xl">
           ROADMAP
         </h1>
-        <RoadmapLeft title="AAA" paragraph="BBB" />
-        <RoadmapRight title="AAA" paragraph="BBB" />
-        <RoadmapLeft title="AAA" paragraph="BBB" />
-        <RoadmapRight title="AAA" paragraph="BBB" />
+        <RoadmapLeft
+          title="AAA"
+          paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
+        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
+        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
+        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
+        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
+        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
+        quaerat enim. Suscipit ipsum itaque quis vero molestias error!"
+        />
+        <RoadmapRight
+          title="AAA"
+          paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
+        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
+        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
+        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
+        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
+        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
+        quaerat enim. Suscipit ipsum itaque quis vero molestias error!"
+        />
+        <RoadmapLeft
+          title="AAA"
+          paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
+        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
+        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
+        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
+        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
+        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
+        quaerat enim. Suscipit ipsum itaque quis vero molestias error!"
+        />
+        <RoadmapRight
+          title="AAA"
+          paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
+        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
+        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
+        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
+        quaerat enim. Suscipit ipsum itaque quis vero molestias error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam
+        hic ad cum iusto blanditiis debitis amet, totam aut incidunt fugit
+        quaerat enim. Suscipit ipsum itaque quis vero molestias error!"
+        />
       </div>
 
       {/* <StaticImage

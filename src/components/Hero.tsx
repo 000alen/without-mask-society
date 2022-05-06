@@ -14,7 +14,7 @@ export const Hero = () => {
         THE NFTS THAT <br /> CLEAN THE WORLD
       </p>
 
-      <div className="mt-24 flex flex-col justify-center space-y-2 lg:flex-row lg:space-x-2">
+      <div className="flex flex-col justify-center mt-24 space-y-2 lg:flex-row lg:space-x-2">
         <FancyButton label="Buy on OpenSea">
           <OpenseaIcon />
         </FancyButton>

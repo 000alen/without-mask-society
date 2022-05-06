@@ -1,10 +1,11 @@
 import React from "react";
 
 interface Props {
+  className?: string;
   top?: string;
 }
 
-export const Lorem: React.FC<Props> = ({ top = "35%" }) => {
+export const Lorem: React.FC<Props> = ({ className = "", top = "35%" }) => {
   const style = {
     top: top,
   };
@@ -12,10 +13,10 @@ export const Lorem: React.FC<Props> = ({ top = "35%" }) => {
   return (
     <div
       style={style}
-      className="absolute z-[100] inset-x-0 flex justify-center"
+      className={`${className} lg:absolute z-[100] inset-x-0 flex justify-center`}
     >
-      <div className="bg-[#000067] p-8 rounded-lg glow flex flex-col items-center space-y-2">
-        <h1 className="text-7xl font-bold italic">LOREM</h1>
+      <div className="flex flex-col items-center p-8 space-y-2">
+        <h1 className="italic font-bold lg:text-8xl">LOREM</h1>
 
         <p className="max-w-2xl text-center">
           LOREM IPSUM DOLOR, SIT AMET CONSECTETUR ADIPISICING ELIT.

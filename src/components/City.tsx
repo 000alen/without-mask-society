@@ -52,17 +52,12 @@ export const City = () => {
         />
       </div> */}
 
-      <div className="absolute z-[100] w-full top-0 justify-center hidden lg:flex lg:flex-col">
-        <h1 className="mb-8 text-8xl max-w-3xl font-bold italic text-center self-center">
+      <div className="lg:absolute z-[100] w-full top-0 justify-center flex flex-col">
+        <h1 className="self-center mb-8 italic font-bold text-center lg:max-w-3xl lg:text-8xl">
           MEET THE TEAM
         </h1>
 
         <div className="flex flex-col space-y-4">
-          <div className="flex justify-center space-x-4">
-            <Avatar name="Juanito" description="3D Artist" />
-            <Avatar name="Juanito" description="3D Artist" />
-            <Avatar name="Juanito" description="3D Artist" />
-          </div>
           <div className="flex justify-center space-x-4">
             <Avatar name="Juanito" description="3D Artist" />
             <Avatar name="Juanito" description="3D Artist" />
@@ -76,13 +71,13 @@ export const City = () => {
       </div>
 
       {/* <StaticImage
-        className="w-full left-0 top-0"
+        className="top-0 left-0 w-full"
         src="../images/city/city.png"
         alt=""
       /> */}
 
       <StaticImage
-        className="w-full left-0 top-0"
+        className="top-0 left-0 w-full"
         src="../images/city/static.png"
         alt=""
       />
