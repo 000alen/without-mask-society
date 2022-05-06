@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+
 import { Avatar } from "./Avatar";
 import { DiscordIcon } from "./icons/DiscordIcon";
 import { TwitterIcon } from "./icons/TwitterIcon";

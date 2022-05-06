@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect } from "react";
+
 import { Title } from "./Title";
 
 interface Props {

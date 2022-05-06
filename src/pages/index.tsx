@@ -1,17 +1,18 @@
-import * as React from "react";
-import { Nav } from "../components/Nav";
+import React, { useRef, useEffect } from "react";
+
 import { AboutSection } from "../components/AboutSection";
-import { Footer } from "../components/Footer";
 import { City } from "../components/City";
+import { Footer } from "../components/Footer";
 import { Forest } from "../components/Forest";
+import { Hero } from "../components/Hero";
+import { Nav } from "../components/Nav";
 import { Planets } from "../components/Planets";
 import { Pool } from "../components/Pool";
-import { Hero } from "../components/Hero";
 import { Stars } from "../components/Stars";
 
 const IndexPage = () => {
   return (
-    <>
+    <div>
       <Stars />
 
       <Nav />
@@ -28,13 +29,14 @@ const IndexPage = () => {
 
       <Stars />
 
+      {/* TODO */}
       <Planets />
 
       {/* FAQ */}
       <Pool />
 
       <Footer />
-    </>
+    </div>
   );
 };
 

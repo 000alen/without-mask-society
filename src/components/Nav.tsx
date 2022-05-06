@@ -1,4 +1,5 @@
 import React from "react";
+
 import { DiscordIcon } from "./icons/DiscordIcon";
 import { InstagramIcon } from "./icons/InstagramIcon";
 import { OpenseaIcon } from "./icons/OpenseaIcon";

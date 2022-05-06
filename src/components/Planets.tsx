@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+
 import { Lorem } from "./Lorem";
 
 export const Planets = () => {

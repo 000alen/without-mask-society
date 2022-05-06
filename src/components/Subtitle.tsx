@@ -1,13 +1,19 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 
 interface Props {
   className?: string;
 }
 
-export const Subtitle: React.FC<Props> = ({ className = "", children }) => {
+export const Subtitle = React.forwardRef<
+  HTMLHeadingElement,
+  PropsWithChildren<Props>
+>(({ className = "", children }, ref) => {
   return (
-    <h1 className={`${className} max-w-3xl text-6xl italic font-bold`}>
+    <h1
+      ref={ref}
+      className={`${className} max-w-3xl text-6xl italic font-bold`}
+    >
       {children}
     </h1>
   );
-};
+});

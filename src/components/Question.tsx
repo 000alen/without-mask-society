@@ -7,20 +7,22 @@ interface Props {
   answer: string;
 }
 
-export const Question: React.FC<Props> = ({ id, question, answer }) => {
-  if (!id) id = uuid();
+export const Question = React.forwardRef<HTMLDivElement, Props>(
+  ({ id, question, answer }) => {
+    if (!id) id = uuid();
 
-  return (
-    <div>
-      <input id={id} className="toggle" type="checkbox" />
-      <label htmlFor={id} className="toggle-label">
-        {question}
-      </label>
-      <div className="collapsible-content">
-        <div className="content-inner">
-          <p>{answer}</p>
+    return (
+      <div>
+        <input id={id} className="toggle" type="checkbox" />
+        <label htmlFor={id} className="toggle-label">
+          {question}
+        </label>
+        <div className="collapsible-content">
+          <div className="content-inner">
+            <p>{answer}</p>
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+);

@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+
 import { Lorem } from "./Lorem";
 import { Question } from "./Question";
 import { RoadmapLeft } from "./RoadmapLeft";

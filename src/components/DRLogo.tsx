@@ -5,12 +5,14 @@ interface Props {
   className?: string;
 }
 
-export const DRLogo: React.FC<Props> = ({ className = "" }) => {
-  return (
-    <StaticImage
-      className={`${className} z-[1000] select-none`}
-      src="../images/DRLogo.png"
-      alt="Digital Rocket Logo"
-    />
-  );
-};
+export const DRLogo = React.forwardRef<unknown, Props>(
+  ({ className = "" }, ref) => {
+    return (
+      <StaticImage
+        className={`${className} z-[1000] select-none`}
+        src="../images/DRLogo.png"
+        alt="Digital Rocket Logo"
+      />
+    );
+  }
+);

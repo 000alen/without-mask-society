@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
-import React from "react";
+import React, { PropsWithChildren } from "react";
+
 import { FancyButton } from "./FancyButton";
 import { OpenseaIcon } from "./icons/OpenseaIcon";
 import { Subtitle } from "./Subtitle";
@@ -8,16 +9,18 @@ interface Props {
   id: string;
   title: string;
   paragraph: string;
+  className?: string;
 }
 
-export const RoadmapLeft: React.FC<Props> = ({
-  id,
-  title,
-  paragraph,
-  children,
-}) => {
+export const RoadmapLeft = React.forwardRef<
+  HTMLDivElement,
+  PropsWithChildren<Props>
+>(({ id, title, paragraph, className = "", children }, ref) => {
   return (
-    <div className="flex flex-col justify-center p-8 space-y-8 lg:space-x-8 lg:flex-row">
+    <div
+      ref={ref}
+      className={`${className} flex flex-col justify-center p-8 space-y-8 lg:space-x-8 lg:flex-row`}
+    >
       {id === "1" ? (
         <StaticImage
           className="lg:w-[30%] min-w-min max-w-[20rem] rounded max-h-[20rem]"
@@ -51,4 +54,4 @@ export const RoadmapLeft: React.FC<Props> = ({
       </div>
     </div>
   );
-};
+});

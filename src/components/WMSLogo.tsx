@@ -5,12 +5,14 @@ interface Props {
   className?: string;
 }
 
-export const WMSLogo: React.FC<Props> = ({ className = "" }) => {
-  return (
-    <StaticImage
-      className={`${className} z-[1000] select-none`}
-      src="../images/WMSLogo.png"
-      alt="Without Mask Society Logo"
-    />
-  );
-};
+export const WMSLogo = React.forwardRef<unknown, Props>(
+  ({ className = "" }, ref) => {
+    return (
+      <StaticImage
+        className={`${className} z-[1000] select-none`}
+        src="../images/WMSLogo.png"
+        alt="Without Mask Society Logo"
+      />
+    );
+  }
+);
