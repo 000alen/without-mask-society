@@ -93,37 +93,37 @@ export const pageQuery = graphql`
             about_text
             about_title
             city_title
-            pool_title
+            forest_title
+            hero_title
             planets_text
             planets_title
-            hero_title
-            forest_title
-            city_team {
-              member_avatar
-              member_description
-              member_name
-              member_social {
-                social_name
-                social_url
+            pool_title
+            city_members {
+              city_member_avatar
+              city_member_description
+              city_member_name
+              city_member_socials {
+                city_member_social_name
+                city_member_social_url
               }
             }
-            forest_roadmap {
-              roadmap_image
-              roadmap_direction
-              roadmap_title
-              roadmap_text
-              roadmap_buttons {
-                roadmap_button_color
-                roadmap_button_icon
-                roadmap_button_text
-                roadmap_button_url
+            forest_milestones {
+              forest_milestone_direction
+              forest_milestone_image
+              forest_milestone_text
+              forest_milestone_title
+              forest_milestone_buttons {
+                forest_milestone_button_icon
+                forest_milestone_button_color
+                forest_milestone_button_text
+                forest_milestone_button_url
               }
             }
             hero_buttons {
-              button_color
-              button_icon
-              button_text
-              button_url
+              hero_button_color
+              hero_button_icon
+              hero_button_text
+              hero_button_url
             }
             pool_questions {
               pool_answer

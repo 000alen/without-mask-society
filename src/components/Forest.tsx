@@ -93,6 +93,7 @@ export const Forest: React.FC<Props> = ({
                 forest_milestone_title,
                 forest_milestone_text,
                 forest_milestone_buttons,
+                forest_milestone_image,
               },
               i
             ) =>
@@ -101,19 +102,24 @@ export const Forest: React.FC<Props> = ({
                   key={i}
                   ref={(e) => (itemsRef.current[i] = e)}
                   className="gs_fromLeft"
-                  id="1" // TODO
+                  image={forest_milestone_image}
                   title={forest_milestone_title}
                   paragraph={forest_milestone_text}
                 >
+                  {/* TODO */}
                   {forest_milestone_buttons &&
                     forest_milestone_buttons.map(
-                      ({
-                        forest_milestone_button_color,
-                        forest_milestone_button_icon,
-                        forest_milestone_button_text,
-                        forest_milestone_button_url,
-                      }) => (
+                      (
+                        {
+                          forest_milestone_button_color,
+                          forest_milestone_button_icon,
+                          forest_milestone_button_text,
+                          forest_milestone_button_url,
+                        },
+                        j
+                      ) => (
                         <FancyButton
+                          key={j}
                           label={forest_milestone_button_text}
                           color={forest_milestone_button_color}
                         >
@@ -131,19 +137,24 @@ export const Forest: React.FC<Props> = ({
                   key={i}
                   ref={(e) => (itemsRef.current[i] = e)}
                   className="gs_fromRight"
-                  id="1" // TODO
+                  image={forest_milestone_image}
                   title={forest_milestone_title}
                   paragraph={forest_milestone_text}
                 >
+                  {/* TODO */}
                   {forest_milestone_buttons &&
                     forest_milestone_buttons.map(
-                      ({
-                        forest_milestone_button_color,
-                        forest_milestone_button_icon,
-                        forest_milestone_button_text,
-                        forest_milestone_button_url,
-                      }) => (
+                      (
+                        {
+                          forest_milestone_button_color,
+                          forest_milestone_button_icon,
+                          forest_milestone_button_text,
+                          forest_milestone_button_url,
+                        },
+                        j
+                      ) => (
                         <FancyButton
+                          key={j}
                           label={forest_milestone_button_text}
                           color={forest_milestone_button_color}
                         >

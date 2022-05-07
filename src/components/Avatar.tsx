@@ -1,62 +1,24 @@
-import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { CityMemberSocial } from "../typings";
-import { DiscordIcon } from "./icons/DiscordIcon";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
 import { TwitterIcon } from "./icons/TwitterIcon";
 import { Subtitle } from "./Subtitle";
 
 interface Props {
+  avatar: string;
   name: string;
   description: string;
-  id: string;
   socials: CityMemberSocial[];
 }
 
 export const Avatar = React.forwardRef<HTMLDivElement, Props>(
-  ({ name, description, id, socials }, ref) => {
+  ({ avatar, name, description, socials }, ref) => {
     return (
       <div ref={ref} className="flex flex-col items-center">
         <div className="relative flex justify-center">
           <div className="absolute bottom-0 border-2 border-white w-[80%] h-[70%]"></div>
 
-          {id === "1" ? (
-            <StaticImage
-              className="w-64"
-              src="../images/avatars/1.png"
-              alt=""
-            />
-          ) : id === "2" ? (
-            <StaticImage
-              className="w-64"
-              src="../images/avatars/2.png"
-              alt=""
-            />
-          ) : id === "3" ? (
-            <StaticImage
-              className="w-64"
-              src="../images/avatars/3.png"
-              alt=""
-            />
-          ) : id === "4" ? (
-            <StaticImage
-              className="w-64"
-              src="../images/avatars/4.png"
-              alt=""
-            />
-          ) : id === "5" ? (
-            <StaticImage
-              className="w-64"
-              src="../images/avatars/5.png"
-              alt=""
-            />
-          ) : id === "6" ? (
-            <StaticImage
-              className="w-64"
-              src="../images/avatars/6.png"
-              alt=""
-            />
-          ) : null}
+          <img className="w-64" src={avatar} alt={name} />
         </div>
 
         <Subtitle>{name}</Subtitle>
@@ -66,14 +28,14 @@ export const Avatar = React.forwardRef<HTMLDivElement, Props>(
           {/* TODO */}
           {socials &&
             socials.map(
-              ({
-                city_member_social_name: name,
-                city_member_social_url: url,
-              }) =>
+              (
+                { city_member_social_name: name, city_member_social_url: url },
+                i
+              ) =>
                 name === "twitter" ? (
-                  <TwitterIcon />
+                  <TwitterIcon key={i} />
                 ) : name === "linkedin" ? (
-                  <LinkedinIcon />
+                  <LinkedinIcon key={i} />
                 ) : null
             )}
         </div>

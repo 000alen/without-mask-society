@@ -34,8 +34,16 @@ export const Hero: React.FC<Props> = ({ hero_title, hero_buttons }) => {
         {/* TODO: Urls */}
         {hero_buttons &&
           hero_buttons.map(
-            ({ hero_button_color: button_color, hero_button_icon: button_icon, hero_button_text: button_text, hero_button_url: button_url }) => (
-              <FancyButton label={button_text} color={button_color}>
+            (
+              {
+                hero_button_color: button_color,
+                hero_button_icon: button_icon,
+                hero_button_text: button_text,
+                hero_button_url: button_url,
+              },
+              i
+            ) => (
+              <FancyButton key={i} label={button_text} color={button_color}>
                 {button_icon === "opensea" ? (
                   <OpenseaIcon />
                 ) : button_icon === "discord" ? (

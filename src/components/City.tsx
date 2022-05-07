@@ -93,7 +93,7 @@ export const City: React.FC<Props> = ({ city_title, city_members }) => {
                 <Avatar
                   key={i}
                   ref={(e) => (itemsRef.current[i] = e)}
-                  id="1" // TODO
+                  avatar={city_member_avatar}
                   name={city_member_name}
                   description={city_member_description}
                   socials={city_member_socials}
