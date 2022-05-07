@@ -1,4 +1,5 @@
 ---
+title: landing
 hero_title: LOREM IPSUM
 hero_buttons:
   - hero_button_text: LOREM IPSUM
