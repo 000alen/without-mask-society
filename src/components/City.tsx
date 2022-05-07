@@ -1,49 +1,20 @@
-import React, { useEffect, useRef } from "react";
-
-import { Avatar } from "./Avatar";
-import { Title } from "./Title";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { CityBackground } from "./backgrounds/CityBackground";
-import { CityTeamMember } from "../typings";
+import React, { useEffect, useRef } from "react";
 
-const items = [
-  {
-    id: "1",
-    name: "Juanito",
-    description: "3D Artist",
-  },
-  {
-    id: "2",
-    name: "Pamela",
-    description: "3D Artist",
-  },
-  {
-    id: "3",
-    name: "Jaime",
-    description: "3D Artist",
-  },
-  {
-    id: "4",
-    name: "Luchito",
-    description: "3D Artist",
-  },
-  {
-    id: "5",
-    name: "Hugo",
-    description: "3D Artist",
-  },
-];
+import { CityMember } from "../typings";
+import { Avatar } from "./Avatar";
+import { CityBackground } from "./backgrounds/CityBackground";
+import { Title } from "./Title";
 
 interface Props {
   city_title: string;
-  city_team: CityTeamMember[];
+  city_members: CityMember[];
 }
 
-export const City: React.FC<Props> = ({ city_title, city_team }) => {
+export const City: React.FC<Props> = ({ city_title, city_members }) => {
   const itemsRef = useRef<Array<HTMLDivElement | null>>(
-    // Array.from({ length: items.length }, () => null)
-    Array.from({ length: city_team.length }, () => null)
+    Array.from({ length: city_members.length }, () => null)
   );
 
   const hideItem = (item: HTMLDivElement) => {
@@ -108,23 +79,14 @@ export const City: React.FC<Props> = ({ city_title, city_team }) => {
         </Title>
 
         <div className="grid justify-center grid-cols-1 gap-4 lg:grid-cols-3 place-content-center">
-          {/* {items.map(({ id, name, description }, i) => (
-            <Avatar
-              key={i}
-              ref={(e) => (itemsRef.current[i] = e)}
-              id={id}
-              name={name}
-              description={description}
-            />
-          ))} */}
-          {city_team &&
-            city_team.map(
+          {city_members &&
+            city_members.map(
               (
                 {
-                  member_avatar,
-                  member_description,
-                  member_name,
-                  member_social,
+                  city_member_avatar,
+                  city_member_description,
+                  city_member_name,
+                  city_member_socials,
                 },
                 i
               ) => (
@@ -132,9 +94,9 @@ export const City: React.FC<Props> = ({ city_title, city_team }) => {
                   key={i}
                   ref={(e) => (itemsRef.current[i] = e)}
                   id="1" // TODO
-                  name={member_name}
-                  description={member_description}
-                  social={member_social}
+                  name={city_member_name}
+                  description={city_member_description}
+                  socials={city_member_socials}
                 />
               )
             )}{" "}

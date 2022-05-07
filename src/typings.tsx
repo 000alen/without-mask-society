@@ -4,38 +4,38 @@ export type ButtonIcon = "opensea" | "discord" | "none";
 
 export type Direction = "left" | "right";
 
-export interface CityTeamMemberSocial {
-  social_name: SocialName;
-  social_url: string;
+export interface CityMemberSocial {
+  city_member_social_name: SocialName;
+  city_member_social_url: string;
 }
 
-export interface CityTeamMember {
-  member_avatar: string;
-  member_description: string;
-  member_name: string;
-  member_social: CityTeamMemberSocial[];
+export interface CityMember {
+  city_member_avatar: string;
+  city_member_description: string;
+  city_member_name: string;
+  city_member_socials: CityMemberSocial[];
 }
 
-export interface ForestRoadmapMilestoneButton {
-  roadmap_button_color: string;
-  roadmap_button_icon: ButtonIcon;
-  roadmap_button_text: string;
-  roadmap_button_url: string;
+export interface ForestMilestoneButton {
+  forest_milestone_button_color: string;
+  forest_milestone_button_icon: ButtonIcon;
+  forest_milestone_button_text: string;
+  forest_milestone_button_url: string;
 }
 
-export interface ForestRoadmapMilestone {
-  roadmap_image: string;
-  roadmap_direction: Direction;
-  roadmap_title: string;
-  roadmap_text: string;
-  roadmap_buttons: ForestRoadmapMilestoneButton[];
+export interface ForestMilestone {
+  forest_milestone_image: string;
+  forest_milestone_direction: Direction;
+  forest_milestone_title: string;
+  forest_milestone_text: string;
+  forest_milestone_buttons: ForestMilestoneButton[];
 }
 
 export interface HeroButton {
-  button_color: string;
-  button_icon: ButtonIcon;
-  button_text: string;
-  button_url: string;
+  hero_button_color: string;
+  hero_button_icon: ButtonIcon;
+  hero_button_text: string;
+  hero_button_url: string;
 }
 
 export interface PoolQuestion {
@@ -44,16 +44,21 @@ export interface PoolQuestion {
 }
 
 export interface LandingFrontmatter {
+  hero_title: string;
+  hero_buttons: HeroButton[];
+
   about_text: string;
   about_title: string;
+
   city_title: string;
-  pool_title: string;
+  city_members: CityMember[];
+
+  forest_title: string;
+  forest_milestones: ForestMilestone[];
+
   planets_text: string;
   planets_title: string;
-  hero_title: string;
-  forest_title: string;
-  city_team: CityTeamMember[];
-  forest_roadmap: ForestRoadmapMilestone[];
-  hero_buttons: HeroButton[];
+
+  pool_title: string;
   pool_questions: PoolQuestion[];
 }

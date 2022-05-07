@@ -1,6 +1,6 @@
 import React from "react";
-import { PlanetsBackground } from "./backgrounds/PlanetsBackground";
 
+import { PlanetsBackground } from "./backgrounds/PlanetsBackground";
 import { Lorem } from "./Lorem";
 
 interface Props {

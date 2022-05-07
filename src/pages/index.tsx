@@ -1,4 +1,7 @@
-import React, { useRef, useEffect } from "react";
+import { graphql } from "gatsby";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import React from "react";
 
 import { AboutSection } from "../components/AboutSection";
 import { City } from "../components/City";
@@ -9,9 +12,6 @@ import { Nav } from "../components/Nav";
 import { Planets } from "../components/Planets";
 import { Pool } from "../components/Pool";
 import { Stars } from "../components/Stars";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import { graphql } from "gatsby";
 import { LandingFrontmatter } from "../typings";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -56,13 +56,13 @@ export default ({ data }: Props) => {
       {/* Team */}
       <City
         city_title={frontmatter.city_title}
-        city_team={frontmatter.city_team}
+        city_members={frontmatter.city_members}
       />
 
       {/* Roadmap */}
       <Forest
         forest_title={frontmatter.forest_title}
-        forest_roadmap={frontmatter.forest_roadmap}
+        forest_milestones={frontmatter.forest_milestones}
       />
 
       <Stars />

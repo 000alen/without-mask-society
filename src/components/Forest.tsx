@@ -1,68 +1,27 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 import React, { useEffect, useRef } from "react";
 
-import { lorem } from "../constants";
+import { ForestMilestone } from "../typings";
+import { ForestBackground } from "./backgrounds/ForestBackground";
 import { FancyButton } from "./FancyButton";
+import { DiscordIcon } from "./icons/DiscordIcon";
 import { OpenseaIcon } from "./icons/OpenseaIcon";
 import { RoadmapLeft } from "./RoadmapLeft";
 import { RoadmapRight } from "./RoadmapRight";
 import { Title } from "./Title";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import { ForestBackground } from "./backgrounds/ForestBackground";
-import { ForestRoadmapMilestone } from "../typings";
-import { DiscordIcon } from "./icons/DiscordIcon";
-
-const items = [
-  {
-    direction: "left",
-    id: "1",
-    title: "0%",
-    paragraph: lorem,
-    children: undefined,
-  },
-  {
-    direction: "right",
-    id: "2",
-    title: "25%",
-    paragraph: lorem,
-    children: (
-      <FancyButton label="Go to OpenSea">
-        <OpenseaIcon />
-      </FancyButton>
-    ),
-  },
-  {
-    direction: "left",
-    id: "3",
-    title: "50%",
-    paragraph: lorem,
-    children: undefined,
-  },
-  {
-    direction: "right",
-    id: "4",
-    title: "75%",
-    paragraph: lorem,
-    children: undefined,
-  },
-  {
-    direction: "left",
-    id: "1",
-    title: "100%",
-    paragraph: lorem,
-    children: undefined,
-  },
-];
 
 interface Props {
   forest_title: string;
-  forest_roadmap: ForestRoadmapMilestone[];
+  forest_milestones: ForestMilestone[];
 }
 
-export const Forest: React.FC<Props> = ({ forest_title, forest_roadmap }) => {
+export const Forest: React.FC<Props> = ({
+  forest_title,
+  forest_milestones,
+}) => {
   const itemsRef = useRef<Array<HTMLDivElement | null>>(
-    // Array.from({ length: items.length }, () => null)
-    Array.from({ length: forest_roadmap.length }, () => null)
+    Array.from({ length: forest_milestones.length }, () => null)
   );
 
   const hideItem = (item: HTMLDivElement) => {
@@ -126,66 +85,41 @@ export const Forest: React.FC<Props> = ({ forest_title, forest_roadmap }) => {
           {forest_title}
         </Title>
 
-        {/* {items.map(({ direction, id, title, paragraph, children }, i) =>
-          direction === "left" ? (
-            <RoadmapLeft
-              key={i}
-              ref={(e) => (itemsRef.current[i] = e)}
-              className="gs_fromLeft"
-              id={id}
-              title={title}
-              paragraph={paragraph}
-            >
-              {children}
-            </RoadmapLeft>
-          ) : (
-            <RoadmapRight
-              key={i}
-              ref={(e) => (itemsRef.current[i] = e)}
-              className="gs_fromRight"
-              id={id}
-              title={title}
-              paragraph={paragraph}
-            >
-              {children}
-            </RoadmapRight>
-          )
-        )} */}
-        {forest_roadmap &&
-          forest_roadmap.map(
+        {forest_milestones &&
+          forest_milestones.map(
             (
               {
-                roadmap_direction,
-                roadmap_title,
-                roadmap_text,
-                roadmap_buttons,
+                forest_milestone_direction,
+                forest_milestone_title,
+                forest_milestone_text,
+                forest_milestone_buttons,
               },
               i
             ) =>
-              roadmap_direction === "left" ? (
+              forest_milestone_direction === "left" ? (
                 <RoadmapLeft
                   key={i}
                   ref={(e) => (itemsRef.current[i] = e)}
                   className="gs_fromLeft"
                   id="1" // TODO
-                  title={roadmap_title}
-                  paragraph={roadmap_text}
+                  title={forest_milestone_title}
+                  paragraph={forest_milestone_text}
                 >
-                  {roadmap_buttons &&
-                    roadmap_buttons.map(
+                  {forest_milestone_buttons &&
+                    forest_milestone_buttons.map(
                       ({
-                        roadmap_button_color,
-                        roadmap_button_icon,
-                        roadmap_button_text,
-                        roadmap_button_url,
+                        forest_milestone_button_color,
+                        forest_milestone_button_icon,
+                        forest_milestone_button_text,
+                        forest_milestone_button_url,
                       }) => (
                         <FancyButton
-                          label={roadmap_button_text}
-                          color={roadmap_button_color}
+                          label={forest_milestone_button_text}
+                          color={forest_milestone_button_color}
                         >
-                          {roadmap_button_icon === "opensea" ? (
+                          {forest_milestone_button_icon === "opensea" ? (
                             <OpenseaIcon />
-                          ) : roadmap_button_icon === "discord" ? (
+                          ) : forest_milestone_button_icon === "discord" ? (
                             <DiscordIcon />
                           ) : null}
                         </FancyButton>
@@ -198,24 +132,24 @@ export const Forest: React.FC<Props> = ({ forest_title, forest_roadmap }) => {
                   ref={(e) => (itemsRef.current[i] = e)}
                   className="gs_fromRight"
                   id="1" // TODO
-                  title={roadmap_title}
-                  paragraph={roadmap_text}
+                  title={forest_milestone_title}
+                  paragraph={forest_milestone_text}
                 >
-                  {roadmap_buttons &&
-                    roadmap_buttons.map(
+                  {forest_milestone_buttons &&
+                    forest_milestone_buttons.map(
                       ({
-                        roadmap_button_color,
-                        roadmap_button_icon,
-                        roadmap_button_text,
-                        roadmap_button_url,
+                        forest_milestone_button_color,
+                        forest_milestone_button_icon,
+                        forest_milestone_button_text,
+                        forest_milestone_button_url,
                       }) => (
                         <FancyButton
-                          label={roadmap_button_text}
-                          color={roadmap_button_color}
+                          label={forest_milestone_button_text}
+                          color={forest_milestone_button_color}
                         >
-                          {roadmap_button_icon === "opensea" ? (
+                          {forest_milestone_button_icon === "opensea" ? (
                             <OpenseaIcon />
-                          ) : roadmap_button_icon === "discord" ? (
+                          ) : forest_milestone_button_icon === "discord" ? (
                             <DiscordIcon />
                           ) : null}
                         </FancyButton>

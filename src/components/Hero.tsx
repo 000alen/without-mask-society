@@ -1,6 +1,6 @@
 import React from "react";
-import { HeroButton } from "../typings";
 
+import { HeroButton } from "../typings";
 import { FancyButton } from "./FancyButton";
 import { DiscordIcon } from "./icons/DiscordIcon";
 import { OpenseaIcon } from "./icons/OpenseaIcon";
@@ -34,7 +34,7 @@ export const Hero: React.FC<Props> = ({ hero_title, hero_buttons }) => {
         {/* TODO: Urls */}
         {hero_buttons &&
           hero_buttons.map(
-            ({ button_color, button_icon, button_text, button_url }) => (
+            ({ hero_button_color: button_color, hero_button_icon: button_icon, hero_button_text: button_text, hero_button_url: button_url }) => (
               <FancyButton label={button_text} color={button_color}>
                 {button_icon === "opensea" ? (
                   <OpenseaIcon />

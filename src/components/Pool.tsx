@@ -1,25 +1,11 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 import React, { useEffect, useRef } from "react";
+
+import { PoolQuestion } from "../typings";
 import { PoolBackground } from "./backgrounds/PoolBackground";
 import { Question } from "./Question";
 import { Title } from "./Title";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import { PoolQuestion } from "../typings";
-
-const items = [
-  {
-    question: "What is the name of the pool?",
-    answer: "The Pool",
-  },
-  {
-    question: "What is the size of the pool?",
-    answer: "100m x 100m",
-  },
-  {
-    question: "What is the depth of the pool?",
-    answer: "100m",
-  },
-];
 
 interface Props {
   pool_title: string;
@@ -28,7 +14,6 @@ interface Props {
 
 export const Pool: React.FC<Props> = ({ pool_title, pool_questions }) => {
   const itemsRef = useRef<Array<HTMLDivElement | null>>(
-    // Array.from({ length: items.length }, () => null)
     Array.from({ length: pool_questions.length }, () => null)
   );
 
@@ -94,14 +79,6 @@ export const Pool: React.FC<Props> = ({ pool_title, pool_questions }) => {
         </Title>
 
         <div className="flex flex-col space-y-4">
-          {/* {items.map(({ question, answer }, i) => (
-            <Question
-              key={i}
-              ref={(e) => (itemsRef.current[i] = e)}
-              question={question}
-              answer={answer}
-            />
-          ))} */}
           {pool_questions &&
             pool_questions.map(({ pool_question, pool_answer }, i) => (
               <Question

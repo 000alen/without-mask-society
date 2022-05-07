@@ -1,7 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
-import { CityTeamMemberSocial } from "../typings";
-
+import { CityMemberSocial } from "../typings";
 import { DiscordIcon } from "./icons/DiscordIcon";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
 import { TwitterIcon } from "./icons/TwitterIcon";
@@ -11,11 +10,11 @@ interface Props {
   name: string;
   description: string;
   id: string;
-  social: CityTeamMemberSocial[];
+  socials: CityMemberSocial[];
 }
 
 export const Avatar = React.forwardRef<HTMLDivElement, Props>(
-  ({ name, description, id, social }, ref) => {
+  ({ name, description, id, socials }, ref) => {
     return (
       <div ref={ref} className="flex flex-col items-center">
         <div className="relative flex justify-center">
@@ -64,16 +63,18 @@ export const Avatar = React.forwardRef<HTMLDivElement, Props>(
 
         <p className="mb-8 italic">{description}</p>
         <div className="flex flex-row justify-center space-x-2">
-          {/* <TwitterIcon />
-          <LinkedinIcon /> */}
           {/* TODO */}
-          {social &&
-            social.map(({ social_name, social_url }) =>
-              social_name === "twitter" ? (
-                <TwitterIcon />
-              ) : social_name === "linkedin" ? (
-                <LinkedinIcon />
-              ) : null
+          {socials &&
+            socials.map(
+              ({
+                city_member_social_name: name,
+                city_member_social_url: url,
+              }) =>
+                name === "twitter" ? (
+                  <TwitterIcon />
+                ) : name === "linkedin" ? (
+                  <LinkedinIcon />
+                ) : null
             )}
         </div>
       </div>

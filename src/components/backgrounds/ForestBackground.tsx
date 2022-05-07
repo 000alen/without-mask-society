@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect } from "react";
+
 // import gsap from "gsap";
 // import P from "../../images/forest/P.png";
 // import B from "../../images/forest/forest.png";

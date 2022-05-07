@@ -11,26 +11,30 @@ collections:
     label: Landing
     folder: landing
     create: true
-    view_groups:
-      - label: "Hero"
-        field: hero
-        pattern: hero_\w+
     fields:
       # Hero
-      - { name: hero_title, label: "Hero title", widget: text }
-      - name: hero_buttons
-        label: "Hero buttons"
-        widget: list
-        fields:
-          - { name: button_text, label: "Button text" }
-          - { name: button_color, label: "Button color", widget: color }
-          - {
-              name: button_icon,
-              label: "Button icon",
-              widget: select,
-              options: [opensea, discord, none],
-            }
-          - { name: button_url, label: "Button url" }
+      - { name: hero_title, label: "Hero - Title", widget: text }
+      - {
+          name: hero_buttons,
+          label: "Hero - Buttons",
+          widget: list,
+          fields:
+            [
+              { name: hero_button_text, label: "Hero - Button text" },
+              {
+                name: hero_button_color,
+                label: "Hero - Button color",
+                widget: color,
+              },
+              {
+                name: hero_button_icon,
+                label: "Hero - Button icon",
+                widget: select,
+                options: [opensea, discord, none],
+              },
+              { name: hero_button_url, label: "Hero - Button url" },
+            ],
+        }
 
       # About
       - { name: about_title, label: "About - Title" }
@@ -38,57 +42,100 @@ collections:
 
       # City
       - { name: city_title, label: "City - Title" }
-      - name: city_team
-        label: "City - Team"
-        widget: list
-        fields:
-          - { name: member_name, label: "Member name" }
-          - { name: member_description, label: "Member description" }
-          - { name: member_avatar, label: "Member avatar", widget: image }
-          - name: member_social
-            label: "Member social"
-            widget: list
-            fields:
-              - {
-                  name: social_name,
-                  label: "Social name",
-                  widget: select,
-                  options: [twitter, linkedin],
-                }
-              - { name: social_url, label: "Social url" }
+      - {
+          name: city_members,
+          label: "City - Members",
+          widget: list,
+          fields:
+            [
+              { name: city_member_name, label: "City - Member name" },
+              {
+                name: city_member_description,
+                label: "City - Member description",
+              },
+              {
+                name: city_member_avatar,
+                label: "City - Member avatar",
+                widget: image,
+              },
+              {
+                name: city_member_socials,
+                label: "City - Member socials",
+                widget: list,
+                fields:
+                  [
+                    {
+                      name: city_member_social_name,
+                      label: "City - Social name",
+                      widget: select,
+                      options: [twitter, linkedin],
+                    },
+                    {
+                      name: city_member_social_url,
+                      label: "City - Social url",
+                    },
+                  ],
+              },
+            ],
+        }
 
       # Forest
       - { name: forest_title, label: "Forest - Title" }
-      - name: forest_roadmap
-        label: "Forest - Roadmap"
-        widget: list
-        fields:
-          - {
-              name: roadmap_direction,
-              label: "Roadmap direction",
-              widget: select,
-              options: [left, right],
-            }
-          - { name: roadmap_title, label: "Roadmap title" }
-          - { name: roadmap_text, label: "Roadmap text", widget: text }
-          - { name: roadmap_image, label: "Roadmap image", widget: image }
-          - name: roadmap_buttons
-            label: "Roadmap buttons"
-            widget: list
-            fields:
-              - { name: roadmap_button_text, label: "Button text" }
-              - {
-                  name: roadmap_button_color,
-                  label: "Button color",
-                  widget: color,
-                }
-              - {
-                  name: roadmap_button_icon,
-                  label: "Button icon",
-                  widget: select,
-                  options: [opensea, discord, none],
-                }
-              - { name: roadmap_button_url, label: "Button url" }
+      - {
+          name: forest_milestones,
+          label: "Forest - Milestones",
+          widget: list,
+          fields:
+            [
+              {
+                name: forest_milestone_direction,
+                label: "Forest - Milestone direction",
+                widget: select,
+                options: [left, right],
+              },
+              {
+                name: forest_milestone_title,
+                label: "Forest - Milestone title",
+              },
+              {
+                name: forest_milestone_text,
+                label: "Forest - Milestone text",
+                widget: text,
+              },
+              {
+                name: forest_milestone_image,
+                label: "Forest - Milestone image",
+                widget: image,
+              },
+              {
+                name: forest_milestone_buttons,
+                label: "Forest - Milestone buttons",
+                widget: list,
+                fields:
+                  [
+                    {
+                      name: forest_milestone_button_text,
+                      label: "Forest - Milestone button text",
+                    },
+                    {
+                      name: forest_milestone_button_color,
+                      label: "Forest - Milestone button color",
+                      widget: color,
+                    },
+                    {
+                      name: forest_milestone_button_icon,
+                      label: "Forest - Milestone button icon",
+                      widget: select,
+                      options: [opensea, discord, none],
+                    },
+                    {
+                      name: forest_milestone_button_url,
+                      label: "Forest - Milestone button url",
+                    },
+                  ],
+              },
+            ],
+        }
 
       # Planets
       - { name: planets_title, label: "Planet - Title" }
@@ -100,8 +147,8 @@ collections:
         label: "Pool - Questions"
         widget: list
         fields:
-          - { name: pool_question, label: "Question" }
-          - { name: pool_answer, label: "Answer", widget: text }
+          - { name: pool_question, label: "Pool - Question" }
+          - { name: pool_answer, label: "Pool - Answer", widget: text }
 
   - name: blog
     label: Blog
