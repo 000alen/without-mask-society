@@ -1,6 +1,6 @@
 ---
 title: landing
-hero_title: LOREM IPSUM
+hero_title: LOREM IPSUM DOREM
 hero_buttons:
   - hero_button_text: LOREM IPSUM
     hero_button_color: "#ff0000"
