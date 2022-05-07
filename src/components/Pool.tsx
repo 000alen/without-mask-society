@@ -1,78 +1,101 @@
-import { StaticImage } from "gatsby-plugin-image";
-import React from "react";
-
-import { Lorem } from "./Lorem";
+import React, { useEffect, useRef } from "react";
+import { PoolBackground } from "./backgrounds/PoolBackground";
 import { Question } from "./Question";
-import { RoadmapLeft } from "./RoadmapLeft";
-import { RoadmapRight } from "./RoadmapRight";
 import { Title } from "./Title";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+const items = [
+  {
+    question: "What is the name of the pool?",
+    answer: "The Pool",
+  },
+  {
+    question: "What is the size of the pool?",
+    answer: "100m x 100m",
+  },
+  {
+    question: "What is the depth of the pool?",
+    answer: "100m",
+  },
+];
 
 export const Pool = () => {
+  const itemsRef = useRef<Array<HTMLDivElement | null>>(
+    Array.from({ length: items.length }, () => null)
+  );
+
+  const hideItem = (item: HTMLDivElement) => {
+    gsap.set(item, { autoAlpha: 0 });
+  };
+
+  function animateItem(item: HTMLDivElement, direction: number = 1) {
+    let x = 0;
+    let y = direction * 100;
+
+    if (item.classList.contains("gs_fromLeft")) {
+      x = -300;
+      y = 0;
+    } else if (item.classList.contains("gs_fromRight")) {
+      x = 300;
+      y = 0;
+    }
+
+    item.style.transform = "translate(" + x + "px, " + y + "px)";
+    item.style.opacity = "0";
+
+    gsap.fromTo(
+      item,
+      { x: x, y: y, autoAlpha: 0 },
+      {
+        duration: 1.25,
+        x: 0,
+        y: 0,
+        autoAlpha: 1,
+        ease: "expo",
+        overwrite: "auto",
+      }
+    );
+  }
+
+  useEffect(() => {
+    itemsRef.current!.forEach((item) => {
+      hideItem(item!);
+
+      ScrollTrigger.create({
+        trigger: item,
+        onEnter: () => {
+          animateItem(item!);
+        },
+        onEnterBack: () => {
+          animateItem(item!, -1);
+          animateItem(item!, -1);
+        },
+        onLeave: () => {
+          hideItem(item!);
+        },
+      });
+    });
+  }, []);
+
   return (
     <section className="relative">
-      {/* <StaticImage
-        className="!absolute z-50 w-[6.3%] left-[40.2%] top-[55.8%]"
-        src="../images/pool/P1.png"
-        alt=""
-      />
-
-      <StaticImage
-        className="!absolute z-50 w-[82.9.8%] left-[0.4%] top-[66.8%]"
-        src="../images/pool/P2.png"
-        alt=""
-      />
-
-      <StaticImage
-        className="!absolute z-50 w-[12%] left-[63.7%] top-[40.6%]"
-        src="../images/pool/P3.png"
-        alt=""
-      />
-
-      <StaticImage
-        className="!absolute z-[49] w-[43.6%] left-[56.3%] top-[63.5%]"
-        src="../images/pool/P4.png"
-        alt=""
-      />
-
-      <StaticImage
-        className="!absolute z-50 w-[17.2%] left-[72.5%] top-[53.5%]"
-        src="../images/pool/P5.png"
-        alt=""
-      />
-
-      <StaticImage
-        className="!absolute z-[48] w-[22.3%] left-[49.2%] top-[54.4%]"
-        src="../images/pool/P6.png"
-        alt=""
-      />
-
-      <StaticImage
-        className="!absolute z-50 w-[18.5%] left-[11.8%] top-[56.5%]"
-        src="../images/pool/P7.png"
-        alt=""
-      /> */}
-
       <div className="lg:absolute z-[100] w-full top-[10%] flex flex-col items-center">
         <Title className="mb-8">FAQ</Title>
 
         <div className="flex flex-col space-y-4">
-          <Question question="What is lorem ipsum?" answer="AAA" />
-          <Question question="What is lorem ipsum ii?" answer="AAA" />
-          <Question question="What is lorem ipsum iii?" answer="AAA" />
+          {items.map(({ question, answer }, i) => (
+            <Question
+              key={i}
+              ref={(e) => (itemsRef.current[i] = e)}
+              question={question}
+              answer={answer}
+            />
+          ))}
         </div>
       </div>
 
-      {/* <StaticImage
-        className="w-full h-auto"
-        src="../images/pool/pool.png"
-        alt=""
-      /> */}
-
-      <StaticImage
-        className="w-full h-auto"
-        src="../images/pool/static.png"
-        alt=""
-      />
+      <PoolBackground />
     </section>
   );
 };

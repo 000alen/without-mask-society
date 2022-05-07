@@ -8,11 +8,11 @@ interface Props {
 }
 
 export const Question = React.forwardRef<HTMLDivElement, Props>(
-  ({ id, question, answer }) => {
+  ({ id, question, answer }, ref) => {
     if (!id) id = uuid();
 
     return (
-      <div>
+      <div ref={ref}>
         <input id={id} className="toggle" type="checkbox" />
         <label htmlFor={id} className="toggle-label">
           {question}
