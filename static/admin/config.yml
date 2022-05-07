@@ -11,8 +11,10 @@ collections:
     label: Landing
     folder: landing
     create: true
+    slug: "{{slug}}"
     fields:
       # Hero
+      - { name: title }
       - { name: hero_title, label: "Hero - Title", widget: text }
       - {
           name: hero_buttons,
