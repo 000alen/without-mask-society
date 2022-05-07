@@ -4,6 +4,7 @@ import { Question } from "./Question";
 import { Title } from "./Title";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { PoolQuestion } from "../typings";
 
 const items = [
   {
@@ -20,9 +21,15 @@ const items = [
   },
 ];
 
-export const Pool = () => {
+interface Props {
+  pool_title: string;
+  pool_questions: PoolQuestion[];
+}
+
+export const Pool: React.FC<Props> = ({ pool_title, pool_questions }) => {
   const itemsRef = useRef<Array<HTMLDivElement | null>>(
-    Array.from({ length: items.length }, () => null)
+    // Array.from({ length: items.length }, () => null)
+    Array.from({ length: pool_questions.length }, () => null)
   );
 
   const hideItem = (item: HTMLDivElement) => {
@@ -81,17 +88,29 @@ export const Pool = () => {
   return (
     <section className="relative">
       <div className="lg:absolute z-[100] w-full top-[10%] flex flex-col items-center">
-        <Title className="mb-8">FAQ</Title>
+        <Title className="mb-8">
+          {/* FAQ */}
+          {pool_title}
+        </Title>
 
         <div className="flex flex-col space-y-4">
-          {items.map(({ question, answer }, i) => (
+          {/* {items.map(({ question, answer }, i) => (
             <Question
               key={i}
               ref={(e) => (itemsRef.current[i] = e)}
               question={question}
               answer={answer}
             />
-          ))}
+          ))} */}
+          {pool_questions &&
+            pool_questions.map(({ pool_question, pool_answer }, i) => (
+              <Question
+                key={i}
+                ref={(e) => (itemsRef.current[i] = e)}
+                question={pool_question}
+                answer={pool_answer}
+              />
+            ))}
         </div>
       </div>
 

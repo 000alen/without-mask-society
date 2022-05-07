@@ -1,4 +1,3 @@
-import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect, useRef } from "react";
 
 import { Avatar } from "./Avatar";
@@ -6,6 +5,7 @@ import { Title } from "./Title";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { CityBackground } from "./backgrounds/CityBackground";
+import { CityTeamMember } from "../typings";
 
 const items = [
   {
@@ -35,9 +35,15 @@ const items = [
   },
 ];
 
-export const City = () => {
+interface Props {
+  city_title: string;
+  city_team: CityTeamMember[];
+}
+
+export const City: React.FC<Props> = ({ city_title, city_team }) => {
   const itemsRef = useRef<Array<HTMLDivElement | null>>(
-    Array.from({ length: items.length }, () => null)
+    // Array.from({ length: items.length }, () => null)
+    Array.from({ length: city_team.length }, () => null)
   );
 
   const hideItem = (item: HTMLDivElement) => {
@@ -96,10 +102,13 @@ export const City = () => {
   return (
     <section className="relative">
       <div className="lg:absolute z-[100] w-full top-0 justify-center flex flex-col">
-        <Title className="mb-8">MEET THE TEAM</Title>
+        <Title className="mb-8">
+          {/* MEET THE TEAM */}
+          {city_title}
+        </Title>
 
         <div className="grid justify-center grid-cols-1 gap-4 lg:grid-cols-3 place-content-center">
-          {items.map(({ id, name, description }, i) => (
+          {/* {items.map(({ id, name, description }, i) => (
             <Avatar
               key={i}
               ref={(e) => (itemsRef.current[i] = e)}
@@ -107,7 +116,28 @@ export const City = () => {
               name={name}
               description={description}
             />
-          ))}
+          ))} */}
+          {city_team &&
+            city_team.map(
+              (
+                {
+                  member_avatar,
+                  member_description,
+                  member_name,
+                  member_social,
+                },
+                i
+              ) => (
+                <Avatar
+                  key={i}
+                  ref={(e) => (itemsRef.current[i] = e)}
+                  id="1" // TODO
+                  name={member_name}
+                  description={member_description}
+                  social={member_social}
+                />
+              )
+            )}{" "}
         </div>
       </div>
 

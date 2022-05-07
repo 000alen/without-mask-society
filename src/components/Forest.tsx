@@ -1,4 +1,3 @@
-import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect, useRef } from "react";
 
 import { lorem } from "../constants";
@@ -10,6 +9,8 @@ import { Title } from "./Title";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { ForestBackground } from "./backgrounds/ForestBackground";
+import { ForestRoadmapMilestone } from "../typings";
+import { DiscordIcon } from "./icons/DiscordIcon";
 
 const items = [
   {
@@ -53,9 +54,15 @@ const items = [
   },
 ];
 
-export const Forest = () => {
+interface Props {
+  forest_title: string;
+  forest_roadmap: ForestRoadmapMilestone[];
+}
+
+export const Forest: React.FC<Props> = ({ forest_title, forest_roadmap }) => {
   const itemsRef = useRef<Array<HTMLDivElement | null>>(
-    Array.from({ length: items.length }, () => null)
+    // Array.from({ length: items.length }, () => null)
+    Array.from({ length: forest_roadmap.length }, () => null)
   );
 
   const hideItem = (item: HTMLDivElement) => {
@@ -114,9 +121,12 @@ export const Forest = () => {
   return (
     <section className="relative">
       <div className="lg:absolute z-[100] w-full top-[10%] justify-center flex flex-col">
-        <Title className="mb-8">ROADMAP</Title>
+        <Title className="mb-8">
+          {/* ROADMAP */}
+          {forest_title}
+        </Title>
 
-        {items.map(({ direction, id, title, paragraph, children }, i) =>
+        {/* {items.map(({ direction, id, title, paragraph, children }, i) =>
           direction === "left" ? (
             <RoadmapLeft
               key={i}
@@ -140,7 +150,80 @@ export const Forest = () => {
               {children}
             </RoadmapRight>
           )
-        )}
+        )} */}
+        {forest_roadmap &&
+          forest_roadmap.map(
+            (
+              {
+                roadmap_direction,
+                roadmap_title,
+                roadmap_text,
+                roadmap_buttons,
+              },
+              i
+            ) =>
+              roadmap_direction === "left" ? (
+                <RoadmapLeft
+                  key={i}
+                  ref={(e) => (itemsRef.current[i] = e)}
+                  className="gs_fromLeft"
+                  id="1" // TODO
+                  title={roadmap_title}
+                  paragraph={roadmap_text}
+                >
+                  {roadmap_buttons &&
+                    roadmap_buttons.map(
+                      ({
+                        roadmap_button_color,
+                        roadmap_button_icon,
+                        roadmap_button_text,
+                        roadmap_button_url,
+                      }) => (
+                        <FancyButton
+                          label={roadmap_button_text}
+                          color={roadmap_button_color}
+                        >
+                          {roadmap_button_icon === "opensea" ? (
+                            <OpenseaIcon />
+                          ) : roadmap_button_icon === "discord" ? (
+                            <DiscordIcon />
+                          ) : null}
+                        </FancyButton>
+                      )
+                    )}
+                </RoadmapLeft>
+              ) : (
+                <RoadmapRight
+                  key={i}
+                  ref={(e) => (itemsRef.current[i] = e)}
+                  className="gs_fromRight"
+                  id="1" // TODO
+                  title={roadmap_title}
+                  paragraph={roadmap_text}
+                >
+                  {roadmap_buttons &&
+                    roadmap_buttons.map(
+                      ({
+                        roadmap_button_color,
+                        roadmap_button_icon,
+                        roadmap_button_text,
+                        roadmap_button_url,
+                      }) => (
+                        <FancyButton
+                          label={roadmap_button_text}
+                          color={roadmap_button_color}
+                        >
+                          {roadmap_button_icon === "opensea" ? (
+                            <OpenseaIcon />
+                          ) : roadmap_button_icon === "discord" ? (
+                            <DiscordIcon />
+                          ) : null}
+                        </FancyButton>
+                      )
+                    )}
+                </RoadmapRight>
+              )
+          )}
       </div>
       <ForestBackground />
     </section>
