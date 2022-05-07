@@ -7,6 +7,102 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
+  - name: landing
+    label: Landing
+    folder: landing
+    create: true
+    view_groups:
+      - label: "Hero"
+        field: hero
+        pattern: hero_\w+
+    fields:
+      # Hero
+      - { name: hero_title, label: "Hero title", widget: text }
+      - name: hero_buttons
+        label: "Hero buttons"
+        widget: list
+        fields:
+          - { name: button_text, label: "Button text" }
+          - { name: button_color, label: "Button color", widget: color }
+          - {
+              name: button_icon,
+              label: "Button icon",
+              widget: select,
+              options: [opensea, discord, none],
+            }
+          - { name: button_url, label: "Button url" }
+
+      # About
+      - { name: about_title, label: "About - Title" }
+      - { name: about_text, label: "About - Text", widget: text }
+
+      # City
+      - { name: city_title, label: "City - Title" }
+      - name: city_team
+        label: "City - Team"
+        widget: list
+        fields:
+          - { name: member_name, label: "Member name" }
+          - { name: member_description, label: "Member description" }
+          - { name: member_avatar, label: "Member avatar", widget: image }
+          - name: member_social
+            label: "Member social"
+            widget: list
+            fields:
+              - {
+                  name: social_name,
+                  label: "Social name",
+                  widget: select,
+                  options: [twitter, linkedin],
+                }
+              - { name: social_url, label: "Social url" }
+
+      # Forest
+      - { name: forest_title, label: "Forest - Title" }
+      - name: forest_roadmap
+        label: "Forest - Roadmap"
+        widget: list
+        fields:
+          - {
+              name: roadmap_direction,
+              label: "Roadmap direction",
+              widget: select,
+              options: [left, right],
+            }
+          - { name: roadmap_title, label: "Roadmap title" }
+          - { name: roadmap_text, label: "Roadmap text", widget: text }
+          - { name: roadmap_image, label: "Roadmap image", widget: image }
+          - name: roadmap_buttons
+            label: "Roadmap buttons"
+            widget: list
+            fields:
+              - { name: roadmap_button_text, label: "Button text" }
+              - {
+                  name: roadmap_button_color,
+                  label: "Button color",
+                  widget: color,
+                }
+              - {
+                  name: roadmap_button_icon,
+                  label: "Button icon",
+                  widget: select,
+                  options: [opensea, discord, none],
+                }
+              - { name: roadmap_button_url, label: "Button url" }
+
+      # Planets
+      - { name: planets_title, label: "Planet - Title" }
+      - { name: planets_text, label: "Planet - Text", widget: text }
+
+      # Pool
+      - { name: pool_title, label: "Pool - Title" }
+      - name: pool_questions
+        label: "Pool - Questions"
+        widget: list
+        fields:
+          - { name: pool_question, label: "Question" }
+          - { name: pool_answer, label: "Answer", widget: text }
+
   - name: blog
     label: Blog
     folder: blog

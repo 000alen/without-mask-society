@@ -18,6 +18,13 @@ const config: GatsbyConfig = {
         path: `${__dirname}/blog`,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "landing",
+        path: `${__dirname}/landing`,
+      },
+    },
     "gatsby-transformer-remark",
   ],
 };
