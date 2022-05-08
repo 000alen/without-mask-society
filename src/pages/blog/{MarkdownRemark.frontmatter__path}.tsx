@@ -25,10 +25,10 @@ export default function Template({ data }: Props) {
   const { frontmatter, html } = markdownRemark;
   return (
     <div>
-      <div className="flex flex-col items-end p-12 space-y-2 lg:flex-row lg:justify-around lg:space-x-2">
+      <div className="flex flex-col items-end gap-2 p-12 lg:flex-row lg:justify-around">
         <WMSLogo className="w-24" />
 
-        <div className="flex flex-row space-x-4">
+        <div className="flex flex-row gap-4">
           <a>
             <TwitterIcon />
           </a>

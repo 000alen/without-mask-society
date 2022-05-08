@@ -24,7 +24,7 @@ export const Lorem: React.FC<Props> = ({
       style={style}
       className={`${className} lg:absolute z-[100] inset-x-0 flex justify-center`}
     >
-      <div className="flex flex-col items-center p-8 space-y-2">
+      <div className="flex flex-col items-center gap-2 p-8">
         <Title>
           {/* LOREM */}
           {title}

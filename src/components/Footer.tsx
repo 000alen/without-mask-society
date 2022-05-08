@@ -11,10 +11,10 @@ import { WMSLogo } from "./WMSLogo";
 
 export const Footer = () => {
   return (
-    <footer className="flex flex-col justify-around space-y-6">
+    <footer className="flex flex-col justify-around gap-6">
       <Mailing />
 
-      <div className="flex flex-col p-12 space-y-2 lg:flex-row lg:justify-around lg:space-x-2">
+      <div className="flex flex-col gap-2 p-12 lg:flex-row lg:justify-around">
         <WMSLogo className="w-24" />
 
         <a className="text-xl italic font-bold">ABOUT</a>
@@ -23,7 +23,7 @@ export const Footer = () => {
         <a className="text-xl italic font-bold">TEAM</a>
         <a className="text-xl italic font-bold">SHOP</a>
 
-        <div className="flex flex-row space-x-4">
+        <div className="flex flex-row gap-4">
           <a>
             <TwitterIcon />
           </a>

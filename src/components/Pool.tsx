@@ -78,7 +78,7 @@ export const Pool: React.FC<Props> = ({ pool_title, pool_questions }) => {
           {pool_title}
         </Title>
 
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col gap-4">
           {pool_questions &&
             pool_questions.map(({ pool_question, pool_answer }, i) => (
               <Question

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { HeroButton } from "../typings";
+import { HeroButton, HeroShowcase } from "../typings";
 import { FancyButton } from "./FancyButton";
 import { DiscordIcon } from "./icons/DiscordIcon";
 import { OpenseaIcon } from "./icons/OpenseaIcon";
@@ -10,9 +10,16 @@ import { WMSLogo } from "./WMSLogo";
 interface Props {
   hero_title: string;
   hero_buttons: HeroButton[];
+  hero_showcase_title: string;
+  hero_showcase: HeroShowcase[];
 }
 
-export const Hero: React.FC<Props> = ({ hero_title, hero_buttons }) => {
+export const Hero: React.FC<Props> = ({
+  hero_title,
+  hero_buttons,
+  hero_showcase_title,
+  hero_showcase,
+}) => {
   return (
     <section className="flex flex-col items-center">
       <WMSLogo className="w-[50%]" />
@@ -22,17 +29,17 @@ export const Hero: React.FC<Props> = ({ hero_title, hero_buttons }) => {
         {hero_title}
       </p>
 
-      <div className="flex flex-col justify-center mt-24 space-y-2 lg:flex-row lg:space-x-2">
-        {/* <FancyButton label="Buy on OpenSea">
+      <div className="flex flex-col items-center justify-center gap-2 mt-24 lg:flex-row">
+        <FancyButton label="Buy on OpenSea">
           <OpenseaIcon />
         </FancyButton>
 
         <FancyButton label="Go to Discord" color="#5865F2">
           <DiscordIcon />
-        </FancyButton> */}
+        </FancyButton>
 
         {/* TODO: Urls */}
-        {hero_buttons &&
+        {/* {hero_buttons &&
           hero_buttons.map(
             (
               {
@@ -51,10 +58,14 @@ export const Hero: React.FC<Props> = ({ hero_title, hero_buttons }) => {
                 ) : null}
               </FancyButton>
             )
-          )}
+          )} */}
       </div>
 
-      <Showcase className="mt-24" />
+      <Showcase
+        className="mt-24"
+        hero_showcase_title={hero_showcase_title}
+        hero_showcase={hero_showcase}
+      />
     </section>
   );
 };

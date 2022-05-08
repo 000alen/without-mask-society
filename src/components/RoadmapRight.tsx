@@ -19,7 +19,7 @@ export const RoadmapRight = React.forwardRef<
   return (
     <div
       ref={ref}
-      className={`${className} flex flex-col p-8 space-y-8 lg:justify-center lg:space-x-8 lg:flex-row`}
+      className={`${className} flex flex-col p-8 gap-8 lg:justify-center lg:flex-row`}
     >
       <img
         className="lg:hidden self-end min-w-min max-w-[20rem] rounded max-h-[20rem]"
@@ -27,7 +27,7 @@ export const RoadmapRight = React.forwardRef<
         alt=""
       />
 
-      <div className="lg:w-[70%] p-8 border-r-2 flex flex-col space-y-2 text-right items-end">
+      <div className="lg:w-[70%] p-8 border-r-2 flex flex-col gap-2 text-right items-end">
         <Subtitle>{title}</Subtitle>
         <p className="max-w-xl font-semibold">{paragraph}</p>
         {children}

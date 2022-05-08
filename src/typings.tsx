@@ -43,9 +43,17 @@ export interface PoolQuestion {
   pool_answer: string;
 }
 
+export interface HeroShowcase {
+  hero_showcase_unmasked: string;
+  hero_showcase_masked: string;
+  hero_showcase_url: string;
+}
+
 export interface LandingFrontmatter {
   hero_title: string;
   hero_buttons: HeroButton[];
+  hero_showcase_title: string;
+  hero_showcase: HeroShowcase[];
 
   about_text: string;
   about_title: string;

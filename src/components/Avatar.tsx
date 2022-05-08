@@ -24,7 +24,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, Props>(
         <Subtitle>{name}</Subtitle>
 
         <p className="mb-8 italic">{description}</p>
-        <div className="flex flex-row justify-center space-x-2">
+        <div className="flex flex-row justify-center gap-2">
           {/* TODO */}
           {socials &&
             socials.map(

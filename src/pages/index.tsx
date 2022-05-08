@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/all";
 import React from "react";
 
 import { AboutSection } from "../components/AboutSection";
+import { Blogs } from "../components/Blogs";
 import { City } from "../components/City";
 import { Footer } from "../components/Footer";
 import { Forest } from "../components/Forest";
@@ -46,6 +47,8 @@ export default ({ data }: Props) => {
       <Hero
         hero_title={frontmatter.hero_title}
         hero_buttons={frontmatter.hero_buttons}
+        hero_showcase_title={frontmatter.hero_showcase_title}
+        hero_showcase={frontmatter.hero_showcase}
       />
 
       <AboutSection
@@ -79,6 +82,9 @@ export default ({ data }: Props) => {
         pool_questions={frontmatter.pool_questions}
       />
 
+      {/* Blogs */}
+      <Blogs />
+
       <Footer />
     </div>
   );
@@ -90,14 +96,24 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
+            hero_title
+            hero_buttons {
+              hero_button_color
+              hero_button_icon
+              hero_button_text
+              hero_button_url
+            }
+            hero_showcase_title
+            hero_showcase {
+              hero_showcase_unmasked
+              hero_showcase_masked
+              hero_showcase_url
+            }
+
             about_text
             about_title
+
             city_title
-            forest_title
-            hero_title
-            planets_text
-            planets_title
-            pool_title
             city_members {
               city_member_avatar
               city_member_description
@@ -107,6 +123,8 @@ export const pageQuery = graphql`
                 city_member_social_url
               }
             }
+
+            forest_title
             forest_milestones {
               forest_milestone_direction
               forest_milestone_image
@@ -119,12 +137,11 @@ export const pageQuery = graphql`
                 forest_milestone_button_url
               }
             }
-            hero_buttons {
-              hero_button_color
-              hero_button_icon
-              hero_button_text
-              hero_button_url
-            }
+
+            planets_text
+            planets_title
+
+            pool_title
             pool_questions {
               pool_answer
               pool_question

@@ -7,14 +7,14 @@ import { TwitterIcon } from "./icons/TwitterIcon";
 
 export const Nav = () => {
   return (
-    <nav className="flex flex-col items-end p-12 space-y-2 lg:ml-12 lg:flex-row lg:justify-around lg:space-x-2">
+    <nav className="flex flex-col items-end gap-2 p-12 lg:ml-12 lg:flex-row lg:justify-around">
       <a className="text-xl italic font-bold">ABOUT</a>
       <a className="text-xl italic font-bold">ROADMAP</a>
       <a className="text-xl italic font-bold">FAQ</a>
       <a className="text-xl italic font-bold">TEAM</a>
       <a className="text-xl italic font-bold">SHOP</a>
 
-      <div className="flex flex-row space-x-4">
+      <div className="flex flex-row gap-4">
         <a>
           <TwitterIcon />
         </a>

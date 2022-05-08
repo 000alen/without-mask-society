@@ -1,10 +1,13 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect } from "react";
+import { HeroShowcase } from "../typings";
 
 import { Title } from "./Title";
 
 interface Props {
   className?: string;
+  hero_showcase_title: string;
+  hero_showcase: HeroShowcase[];
 }
 
 // ! TODO Make it a carousel for sm and md screens
@@ -14,7 +17,7 @@ export const Showcase: React.FC<Props> = ({ className = "" }) => {
   return (
     <>
       <div
-        className={`${className} hidden lg:flex flex-col space-y-2 lg:flex-row lg:space-x-2`}
+        className={`${className} hidden lg:flex flex-col gap-2 lg:flex-row`}
       >
         <StaticImage
           className="w-48 h-auto transition-all hover:glow"

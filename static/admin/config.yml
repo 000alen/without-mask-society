@@ -37,6 +37,7 @@ collections:
               { name: hero_button_url, label: "Hero - Button url" },
             ],
         }
+      - { name: hero_showcase_title, label: "Hero - Showcase title" }
       - {
           name: hero_showcase,
           label: "Hero - Showcase",
