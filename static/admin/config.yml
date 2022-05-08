@@ -37,6 +37,25 @@ collections:
               { name: hero_button_url, label: "Hero - Button url" },
             ],
         }
+      - {
+          name: hero_showcase,
+          label: "Hero - Showcase",
+          widget: list,
+          fields:
+            [
+              {
+                name: hero_showcase_unmasked,
+                label: "Hero - Showcase unmasked",
+                widget: image,
+              },
+              {
+                name: hero_showcase_masked,
+                label: "Hero - Showcase masked",
+                widget: image,
+              },
+              { name: hero_showcase_url, label: "Hero - Url" },
+            ],
+        }
 
       # About
       - { name: about_title, label: "About - Title" }

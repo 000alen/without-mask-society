@@ -1,5 +1,11 @@
 import { graphql } from "gatsby";
 import React from "react";
+import { DiscordIcon } from "../../components/icons/DiscordIcon";
+import { InstagramIcon } from "../../components/icons/InstagramIcon";
+import { OpenseaIcon } from "../../components/icons/OpenseaIcon";
+import { TwitterIcon } from "../../components/icons/TwitterIcon";
+import { Title } from "../../components/Title";
+import { WMSLogo } from "../../components/WMSLogo";
 
 interface Props {
   data: {
@@ -14,21 +20,40 @@ interface Props {
   };
 }
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}: Props) {
-  const { markdownRemark } = data; // data.markdownRemark holds your post data
+export default function Template({ data }: Props) {
+  const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
+    <div>
+      <div className="flex flex-col items-end p-12 space-y-2 lg:flex-row lg:justify-around lg:space-x-2">
+        <WMSLogo className="w-24" />
+
+        <div className="flex flex-row space-x-4">
+          <a>
+            <TwitterIcon />
+          </a>
+          <a>
+            <InstagramIcon />
+          </a>
+          <a>
+            <DiscordIcon />
+          </a>
+          <a>
+            <OpenseaIcon />
+          </a>
+        </div>
+      </div>
+
+      <main className="flex flex-col items-center p-8">
+        <Title>{frontmatter.title}</Title>
+
+        <p className="italic">{frontmatter.date}</p>
+
         <div
-          className="blog-post-content"
+          className="max-w-2xl mt-24 prose prose-invert lg:prose-xl"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-      </div>
+      </main>
     </div>
   );
 }

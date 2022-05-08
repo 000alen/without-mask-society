@@ -14,14 +14,14 @@ export const Footer = () => {
     <footer className="flex flex-col justify-around space-y-6">
       <Mailing />
 
-      <div className="p-12 space-y-2 flex flex-col lg:flex-row lg:justify-around lg:space-x-2">
+      <div className="flex flex-col p-12 space-y-2 lg:flex-row lg:justify-around lg:space-x-2">
         <WMSLogo className="w-24" />
 
-        <a className="text-xl font-bold italic">ABOUT</a>
-        <a className="text-xl font-bold italic">ROADMAP</a>
-        <a className="text-xl font-bold italic">FAQ</a>
-        <a className="text-xl font-bold italic">TEAM</a>
-        <a className="text-xl font-bold italic">SHOP</a>
+        <a className="text-xl italic font-bold">ABOUT</a>
+        <a className="text-xl italic font-bold">ROADMAP</a>
+        <a className="text-xl italic font-bold">FAQ</a>
+        <a className="text-xl italic font-bold">TEAM</a>
+        <a className="text-xl italic font-bold">SHOP</a>
 
         <div className="flex flex-row space-x-4">
           <a>
@@ -39,7 +39,7 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="pb-24 flex flex-row justify-center items-center">
+      <div className="flex flex-row items-center justify-center pb-24">
         <span>Brought to you by</span>
         <a>
           <DRLogo className="w-24" />
