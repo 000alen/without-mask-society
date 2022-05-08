@@ -11,7 +11,7 @@ export const Subtitle = React.forwardRef<
   return (
     <h1
       ref={ref}
-      className={`${className} max-w-3xl text-6xl italic font-bold`}
+      className={`${className} p-8 max-w-lg text-center lg:max-w-3xl text-6xl italic font-bold`}
     >
       {children}
     </h1>

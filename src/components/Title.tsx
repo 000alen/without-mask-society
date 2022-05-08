@@ -11,7 +11,7 @@ export const Title = React.forwardRef<
   return (
     <h1
       ref={ref}
-      className={`${className} self-center italic font-bold text-center lg:max-w-3xl lg:text-8xl`}
+      className={`${className} p-8 max-w-lg self-center italic font-bold text-center lg:max-w-3xl lg:text-8xl`}
     >
       {children}
     </h1>

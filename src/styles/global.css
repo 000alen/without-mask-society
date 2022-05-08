@@ -6,6 +6,7 @@
 @import "waves.css";
 @import "collapsible.css";
 @import "slides.css";
+@import "crossfade.css";
 
 body {
   color: white;

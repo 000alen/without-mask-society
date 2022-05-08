@@ -5,6 +5,7 @@ import { FancyButton } from "./FancyButton";
 import { DiscordIcon } from "./icons/DiscordIcon";
 import { OpenseaIcon } from "./icons/OpenseaIcon";
 import { Showcase } from "./Showcase";
+import { Title } from "./Title";
 import { WMSLogo } from "./WMSLogo";
 
 interface Props {
@@ -24,22 +25,13 @@ export const Hero: React.FC<Props> = ({
     <section className="flex flex-col items-center">
       <WMSLogo className="w-[50%]" />
 
-      <p className="text-6xl font-bold text-center">
-        {/* THE NFTS THAT <br /> CLEAN THE WORLD */}
+      <h1 className="self-center max-w-lg italic font-bold text-center text-8xl lg:max-w-3xl">
         {hero_title}
-      </p>
+      </h1>
 
       <div className="flex flex-col items-center justify-center gap-2 mt-24 lg:flex-row">
-        <FancyButton label="Buy on OpenSea">
-          <OpenseaIcon />
-        </FancyButton>
-
-        <FancyButton label="Go to Discord" color="#5865F2">
-          <DiscordIcon />
-        </FancyButton>
-
         {/* TODO: Urls */}
-        {/* {hero_buttons &&
+        {hero_buttons &&
           hero_buttons.map(
             (
               {
@@ -58,7 +50,7 @@ export const Hero: React.FC<Props> = ({
                 ) : null}
               </FancyButton>
             )
-          )} */}
+          )}
       </div>
 
       <Showcase
