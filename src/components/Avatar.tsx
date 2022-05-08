@@ -21,7 +21,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, Props>(
           <img className="w-64" src={avatar} alt={name} />
         </div>
 
-        <Subtitle>{name}</Subtitle>
+        <Subtitle className="px-8 text-center">{name}</Subtitle>
 
         <p className="mb-8 italic">{description}</p>
         <div className="flex flex-row justify-center gap-2">
