@@ -10,6 +10,11 @@ hero_buttons:
     hero_button_color: "#3100ff"
     hero_button_icon: discord
     hero_button_url: https://example.com/
+hero_showcase_title: LOREM
+hero_showcase:
+  - hero_showcase_unmasked: /assets/1.png
+    hero_showcase_masked: /assets/2.png
+    hero_showcase_url: https://example.com/
 about_title: LOREM IPSUM
 about_text: LOREM IPSUM
 city_title: LOREM IPSUM
