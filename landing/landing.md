@@ -23,6 +23,12 @@ hero_showcase:
   - hero_showcase_unmasked: /assets/2.png
     hero_showcase_masked: /assets/3.png
     hero_showcase_url: https://example.com/
+  - hero_showcase_unmasked: /assets/004.png
+    hero_showcase_masked: /assets/004.png
+    hero_showcase_url: https://example.com/
+  - hero_showcase_unmasked: /assets/3.png
+    hero_showcase_masked: /assets/3.png
+    hero_showcase_url: https://example.com/
 about_title: ABOUT
 about_text: LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISICING ELIT. MAGNI
   TEMPORA SUNT, HARUM ERROR OBCAECATI EXERCITATIONEM LABORUM IUSTO REPUDIANDAE
