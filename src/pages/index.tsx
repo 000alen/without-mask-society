@@ -39,10 +39,20 @@ export default ({ data }: Props) => {
   )!;
 
   return (
-    <div>
+    <div className="scroll-smooth">
+      {/* <div className="fixed w-6 h-6 p-4 bg-gray-600 text-center rounded-full z-[1000] bottom-8 right-8">
+        up
+      </div> */}
+
       <Stars />
 
-      <Nav />
+      <Nav
+        twitter_url={frontmatter.twitter_url}
+        instagram_url={frontmatter.instagram_url}
+        discord_url={frontmatter.discord_url}
+        opensea_url={frontmatter.opensea_url}
+        digitalrocket_url={frontmatter.digitalrocket_url}
+      />
 
       <Hero
         hero_title={frontmatter.hero_title}
@@ -55,6 +65,8 @@ export default ({ data }: Props) => {
         about_title={frontmatter.about_title}
         about_text={frontmatter.about_text}
       />
+
+      <Stars />
 
       {/* Team */}
       <City
@@ -85,7 +97,13 @@ export default ({ data }: Props) => {
       {/* Blogs */}
       <Blogs />
 
-      <Footer />
+      <Footer
+        twitter_url={frontmatter.twitter_url}
+        instagram_url={frontmatter.instagram_url}
+        discord_url={frontmatter.discord_url}
+        opensea_url={frontmatter.opensea_url}
+        digitalrocket_url={frontmatter.digitalrocket_url}
+      />
     </div>
   );
 };
@@ -96,6 +114,12 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
+            twitter_url
+            instagram_url
+            discord_url
+            opensea_url
+            digitalrocket_url
+
             hero_title
             hero_buttons {
               hero_button_color

@@ -50,6 +50,12 @@ export interface HeroShowcase {
 }
 
 export interface LandingFrontmatter {
+  twitter_url: string;
+  instagram_url: string;
+  discord_url: string;
+  opensea_url: string;
+  digitalrocket_url: string;
+
   hero_title: string;
   hero_buttons: HeroButton[];
   hero_showcase_title: string;

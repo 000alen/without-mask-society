@@ -13,6 +13,13 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      # Nav
+      - { name: twitter_url, label: "Twitter url" }
+      - { name: instagram_url, label: "Instagram url" }
+      - { name: discord_url, label: "Discord url" }
+      - { name: opensea_url, label: "Opensea url" }
+      - { name: digitalrocket_url, label: "DigitalRocket url" }
+
       # Hero
       - { name: title }
       - { name: hero_title, label: "Hero - Title", widget: text }

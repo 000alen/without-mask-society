@@ -71,12 +71,9 @@ export const City: React.FC<Props> = ({ city_title, city_members }) => {
   }, []);
 
   return (
-    <section className="relative">
-      <div className="lg:absolute z-[100] w-full top-0 justify-center flex flex-col">
-        <Title className="mb-8">
-          {/* MEET THE TEAM */}
-          {city_title}
-        </Title>
+    <section className="relative" id="team">
+      <div className="lg:absolute z-[100] w-full top-[10%] justify-center flex flex-col">
+        <Title className="mb-8">{city_title}</Title>
 
         <div className="grid justify-center grid-cols-1 gap-4 lg:grid-cols-3 place-content-center">
           {city_members &&

@@ -71,12 +71,9 @@ export const Pool: React.FC<Props> = ({ pool_title, pool_questions }) => {
   }, []);
 
   return (
-    <section className="relative">
+    <section className="relative" id="faq">
       <div className="lg:absolute z-[100] w-full top-[10%] flex flex-col items-center">
-        <Title className="mb-8">
-          {/* FAQ */}
-          {pool_title}
-        </Title>
+        <Title className="mb-8">{pool_title}</Title>
 
         <div className="flex flex-col gap-4">
           {pool_questions &&

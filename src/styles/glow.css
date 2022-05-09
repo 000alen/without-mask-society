@@ -1,0 +1,7 @@
+.glow {
+  box-shadow: 0 0 8px 8px #13d62899;
+}
+
+.hover\:glow:hover {
+  box-shadow: 0 0 8px 8px #13d62899;
+}

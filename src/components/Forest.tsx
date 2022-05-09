@@ -78,7 +78,7 @@ export const Forest: React.FC<Props> = ({
   }, []);
 
   return (
-    <section className="relative">
+    <section className="relative" id="roadmap">
       <div className="lg:absolute z-[100] w-full top-[10%] justify-center flex flex-col">
         <Title className="mb-8">
           {/* ROADMAP */}
@@ -122,6 +122,7 @@ export const Forest: React.FC<Props> = ({
                           key={j}
                           label={forest_milestone_button_text}
                           color={forest_milestone_button_color}
+                          url={forest_milestone_button_url}
                         >
                           {forest_milestone_button_icon === "opensea" ? (
                             <OpenseaIcon />
@@ -141,7 +142,6 @@ export const Forest: React.FC<Props> = ({
                   title={forest_milestone_title}
                   paragraph={forest_milestone_text}
                 >
-                  {/* TODO */}
                   {forest_milestone_buttons &&
                     forest_milestone_buttons.map(
                       (
@@ -157,6 +157,7 @@ export const Forest: React.FC<Props> = ({
                           key={j}
                           label={forest_milestone_button_text}
                           color={forest_milestone_button_color}
+                          url={forest_milestone_button_url}
                         >
                           {forest_milestone_button_icon === "opensea" ? (
                             <OpenseaIcon />

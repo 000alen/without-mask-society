@@ -9,7 +9,21 @@ import { TwitterIcon } from "./icons/TwitterIcon";
 import { Mailing } from "./Mailing";
 import { WMSLogo } from "./WMSLogo";
 
-export const Footer = () => {
+interface Props {
+  twitter_url: string;
+  instagram_url: string;
+  discord_url: string;
+  opensea_url: string;
+  digitalrocket_url: string;
+}
+
+export const Footer: React.FC<Props> = ({
+  twitter_url,
+  instagram_url,
+  discord_url,
+  opensea_url,
+  digitalrocket_url,
+}) => {
   return (
     <footer className="flex flex-col justify-around gap-6">
       <Mailing />
@@ -24,16 +38,16 @@ export const Footer = () => {
         <a className="text-xl italic font-bold">SHOP</a>
 
         <div className="flex flex-row gap-4">
-          <a>
+          <a href={twitter_url} target="_blank">
             <TwitterIcon />
           </a>
-          <a>
+          <a href={instagram_url} target="_blank">
             <InstagramIcon />
           </a>
-          <a>
+          <a href={discord_url} target="_blank">
             <DiscordIcon />
           </a>
-          <a>
+          <a href={opensea_url} target="_blank">
             <OpenseaIcon />
           </a>
         </div>
@@ -41,7 +55,7 @@ export const Footer = () => {
 
       <div className="flex flex-row items-center justify-center pb-24">
         <span>Brought to you by</span>
-        <a>
+        <a href={digitalrocket_url} target="_blank">
           <DRLogo className="w-24" />
         </a>
       </div>

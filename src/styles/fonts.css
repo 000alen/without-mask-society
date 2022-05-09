@@ -1,0 +1,7 @@
+@font-face {
+  font-family: Aliseo;
+  font-weight: 400;
+  font-style: normal;
+  src: url("fonts/Aliseo.otf") format("opentype");
+  font-display: swap;
+}

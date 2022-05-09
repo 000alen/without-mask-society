@@ -1,4 +1,3 @@
-import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect, useRef, useState } from "react";
 import { HeroShowcase } from "../typings";
 
@@ -32,7 +31,6 @@ export const Showcase: React.FC<Props> = ({
   hero_showcase,
 }) => {
   const [showcase] = useState<HeroShowcase[]>(choose(hero_showcase, 4));
-  const [index, setIndex] = React.useState(0);
 
   const timerIdRef = useRef<number>(null);
   const [timerShouldStart, setTimerShouldStart] = useState<boolean | null>(
@@ -56,7 +54,7 @@ export const Showcase: React.FC<Props> = ({
       timerIdRef.current = setTimeout(() => {
         setMasked((p) => !p);
         setTimerEnded(true);
-      }, 2000);
+      }, 5000);
       setTimerShouldStart(false);
       setTimerEnded(false);
     } else if (timerEnded) {
@@ -69,35 +67,11 @@ export const Showcase: React.FC<Props> = ({
 
   return (
     <>
-      <div
-        className={`${className} hidden lg:flex flex-col gap-2 lg:flex-row transition-all hover:glow`}
-      >
-        {showcase.map(
-          (
-            { hero_showcase_masked, hero_showcase_unmasked, hero_showcase_url },
-            i
-          ) => (
-            <div className="relative w-48">
-              <img
-                className={`${masked ? "" : "opacity-0"} w-48 h-auto`}
-                src={hero_showcase_masked}
-                alt=""
-              />
-              <img
-                className={`${
-                  masked ? "opacity-0" : ""
-                } absolute top-0 w-48 h-auto`}
-                src={hero_showcase_unmasked}
-                alt=""
-              />
-            </div>
-          )
-        )}
-      </div>
+      <Title className={`${className} mb-8 lg:hidden`}>
+        {hero_showcase_title}
+      </Title>
 
-      <Title className={`${className} mb-8 lg:hidden`}>SHOWCASE</Title>
-
-      <div className="relative lg:hidden slideshow-container">
+      <div className={`${className} grid grid-cols-2 gap-4 p-4 lg:grid-cols-4`}>
         {showcase.map(
           (
             { hero_showcase_masked, hero_showcase_unmasked, hero_showcase_url },
@@ -105,41 +79,26 @@ export const Showcase: React.FC<Props> = ({
           ) => (
             <div
               key={i}
-              className={`${
-                index === i ? "block" : "slide"
-              } fade relative w-48 transition-all hover:glow`}
+              className="relative transition-all border-2 border-dashed rounded hover:glow"
             >
-              <img
-                className={`${masked ? "" : "opacity-0"} w-48 h-auto`}
-                src={hero_showcase_masked}
-                alt=""
-              />
-              <img
-                className={`${
-                  masked ? "opacity-0" : ""
-                } absolute top-0 w-48 h-auto`}
-                src={hero_showcase_unmasked}
-                alt=""
-              />
+              <a href={hero_showcase_url} target="_blank">
+                <img
+                  className={`${
+                    masked ? "" : "opacity-0"
+                  } max-w-[12rem] transition-all`}
+                  src={hero_showcase_masked}
+                  alt=""
+                />
+                <img
+                  className={`${
+                    masked ? "opacity-0" : ""
+                  } max-w-[12rem] absolute top-0 transition-all`}
+                  src={hero_showcase_unmasked}
+                  alt=""
+                />
+              </a>
             </div>
           )
-        )}
-
-        {showcase.length > 1 && (
-          <>
-            <a
-              className="prev"
-              onClick={() => setIndex((p) => (p - 1) % showcase.length)}
-            >
-              &#10094;
-            </a>
-            <a
-              className="next"
-              onClick={() => setIndex((p) => (p + 1) % showcase.length)}
-            >
-              &#10095;
-            </a>
-          </>
         )}
       </div>
     </>

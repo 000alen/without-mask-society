@@ -2,26 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "fonts.css";
 @import "stars.css";
 @import "waves.css";
 @import "collapsible.css";
-@import "slides.css";
-@import "crossfade.css";
+@import "glow.css";
+
+.rnftg-dark .dark\:rnftg-bg-gray-900 {
+  background: transparent !important;
+}
 
 body {
   color: white;
   overflow-x: hidden;
-
-  /* max-width: 19in; */
-  margin: auto;
-}
-
-.glow {
-  box-shadow: 0 0 8px 8px #13d62899;
-}
-
-.hover\:glow:hover {
-  box-shadow: 0 0 8px 8px #13d62899;
 }
 
 ::-webkit-scrollbar {
