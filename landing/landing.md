@@ -1,10 +1,10 @@
 ---
+title: landing
 twitter_url: https://example.com/
 instagram_url: https://example.com/
 discord_url: https://example.com/
 opensea_url: https://example.com/
 digitalrocket_url: https://example.com/
-title: landing
 hero_title: THE NFTs THAT CLEAN THE WORLD
 hero_buttons:
   - hero_button_text: Buy in OpenSea
@@ -51,6 +51,18 @@ city_members:
       - city_member_social_name: linkedin
         city_member_social_url: https://example.com/
     city_member_avatar: /assets/3.png
+  - city_member_name: Carlos
+    city_member_description: 3D Artist
+    city_member_avatar: /assets/004.png
+    city_member_socials:
+      - city_member_social_name: twitter
+        city_member_social_url: https://example.com/
+  - city_member_name: Juan
+    city_member_description: 2D Artist
+    city_member_avatar: /assets/005.png
+    city_member_socials:
+      - city_member_social_name: linkedin
+        city_member_social_url: https://example.com/
 forest_title: ROADMAP
 forest_milestones:
   - forest_milestone_direction: left
