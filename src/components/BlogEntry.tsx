@@ -1,28 +1,21 @@
+import { Link } from "gatsby";
 import React from "react";
 import { v4 as uuid } from "uuid";
 
 interface Props {
   id?: string;
   title: string;
-  body: string;
+  url: string;
 }
 
-export const BlogEntry = React.forwardRef<HTMLDivElement, Props>(
-  ({ id, title, body }, ref) => {
+export const BlogEntry = React.forwardRef<HTMLAnchorElement, Props>(
+  ({ id, title, url }, ref) => {
     if (!id) id = uuid();
 
     return (
-      <div ref={ref}>
-        <input id={id} className="toggle" type="checkbox" />
-        <label htmlFor={id} className="toggle-label">
-          {title}
-        </label>
-        <div className="collapsible-content">
-          <div className="content-inner">
-            <p>{body}</p>
-          </div>
-        </div>
-      </div>
+      <Link innerRef={ref} className="blog-entry" to={url}>
+        {title}
+      </Link>
     );
   }
 );

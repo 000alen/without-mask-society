@@ -15,6 +15,7 @@ interface Props {
   discord_url: string;
   opensea_url: string;
   digitalrocket_url: string;
+  mailing_text: string;
 }
 
 export const Footer: React.FC<Props> = ({
@@ -23,10 +24,11 @@ export const Footer: React.FC<Props> = ({
   discord_url,
   opensea_url,
   digitalrocket_url,
+  mailing_text,
 }) => {
   return (
     <footer className="flex flex-col justify-around gap-6">
-      <Mailing />
+      <Mailing text={mailing_text} />
 
       <div className="flex flex-col gap-2 p-12 lg:flex-row lg:justify-around">
         <WMSLogo className="w-24" />

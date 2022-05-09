@@ -29,7 +29,7 @@ export const RoadmapRight = React.forwardRef<
 
       <div className="lg:w-[70%] p-8 border-r-2 flex flex-col gap-2 text-right items-end">
         <Subtitle>{title}</Subtitle>
-        <p className="max-w-xl font-semibold">{paragraph}</p>
+        <p className="max-w-xl font-mono font-semibold">{paragraph}</p>
         {children}
       </div>
 

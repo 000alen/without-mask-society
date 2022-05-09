@@ -31,12 +31,11 @@ interface Props {
 
 export default ({ data }: Props) => {
   const { allMarkdownRemark } = data;
-  const { edges } = allMarkdownRemark;
-  const nodes = edges.map(({ node }) => node);
-  const frontmatters = nodes.map(({ frontmatter }) => frontmatter);
-  const frontmatter = frontmatters.find(
-    (frontmatter: any) => !Object.values(frontmatter).includes(null)
-  )!;
+
+  const frontmatter = allMarkdownRemark.edges
+    .map(({ node }) => node)
+    .map(({ frontmatter }) => frontmatter)
+    .find((frontmatter: any) => !Object.values(frontmatter).includes(null))!;
 
   return (
     <div className="scroll-smooth">
@@ -103,6 +102,7 @@ export default ({ data }: Props) => {
         discord_url={frontmatter.discord_url}
         opensea_url={frontmatter.opensea_url}
         digitalrocket_url={frontmatter.digitalrocket_url}
+        mailing_text={frontmatter.mailing_text}
       />
     </div>
   );
@@ -170,6 +170,8 @@ export const pageQuery = graphql`
               pool_answer
               pool_question
             }
+
+            mailing_text
           }
         }
       }

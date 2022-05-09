@@ -12,6 +12,36 @@
   background: transparent !important;
 }
 
+.blog-entry {
+  display: block;
+
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 1rem;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+}
+
+.blog-entry::before {
+  content: " ";
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+
+  vertical-align: middle;
+  margin-right: 0.7rem;
+  transform: translateY(-2px);
+}
+
+html,
 body {
   color: white;
   overflow-x: hidden;

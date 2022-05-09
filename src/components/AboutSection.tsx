@@ -1,4 +1,5 @@
 import React from "react";
+import { Paragraph } from "./Paragraph";
 
 import { Title } from "./Title";
 
@@ -17,8 +18,7 @@ export const AboutSection: React.FC<Props> = ({ about_title, about_text }) => {
         id="about"
       >
         <Title>{about_title}</Title>
-
-        <p className="max-w-2xl text-center">{about_text}</p>
+        <Paragraph>{about_text}</Paragraph>
       </section>
       <div className="wave2 flip"></div>
     </>

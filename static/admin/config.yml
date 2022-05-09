@@ -13,6 +13,8 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - { name: title, widget: hidden, default: "landing" }
+
       # Nav
       - { name: twitter_url, label: "Twitter url" }
       - { name: instagram_url, label: "Instagram url" }
@@ -21,7 +23,6 @@ collections:
       - { name: digitalrocket_url, label: "DigitalRocket url" }
 
       # Hero
-      - { name: title }
       - { name: hero_title, label: "Hero - Title", widget: text }
       - {
           name: hero_buttons,
@@ -178,6 +179,9 @@ collections:
         fields:
           - { name: pool_question, label: "Pool - Question" }
           - { name: pool_answer, label: "Pool - Answer", widget: text }
+
+      # Mailing
+      - { name: mailing_text, label: "Mailing - Text" }
 
   - name: blog
     label: Blog

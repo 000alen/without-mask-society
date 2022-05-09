@@ -1,37 +1,25 @@
 import React, { useEffect, useRef } from "react";
 import { lorem } from "../constants";
 import { BlogEntry } from "./BlogEntry";
-import { Lorem } from "./Lorem";
 import { Question } from "./Question";
 import { Title } from "./Title";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-
-const items = [
-  {
-    title: "Blog 1",
-    body: lorem,
-  },
-  {
-    title: "Blog 2",
-    body: lorem,
-  },
-  {
-    title: "Blog 3",
-    body: lorem,
-  },
-];
+import { graphql, useStaticQuery } from "gatsby";
+import { useBlogEntries } from "./useBlogEntries";
 
 export const Blogs = () => {
-  const itemsRef = useRef<Array<HTMLDivElement | null>>(
-    Array.from({ length: items.length }, () => null)
+  const blogEntries = useBlogEntries();
+
+  const itemsRef = useRef<Array<HTMLAnchorElement | null>>(
+    Array.from({ length: blogEntries.length }, () => null)
   );
 
-  const hideItem = (item: HTMLDivElement) => {
+  const hideItem = (item: HTMLAnchorElement) => {
     gsap.set(item, { autoAlpha: 0 });
   };
 
-  function animateItem(item: HTMLDivElement, direction: number = 1) {
+  function animateItem(item: HTMLAnchorElement, direction: number = 1) {
     let x = 0;
     let y = direction * 100;
 
@@ -87,12 +75,12 @@ export const Blogs = () => {
           <Title>BLOGS</Title>
 
           <div className="flex flex-col gap-4">
-            {items.map(({ title, body }, i) => (
+            {blogEntries.map(({ title, date, path }, i) => (
               <BlogEntry
                 key={i}
                 ref={(e) => (itemsRef.current[i] = e)}
                 title={title}
-                body={body}
+                url={`/blog/${path}`}
               />
             ))}
           </div>

@@ -25,7 +25,7 @@ export const RoadmapLeft = React.forwardRef<
 
       <div className="lg:w-[70%] p-8 border-l-2 flex flex-col gap-2">
         <Subtitle>{title}</Subtitle>
-        <p className="max-w-xl font-semibold">{paragraph}</p>
+        <p className="max-w-xl font-mono font-semibold">{paragraph}</p>
         {children}
       </div>
     </div>

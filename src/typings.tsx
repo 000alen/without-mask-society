@@ -75,4 +75,12 @@ export interface LandingFrontmatter {
 
   pool_title: string;
   pool_questions: PoolQuestion[];
+
+  mailing_text: string;
+}
+
+export interface BlogEntryFrontmatter {
+  title: string;
+  date: string;
+  path: string;
 }

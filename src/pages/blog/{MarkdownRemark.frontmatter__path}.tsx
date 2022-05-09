@@ -1,4 +1,4 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import React from "react";
 import { DiscordIcon } from "../../components/icons/DiscordIcon";
 import { InstagramIcon } from "../../components/icons/InstagramIcon";
@@ -9,6 +9,20 @@ import { WMSLogo } from "../../components/WMSLogo";
 
 interface Props {
   data: {
+    allMarkdownRemark: {
+      edges: {
+        node: {
+          frontmatter: {
+            twitter_url: string;
+            instagram_url: string;
+            discord_url: string;
+            opensea_url: string;
+            digitalrocket_url: string;
+          };
+        };
+      }[];
+    };
+
     markdownRemark: {
       frontmatter: {
         path: string;
@@ -21,24 +35,32 @@ interface Props {
 }
 
 export default function Template({ data }: Props) {
-  const { markdownRemark } = data;
+  const { allMarkdownRemark, markdownRemark } = data;
+  const globalFrontmatter = allMarkdownRemark.edges
+    .map(({ node }) => node)
+    .map(({ frontmatter }) => frontmatter)
+    .find((frontmatter: any) => !Object.values(frontmatter).includes(null))!;
+
   const { frontmatter, html } = markdownRemark;
+
   return (
     <div>
       <div className="flex flex-col items-end gap-2 p-12 lg:flex-row lg:justify-around">
-        <WMSLogo className="w-24" />
+        <Link to="/">
+          <WMSLogo className="w-24" />
+        </Link>
 
         <div className="flex flex-row gap-4">
-          <a>
+          <a href={globalFrontmatter.twitter_url} target="_blank">
             <TwitterIcon />
           </a>
-          <a>
+          <a href={globalFrontmatter.instagram_url} target="_blank">
             <InstagramIcon />
           </a>
-          <a>
+          <a href={globalFrontmatter.discord_url} target="_blank">
             <DiscordIcon />
           </a>
-          <a>
+          <a href={globalFrontmatter.opensea_url}>
             <OpenseaIcon />
           </a>
         </div>
@@ -47,7 +69,7 @@ export default function Template({ data }: Props) {
       <main className="flex flex-col items-center p-8">
         <Title>{frontmatter.title}</Title>
 
-        <p className="italic">{frontmatter.date}</p>
+        <p className="font-mono italic">{frontmatter.date}</p>
 
         <div
           className="max-w-2xl mt-24 prose prose-invert lg:prose-xl"
@@ -60,6 +82,20 @@ export default function Template({ data }: Props) {
 
 export const pageQuery = graphql`
   query ($id: String!) {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            twitter_url
+            instagram_url
+            discord_url
+            opensea_url
+            digitalrocket_url
+          }
+        }
+      }
+    }
+
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
