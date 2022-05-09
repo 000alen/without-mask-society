@@ -81,7 +81,7 @@ export const Blogs = () => {
   }, []);
 
   return (
-    <section className="mb-24">
+    <section className="mb-24" id="blogs">
       <div className="z-[100] flex justify-center">
         <div className="flex flex-col items-center gap-2 p-8">
           <Title>BLOGS</Title>

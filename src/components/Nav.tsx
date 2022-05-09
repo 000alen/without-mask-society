@@ -36,6 +36,9 @@ export const Nav: React.FC<Props> = ({
       <a className="text-xl italic font-bold" href="#faq">
         FAQ
       </a>
+      <a className="text-xl italic font-bold" href="#blogs">
+        BLOGS
+      </a>
 
       <div className="flex flex-row gap-4">
         <a href={twitter_url} target="_blank">

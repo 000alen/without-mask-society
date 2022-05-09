@@ -31,11 +31,24 @@ export const Footer: React.FC<Props> = ({
       <div className="flex flex-col gap-2 p-12 lg:flex-row lg:justify-around">
         <WMSLogo className="w-24" />
 
-        <a className="text-xl italic font-bold">ABOUT</a>
-        <a className="text-xl italic font-bold">ROADMAP</a>
-        <a className="text-xl italic font-bold">FAQ</a>
-        <a className="text-xl italic font-bold">TEAM</a>
-        <a className="text-xl italic font-bold">SHOP</a>
+        <a className="text-xl italic font-bold" href="#about">
+          ABOUT
+        </a>
+        <a className="text-xl italic font-bold" href="#team">
+          TEAM
+        </a>
+        <a className="text-xl italic font-bold" href="#roadmap">
+          ROADMAP
+        </a>
+        <a className="text-xl italic font-bold" href="#shop">
+          SHOP
+        </a>
+        <a className="text-xl italic font-bold" href="#faq">
+          FAQ
+        </a>
+        <a className="text-xl italic font-bold" href="#blogs">
+          BLOGS
+        </a>
 
         <div className="flex flex-row gap-4">
           <a href={twitter_url} target="_blank">
