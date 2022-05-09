@@ -1,4 +1,9 @@
 ---
+twitter_url: https://example.com/
+instagram_url: https://example.com/
+discord_url: https://example.com/
+opensea_url: https://example.com/
+digitalrocket_url: https://example.com/
 title: landing
 hero_title: THE NFTs THAT CLEAN THE WORLD
 hero_buttons:
@@ -46,7 +51,7 @@ city_members:
       - city_member_social_name: linkedin
         city_member_social_url: https://example.com/
     city_member_avatar: /assets/3.png
-forest_title: LOREM IPSUM
+forest_title: ROADMAP
 forest_milestones:
   - forest_milestone_direction: left
     forest_milestone_title: 0% - Minting
