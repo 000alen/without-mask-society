@@ -79,7 +79,7 @@ forest_milestones:
       REPUDIANDAE OFFICIA VEL QUASI EAQUE QUI LABORE DICTA SED CUPIDITATE EOS
       ACCUSANTIUM ENIM.
     forest_milestone_image: /assets/3.png
-planets_title: LOREM IPSUM
+planets_title: SHOP
 planets_text: LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISICING ELIT. MAGNI
   TEMPORA SUNT, HARUM ERROR OBCAECATI EXERCITATIONEM LABORUM IUSTO REPUDIANDAE
   OFFICIA VEL QUASI EAQUE QUI LABORE DICTA SED CUPIDITATE EOS ACCUSANTIUM ENIM.
@@ -100,4 +100,5 @@ pool_questions:
       Tempora Sunt, Harum Error Obcaecati Exercitationem Laborum Iusto
       Repudiandae Officia Vel Quasi Eaque Qui Labore Dicta Sed Cupiditate Eos
       Accusantium Enim.
+mailing_text: Sign up for our newsletter to get exclusive access to information!
 ---
