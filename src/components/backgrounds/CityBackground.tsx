@@ -1,34 +1,17 @@
+import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import React, { useEffect } from "react";
 
-// import gsap from "gsap";
-// import P from "../../images/city/P.png";
-// import PR from "../../images/city/PR.png";
-// import B from "../../images/city/city.png";
+interface Props {
+  className?: string;
+  style?: React.CSSProperties;
+}
 
-export const CityBackground = () => {
-  // useEffect(() => {
-  //   const timeline = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: "#city-background",
-  //       start: "top top",
-  //       end: "bottom top",
-  //       scrub: true,
-  //     },
-  //   });
-
-  //   gsap.utils.toArray(".parallax").forEach((item) => {
-  //     // @ts-ignore
-  //     const depth = Number(item.dataset.depth);
-  //     // @ts-ignore
-  //     const movement = -(item.offsetHeight * depth);
-  //     // @ts-ignore
-  //     timeline.to(item, { y: movement, ease: "none" }, 0);
-  //   });
-  // }, []);
-
+export const CityBackground: React.FC<Props> = ({
+  className = "",
+  style = {},
+}) => {
   return (
-    <div id="city-background">
+    <div className={className} style={style}>
       {/* <div>
         <StaticImage
           className="!absolute z-50 w-[34.3%] left-[5.9%] top-[60.2%]"
@@ -72,7 +55,7 @@ export const CityBackground = () => {
       </div> */}
 
       <StaticImage
-        className="top-0 left-0 w-full"
+        className="w-full"
         src="../../images/city/static.png"
         alt=""
       />
@@ -81,12 +64,19 @@ export const CityBackground = () => {
         className="!absolute z-50 bottom-0 w-full"
         src="../../images/city/P.png"
         alt=""
-      /> */}
+      />
 
-      {/* <StaticImage
+      <StaticImage
         className="top-0 left-0 w-full"
         src="../../images/city/city.png"
         alt=""
+      /> */}
+
+      {/* <img
+        className="!absolute z-50 bottom-0 w-full parallax"
+        src={PR}
+        alt=""
+        data-depth="0.9"
       /> */}
 
       {/* <img
@@ -97,13 +87,6 @@ export const CityBackground = () => {
       /> */}
 
       {/* <img
-        className="!absolute z-50 bottom-0 w-full parallax"
-        src={PR}
-        alt=""
-        data-depth="0.9"
-      />
-
-      <img
         className="top-0 left-0 w-full parallax"
         src={B}
         alt=""

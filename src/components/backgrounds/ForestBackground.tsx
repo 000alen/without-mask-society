@@ -1,33 +1,17 @@
+import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import React, { useEffect } from "react";
 
-// import gsap from "gsap";
-// import P from "../../images/forest/P.png";
-// import B from "../../images/forest/forest.png";
+interface Props {
+  className?: string;
+  style?: React.CSSProperties;
+}
 
-export const ForestBackground = () => {
-  // useEffect(() => {
-  //   const timeline = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: "#forest-background",
-  //       start: "top top",
-  //       end: "bottom top",
-  //       scrub: true,
-  //     },
-  //   });
-
-  //   gsap.utils.toArray(".parallax").forEach((item) => {
-  //     // @ts-ignore
-  //     const depth = Number(item.dataset.depth);
-  //     // @ts-ignore
-  //     const movement = -(item.offsetHeight * depth);
-  //     // @ts-ignore
-  //     timeline.to(item, { y: movement, ease: "none" }, 0);
-  //   });
-  // }, []);
-
+export const ForestBackground: React.FC<Props> = ({
+  className = "",
+  style = {},
+}) => {
   return (
-    <div id="forest-background">
+    <div className={className} style={style}>
       {/* <StaticImage
         className="!absolute z-50 w-[37.6%] left-0 top-[69.6%]"
         src="../../images/forest/P1.png"
@@ -65,10 +49,24 @@ export const ForestBackground = () => {
       /> */}
 
       <StaticImage
-        className="w-full h-auto"
+        className="w-full"
         src="../../images/forest/static.png"
         alt=""
       />
+
+      {/* <img
+        className="!absolute z-50 bottom-0 w-full parallax"
+        src={P}
+        alt=""
+        data-depth="1"
+      />
+
+      <img
+        className="top-0 left-0 w-full parallax"
+        src={B}
+        alt=""
+        data-depth="0.2"
+      /> */}
     </div>
   );
 };

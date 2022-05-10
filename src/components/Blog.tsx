@@ -7,8 +7,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { graphql, useStaticQuery } from "gatsby";
 import { useBlogEntries } from "./useBlogEntries";
+import { Footer } from "./Footer";
 
-export const Blogs = () => {
+export const Blog = () => {
   const blogEntries = useBlogEntries();
 
   const itemsRef = useRef<Array<HTMLAnchorElement | null>>(
@@ -69,21 +70,19 @@ export const Blogs = () => {
   }, []);
 
   return (
-    <section className="mb-24" id="blogs">
-      <div className="z-[100] flex justify-center">
-        <div className="flex flex-col items-center gap-2 p-8">
-          <Title>BLOGS</Title>
+    <section className="w-full" id="blogs">
+      <div className="flex flex-col items-center gap-2">
+        <Title>BLOGS</Title>
 
-          <div className="flex flex-col gap-4">
-            {blogEntries.map(({ title, date, path }, i) => (
-              <BlogEntry
-                key={i}
-                ref={(e) => (itemsRef.current[i] = e)}
-                title={title}
-                url={`/blog/${path}`}
-              />
-            ))}
-          </div>
+        <div className="flex flex-col gap-4">
+          {blogEntries.map(({ title, date, path }, i) => (
+            <BlogEntry
+              key={i}
+              ref={(e) => (itemsRef.current[i] = e)}
+              title={title}
+              url={`/blog/${path}`}
+            />
+          ))}
         </div>
       </div>
     </section>

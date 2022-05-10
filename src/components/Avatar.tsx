@@ -16,14 +16,20 @@ export const Avatar = React.forwardRef<HTMLDivElement, Props>(
     return (
       <div ref={ref} className="flex flex-col items-center">
         <div className="relative flex justify-center">
-          <div className="-z-10 absolute bottom-0 border-2 border-white w-[80%] h-[70%]"></div>
+          <div className="-z-10 absolute bottom-0 border-2 border-green-400 w-[80%] h-[70%]"></div>
 
-          <img className="w-64" src={avatar} alt={name} />
+          <img className="w-32 md:w-48 lg:w-64" src={avatar} alt={name} />
         </div>
 
-        <Subtitle className="px-8 text-center">{name}</Subtitle>
+        {/* <Subtitle className="px-8 text-center">{name}</Subtitle> */}
 
-        <p className="mb-8 font-mono italic">{description}</p>
+        <h1
+          className={`lg:max-w-3xl text-2xl lg:text-6xl italic self-center font-bold`}
+        >
+          {name}
+        </h1>
+
+        <p className="font-mono italic">{description}</p>
         <div className="flex flex-row justify-center gap-2">
           {socials &&
             socials.map(
@@ -33,11 +39,11 @@ export const Avatar = React.forwardRef<HTMLDivElement, Props>(
               ) =>
                 name === "twitter" ? (
                   <a key={i} href={url} target="_blank">
-                    <TwitterIcon />
+                    <TwitterIcon className="w-4 h-4" />
                   </a>
                 ) : name === "linkedin" ? (
                   <a key={i} href={url} target="_blank">
-                    <LinkedinIcon />
+                    <LinkedinIcon className="w-4 h-4" />
                   </a>
                 ) : null
             )}

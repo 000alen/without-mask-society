@@ -4,8 +4,9 @@ import { ScrollTrigger } from "gsap/all";
 import React from "react";
 
 import { AboutSection } from "../components/AboutSection";
-import { Blogs } from "../components/Blogs";
+import { Blog } from "../components/Blog";
 import { City } from "../components/City";
+import { FAQ } from "../components/FAQ";
 import { Footer } from "../components/Footer";
 import { Forest } from "../components/Forest";
 import { Hero } from "../components/Hero";
@@ -39,10 +40,6 @@ export default ({ data }: Props) => {
 
   return (
     <div className="scroll-smooth">
-      {/* <div className="fixed w-6 h-6 p-4 bg-gray-600 text-center rounded-full z-[1000] bottom-8 right-8">
-        up
-      </div> */}
-
       <Stars />
 
       <Nav
@@ -81,20 +78,22 @@ export default ({ data }: Props) => {
 
       <Stars />
 
-      {/* TODO */}
-      <Planets
-        planets_title={frontmatter.planets_title}
-        planets_text={frontmatter.planets_text}
-      />
+      {/* DONATIONS */}
+      <Planets />
 
-      {/* FAQ */}
-      <Pool
-        pool_title={frontmatter.pool_title}
-        pool_questions={frontmatter.pool_questions}
-      />
+      {/* Benefits */}
+      <Pool />
 
-      {/* Blogs */}
-      <Blogs />
+      <div className="flex flex-row items-start divide-x-2">
+        {/* FAQ */}
+        <FAQ
+          pool_title={frontmatter.pool_title}
+          pool_questions={frontmatter.pool_questions}
+        />
+
+        {/* Blogs */}
+        <Blog />
+      </div>
 
       <Footer
         twitter_url={frontmatter.twitter_url}

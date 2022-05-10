@@ -7,8 +7,7 @@ import { ForestBackground } from "./backgrounds/ForestBackground";
 import { FancyButton } from "./FancyButton";
 import { DiscordIcon } from "./icons/DiscordIcon";
 import { OpenseaIcon } from "./icons/OpenseaIcon";
-import { RoadmapLeft } from "./RoadmapLeft";
-import { RoadmapRight } from "./RoadmapRight";
+import { Milestone } from "./Milestone";
 import { Title } from "./Title";
 
 interface Props {
@@ -78,100 +77,69 @@ export const Forest: React.FC<Props> = ({
   }, []);
 
   return (
-    <section className="relative" id="roadmap">
-      <div className="lg:absolute z-[100] w-full top-[10%] justify-center flex flex-col">
-        <Title className="mb-8">
-          {/* ROADMAP */}
-          {forest_title}
-        </Title>
+    <section className="grid" id="roadmap">
+      <div
+        className="z-[100] pb-96 lg:pb-0 items-center flex flex-col"
+        style={{ gridArea: "1/1" }}
+      >
+        <Title>{forest_title}</Title>
 
-        {forest_milestones &&
-          forest_milestones.map(
-            (
-              {
-                forest_milestone_direction,
-                forest_milestone_title,
-                forest_milestone_text,
-                forest_milestone_buttons,
-                forest_milestone_image,
-              },
-              i
-            ) =>
-              forest_milestone_direction === "left" ? (
-                <RoadmapLeft
+        <div className="grid justify-center grid-cols-1 gap-2 place-content-center">
+          {forest_milestones &&
+            forest_milestones.map(
+              (
+                {
+                  forest_milestone_direction: direction,
+                  forest_milestone_title: title,
+                  forest_milestone_text: text,
+                  forest_milestone_buttons: buttons,
+                  forest_milestone_image: image,
+                },
+                i
+              ) => (
+                <Milestone
                   key={i}
                   ref={(e) => (itemsRef.current[i] = e)}
-                  className="gs_fromLeft"
-                  image={forest_milestone_image}
-                  title={forest_milestone_title}
-                  paragraph={forest_milestone_text}
+                  className={
+                    direction === "left" ? "gs_fromLeft" : "gs_fromRight"
+                  }
+                  // direction={direction}
+                  image={image}
+                  title={title}
+                  paragraph={text}
                 >
-                  {/* TODO */}
-                  {forest_milestone_buttons &&
-                    forest_milestone_buttons.map(
+                  {buttons &&
+                    buttons.map(
                       (
                         {
-                          forest_milestone_button_color,
-                          forest_milestone_button_icon,
-                          forest_milestone_button_text,
-                          forest_milestone_button_url,
+                          forest_milestone_button_color: color,
+                          forest_milestone_button_icon: icon,
+                          forest_milestone_button_text: text,
+                          forest_milestone_button_url: url,
                         },
                         j
                       ) => (
                         <FancyButton
                           key={j}
-                          label={forest_milestone_button_text}
-                          color={forest_milestone_button_color}
-                          url={forest_milestone_button_url}
+                          label={text}
+                          color={color}
+                          url={url}
                         >
-                          {forest_milestone_button_icon === "opensea" ? (
+                          {icon === "opensea" ? (
                             <OpenseaIcon />
-                          ) : forest_milestone_button_icon === "discord" ? (
+                          ) : icon === "discord" ? (
                             <DiscordIcon />
                           ) : null}
                         </FancyButton>
                       )
                     )}
-                </RoadmapLeft>
-              ) : (
-                <RoadmapRight
-                  key={i}
-                  ref={(e) => (itemsRef.current[i] = e)}
-                  className="gs_fromRight"
-                  image={forest_milestone_image}
-                  title={forest_milestone_title}
-                  paragraph={forest_milestone_text}
-                >
-                  {forest_milestone_buttons &&
-                    forest_milestone_buttons.map(
-                      (
-                        {
-                          forest_milestone_button_color,
-                          forest_milestone_button_icon,
-                          forest_milestone_button_text,
-                          forest_milestone_button_url,
-                        },
-                        j
-                      ) => (
-                        <FancyButton
-                          key={j}
-                          label={forest_milestone_button_text}
-                          color={forest_milestone_button_color}
-                          url={forest_milestone_button_url}
-                        >
-                          {forest_milestone_button_icon === "opensea" ? (
-                            <OpenseaIcon />
-                          ) : forest_milestone_button_icon === "discord" ? (
-                            <DiscordIcon />
-                          ) : null}
-                        </FancyButton>
-                      )
-                    )}
-                </RoadmapRight>
+                </Milestone>
               )
-          )}
+            )}
+        </div>
       </div>
-      <ForestBackground />
+
+      <ForestBackground className="mt-auto mb-0" style={{ gridArea: "1/1" }} />
     </section>
   );
 };

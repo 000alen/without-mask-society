@@ -67,11 +67,13 @@ export const Showcase: React.FC<Props> = ({
 
   return (
     <>
-      <Title className={`${className} mb-8 lg:hidden`}>
+      {/* <Title className={`${className} lg:hidden`}>
         {hero_showcase_title}
-      </Title>
+      </Title> */}
 
-      <div className={`${className} grid grid-cols-2 gap-4 p-4 lg:grid-cols-4`}>
+      <div
+        className={`${className} grid grid-cols-2 md:grid-cols-4 gap-4 px-4`}
+      >
         {showcase.map(
           (
             { hero_showcase_masked, hero_showcase_unmasked, hero_showcase_url },
@@ -79,20 +81,20 @@ export const Showcase: React.FC<Props> = ({
           ) => (
             <div
               key={i}
-              className="relative transition-all border-2 border-dashed rounded hover:glow"
+              className="relative transition-all border-2 border-green-400 border-solid rounded hover:glow"
             >
               <a href={hero_showcase_url} target="_blank">
                 <img
                   className={`${
                     masked ? "" : "opacity-0"
-                  } max-w-[12rem] transition-all`}
+                  } max-w-[8rem] lg:max-w-[12rem] transition-all`}
                   src={hero_showcase_masked}
                   alt=""
                 />
                 <img
                   className={`${
                     masked ? "opacity-0" : ""
-                  } max-w-[12rem] absolute top-0 transition-all`}
+                  } max-w-[8rem] lg:max-w-[12rem] absolute top-0 transition-all`}
                   src={hero_showcase_unmasked}
                   alt=""
                 />

@@ -21,37 +21,67 @@ export const Nav: React.FC<Props> = ({
 }) => {
   return (
     <nav className="flex flex-col items-end gap-2 p-12 lg:ml-12 lg:flex-row lg:justify-around">
-      <a className="text-xl italic font-bold" href="#about">
+      <a
+        className="text-xl italic font-bold transition-all hover:text-green-400"
+        href="#about"
+      >
         ABOUT
       </a>
-      <a className="text-xl italic font-bold" href="#team">
+      <a
+        className="text-xl italic font-bold transition-all hover:text-green-400"
+        href="#team"
+      >
         TEAM
       </a>
-      <a className="text-xl italic font-bold" href="#roadmap">
+      <a
+        className="text-xl italic font-bold transition-all hover:text-green-400"
+        href="#roadmap"
+      >
         ROADMAP
       </a>
-      <a className="text-xl italic font-bold" href="#shop">
+      <a
+        className="text-xl italic font-bold transition-all hover:text-green-400"
+        href="#shop"
+      >
         SHOP
       </a>
-      <a className="text-xl italic font-bold" href="#faq">
+      <a
+        className="text-xl italic font-bold transition-all hover:text-green-400"
+        href="#faq"
+      >
         FAQ
       </a>
-      <a className="text-xl italic font-bold" href="#blogs">
+      <a
+        className="text-xl italic font-bold transition-all hover:text-green-400"
+        href="#blogs"
+      >
         BLOGS
       </a>
 
       <div className="flex flex-row gap-4">
-        <a href={twitter_url} target="_blank">
-          <TwitterIcon />
+        <a
+          className="transition-all hover:text-green-400"
+          href={twitter_url}
+          target="_blank"
+        >
+          <TwitterIcon className="w-6 h-6 transition-all hover:fill-green-400" />
         </a>
-        <a href={instagram_url} target="_blank">
-          <InstagramIcon />
+        <a
+          className="transition-all hover:text-green-400"
+          href={instagram_url}
+          target="_blank"
+        >
+          <InstagramIcon className="w-6 h-6 transition-all hover:fill-green-400" />
         </a>
-        <a href={discord_url} target="_blank">
-          <DiscordIcon />
+        <a
+          className="transition-all hover:text-green-400"
+          href={discord_url}
+          target="_blank"
+        >
+          <DiscordIcon className="w-6 h-6 transition-all hover:fill-green-400" />
         </a>
         <a href={opensea_url} target="_blank">
-          <OpenseaIcon />
+          <OpenseaIcon className="w-6 h-6 transition-all hover:fill-green-400" />
         </a>
       </div>
     </nav>
