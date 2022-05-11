@@ -14,7 +14,7 @@ export const AboutSection: React.FC<Props> = ({ about_title, about_text }) => {
       <div className="wave2"></div>
 
       <section
-        className="bg-[#000067] flex flex-col items-center p-8 gap-2"
+        className="bg-[#000067] flex flex-col items-center gap-2"
         id="about"
       >
         <Title>{about_title}</Title>

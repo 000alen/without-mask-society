@@ -42,6 +42,8 @@ export default ({ data }: Props) => {
     <div className="scroll-smooth">
       <Stars />
 
+      <a id="top"></a>
+
       <Nav
         twitter_url={frontmatter.twitter_url}
         instagram_url={frontmatter.instagram_url}
@@ -84,7 +86,7 @@ export default ({ data }: Props) => {
       {/* Benefits */}
       <Pool />
 
-      <div className="flex flex-row items-start divide-x-2">
+      <div className="flex flex-col gap-8 lg:items-start lg:flex-row">
         {/* FAQ */}
         <FAQ
           pool_title={frontmatter.pool_title}
