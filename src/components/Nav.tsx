@@ -16,7 +16,6 @@ interface Props {
 interface NavLinkProps {
   href: string;
   onClick?: () => void;
-  onHoverEffect?: boolean;
   children: string;
 }
 
@@ -25,17 +24,10 @@ interface NavIconProps {
   IconComponent: React.FC<{ className?: string }>;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({
-  href,
-  onClick,
-  onHoverEffect = true,
-  children,
-}) => {
+const NavLink: React.FC<NavLinkProps> = ({ href, onClick, children }) => {
   return (
     <a
-      className={`text-xl italic font-bold ${
-        onHoverEffect ? "transition-all hover:text-green-400" : ""
-      }`}
+      className="text-xl italic font-bold md:transition-all md:hover:text-green-400"
       href={href}
       onClick={() => onClick && onClick()}
     >
@@ -66,13 +58,31 @@ export const Nav: React.FC<Props> = ({
 
   return (
     <>
-      <nav className="flex-row items-end justify-around hidden gap-2 p-12 md:flex lg:ml-12">
-        <NavLink href="#about">ABOUT</NavLink>
-        <NavLink href="#team">TEAM</NavLink>
-        <NavLink href="#roadmap">ROADMAP</NavLink>
-        <NavLink href="#shop">SHOP</NavLink>
-        <NavLink href="#faq">FAQ</NavLink>
-        <NavLink href="#blogs">BLOGS</NavLink>
+      <nav className="flex flex-row gap-2 p-12 md:ml-12">
+        <div
+          className={`${
+            isOpen ? "opacity-100" : "opacity-0 invisible"
+          } fixed top-0 left-0 z-40 flex flex-col items-center justify-center w-screen h-screen gap-2 transition-all bg-green-400 md:!opacity-100 md:!visible md:bg-transparent md:h-auto md:w-full md:justify-around md:flex-row md:static`}
+        >
+          <NavLink href="#about" onClick={() => setIsOpen(false)}>
+            ABOUT
+          </NavLink>
+          <NavLink href="#team" onClick={() => setIsOpen(false)}>
+            TEAM
+          </NavLink>
+          <NavLink href="#roadmap" onClick={() => setIsOpen(false)}>
+            ROADMAP
+          </NavLink>
+          <NavLink href="#shop" onClick={() => setIsOpen(false)}>
+            SHOP
+          </NavLink>
+          <NavLink href="#faq" onClick={() => setIsOpen(false)}>
+            FAQ
+          </NavLink>
+          <NavLink href="#blogs" onClick={() => setIsOpen(false)}>
+            BLOGS
+          </NavLink>
+        </div>
 
         <div className="flex flex-row gap-4">
           <NavIcon href={twitter_url} IconComponent={TwitterIcon} />
@@ -82,13 +92,6 @@ export const Nav: React.FC<Props> = ({
         </div>
       </nav>
 
-      <div className="flex flex-row gap-4 p-12 md:hidden">
-        <NavIcon href={twitter_url} IconComponent={TwitterIcon} />
-        <NavIcon href={instagram_url} IconComponent={InstagramIcon} />
-        <NavIcon href={discord_url} IconComponent={DiscordIcon} />
-        <NavIcon href={opensea_url} IconComponent={OpenseaIcon} />
-      </div>
-
       <div className="fixed top-0 right-0 z-50 p-12 md:hidden">
         <div
           className={`${isOpen ? "checked" : ""} w-6 h-6 hamburger`}
@@ -97,55 +100,6 @@ export const Nav: React.FC<Props> = ({
           <div className="bar"></div>
         </div>
       </div>
-
-      <nav
-        className={`${
-          isOpen ? "opacity-100" : "invisible opacity-0"
-        } transition-all fixed top-0 left-0 z-40 flex flex-col items-center justify-center w-screen h-screen bg-green-400 md:hidden`}
-      >
-        <NavLink
-          href="#about"
-          onHoverEffect={false}
-          onClick={() => setIsOpen(false)}
-        >
-          ABOUT
-        </NavLink>
-        <NavLink
-          href="#team"
-          onHoverEffect={false}
-          onClick={() => setIsOpen(false)}
-        >
-          TEAM
-        </NavLink>
-        <NavLink
-          href="#roadmap"
-          onHoverEffect={false}
-          onClick={() => setIsOpen(false)}
-        >
-          ROADMAP
-        </NavLink>
-        <NavLink
-          href="#shop"
-          onHoverEffect={false}
-          onClick={() => setIsOpen(false)}
-        >
-          SHOP
-        </NavLink>
-        <NavLink
-          href="#faq"
-          onHoverEffect={false}
-          onClick={() => setIsOpen(false)}
-        >
-          FAQ
-        </NavLink>
-        <NavLink
-          href="#blogs"
-          onHoverEffect={false}
-          onClick={() => setIsOpen(false)}
-        >
-          BLOGS
-        </NavLink>
-      </nav>
     </>
   );
 };

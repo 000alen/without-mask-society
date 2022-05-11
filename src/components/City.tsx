@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 
 import { CityMember } from "../typings";
 import { Avatar } from "./Avatar";
@@ -23,7 +23,7 @@ export const City: React.FC<Props> = ({ city_title, city_members }) => {
       <div className="flex flex-col items-center" style={{ gridArea: "1/1" }}>
         <Title>{city_title}</Title>
 
-        <div className="grid justify-center grid-cols-2 gap-4 md:grid-cols-3 place-content-center">
+        <div className="grid justify-center grid-cols-2 gap-4 md:grid-cols-3">
           {city_members &&
             city_members.map(
               (
