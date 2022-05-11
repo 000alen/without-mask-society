@@ -11,7 +11,7 @@ export const Planets: React.FC<Props> = ({}) => {
   return (
     <section className="relative" id="shop">
       <div
-        className={`top-[10%] lg:absolute z-[100] inset-x-0 flex flex-col gap-2 items-center`}
+        className={`top-[10%] lg:absolute z-10 inset-x-0 flex flex-col gap-2 items-center`}
       >
         <Title>DONATION</Title>
         <Paragraph>{lorem}</Paragraph>

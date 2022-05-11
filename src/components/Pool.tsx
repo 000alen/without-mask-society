@@ -10,7 +10,7 @@ interface Props {}
 export const Pool: React.FC<Props> = ({}) => {
   return (
     <section className="relative" id="faq">
-      <div className="lg:absolute z-[100] w-full top-[10%] flex flex-col items-center">
+      <div className="lg:absolute z-10 w-full top-[10%] flex flex-col items-center">
         <Title>LOREM</Title>
         <Paragraph>{lorem}</Paragraph>
       </div>

@@ -9,7 +9,7 @@ export const WMSLogo = React.forwardRef<unknown, Props>(
   ({ className = "" }, ref) => {
     return (
       <StaticImage
-        className={`${className} z-[1000] select-none`}
+        className={`${className} select-none`}
         src="../images/WMSLogo.png"
         alt="Without Mask Society Logo"
       />

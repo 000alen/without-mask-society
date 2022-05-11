@@ -21,8 +21,6 @@ export const Avatar = React.forwardRef<HTMLDivElement, Props>(
           <img className="w-32 md:w-48 lg:w-64" src={avatar} alt={name} />
         </div>
 
-        {/* <Subtitle className="px-8 text-center">{name}</Subtitle> */}
-
         <h1
           className={`lg:max-w-3xl text-2xl lg:text-6xl italic self-center font-bold`}
         >

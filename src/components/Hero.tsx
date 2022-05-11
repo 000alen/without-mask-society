@@ -25,7 +25,7 @@ export const Hero: React.FC<Props> = ({
     <section className="flex flex-col items-center">
       <WMSLogo className="w-[80%] lg:w-[45%]" />
 
-      <h1 className="self-center font-[Aliseo] max-w-lg mt-8 italic font-bold text-center text-5xl lg:max-w-3xl">
+      <h1 className="p-8 self-center font-[Aliseo] max-w-lg mt-8 italic font-bold text-center text-5xl lg:max-w-3xl">
         {hero_title}
       </h1>
 
