@@ -14,6 +14,7 @@ interface Props {
 }
 
 interface NavLinkProps {
+  className?: string;
   href: string;
   onClick?: () => void;
   children: string;
@@ -24,10 +25,15 @@ interface NavIconProps {
   IconComponent: React.FC<{ className?: string }>;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ href, onClick, children }) => {
+const NavLink: React.FC<NavLinkProps> = ({
+  className,
+  href,
+  onClick,
+  children,
+}) => {
   return (
     <a
-      className="text-xl italic font-bold md:transition-all md:hover:text-green-400"
+      className={`${className} text-xl italic font-bold md:transition-all md:hover:text-green-400`}
       href={href}
       onClick={() => onClick && onClick()}
     >
@@ -64,8 +70,18 @@ export const Nav: React.FC<Props> = ({
             isOpen ? "opacity-100" : "opacity-0 invisible"
           } fixed top-0 left-0 z-40 flex flex-col items-center justify-center w-screen h-screen gap-2 transition-all bg-green-400 md:!opacity-100 md:!visible md:bg-transparent md:h-auto md:w-full md:justify-around md:flex-row md:static`}
         >
+          <NavLink
+            className="md:hidden"
+            href="#top"
+            onClick={() => setIsOpen(false)}
+          >
+            TOP
+          </NavLink>
           <NavLink href="#about" onClick={() => setIsOpen(false)}>
             ABOUT
+          </NavLink>
+          <NavLink href="#" onClick={() => setIsOpen(false)}>
+            SHOP
           </NavLink>
           <NavLink href="#team" onClick={() => setIsOpen(false)}>
             TEAM
@@ -73,14 +89,17 @@ export const Nav: React.FC<Props> = ({
           <NavLink href="#roadmap" onClick={() => setIsOpen(false)}>
             ROADMAP
           </NavLink>
-          <NavLink href="#shop" onClick={() => setIsOpen(false)}>
-            SHOP
+          <NavLink href="#donations" onClick={() => setIsOpen(false)}>
+            DONATIONS
+          </NavLink>
+          <NavLink href="#benefits" onClick={() => setIsOpen(false)}>
+            BENEFITS
           </NavLink>
           <NavLink href="#faq" onClick={() => setIsOpen(false)}>
             FAQ
           </NavLink>
-          <NavLink href="#blogs" onClick={() => setIsOpen(false)}>
-            BLOGS
+          <NavLink href="#blog" onClick={() => setIsOpen(false)}>
+            BLOG
           </NavLink>
         </div>
 

@@ -11,14 +11,12 @@ import { WMSLogo } from "./WMSLogo";
 interface Props {
   hero_title: string;
   hero_buttons: HeroButton[];
-  hero_showcase_title: string;
   hero_showcase: HeroShowcase[];
 }
 
 export const Hero: React.FC<Props> = ({
   hero_title,
   hero_buttons,
-  hero_showcase_title,
   hero_showcase,
 }) => {
   return (
@@ -29,10 +27,7 @@ export const Hero: React.FC<Props> = ({
         {hero_title}
       </h1>
 
-      <Showcase
-        hero_showcase_title={hero_showcase_title}
-        hero_showcase={hero_showcase}
-      />
+      <Showcase hero_showcase={hero_showcase} />
 
       <div className="flex flex-col items-center justify-center gap-x-24 gap-y-2 md:flex-row">
         {hero_buttons &&

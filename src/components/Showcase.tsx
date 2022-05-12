@@ -5,11 +5,10 @@ import { Title } from "./Title";
 
 interface Props {
   className?: string;
-  hero_showcase_title: string;
   hero_showcase: HeroShowcase[];
 }
 
-const choose = <T,>(list: T[], n: number): T[] => {
+export const choose = <T,>(list: T[], n: number): T[] => {
   const taken = new Array(list.length);
   const result = new Array(n);
   let length = list.length;
@@ -24,10 +23,8 @@ const choose = <T,>(list: T[], n: number): T[] => {
   return result;
 };
 
-// ! TODO Make it a carousel for sm and md screens
 export const Showcase: React.FC<Props> = ({
   className = "",
-  hero_showcase_title,
   hero_showcase,
 }) => {
   const [showcase] = useState<HeroShowcase[]>(choose(hero_showcase, 4));
@@ -66,43 +63,35 @@ export const Showcase: React.FC<Props> = ({
   }, [timerShouldStart, timerEnded]);
 
   return (
-    <>
-      {/* <Title className={`${className} lg:hidden`}>
-        {hero_showcase_title}
-      </Title> */}
-
-      <div
-        className={`${className} grid grid-cols-2 md:grid-cols-4 gap-4 px-4`}
-      >
-        {showcase.map(
-          (
-            { hero_showcase_masked, hero_showcase_unmasked, hero_showcase_url },
-            i
-          ) => (
-            <div
-              key={i}
-              className="relative transition-all border-2 border-green-400 border-solid rounded hover:glow"
-            >
-              <a href={hero_showcase_url} target="_blank">
-                <img
-                  className={`${
-                    masked ? "" : "opacity-0"
-                  } max-w-[8rem] lg:max-w-[12rem] transition-all`}
-                  src={hero_showcase_masked}
-                  alt=""
-                />
-                <img
-                  className={`${
-                    masked ? "opacity-0" : ""
-                  } max-w-[8rem] lg:max-w-[12rem] absolute top-0 transition-all`}
-                  src={hero_showcase_unmasked}
-                  alt=""
-                />
-              </a>
-            </div>
-          )
-        )}
-      </div>
-    </>
+    <div className={`${className} grid grid-cols-2 md:grid-cols-4 gap-4 px-4`}>
+      {showcase.map(
+        (
+          { hero_showcase_masked, hero_showcase_unmasked, hero_showcase_url },
+          i
+        ) => (
+          <div
+            key={i}
+            className="relative transition-all border-2 border-green-400 border-solid rounded hover:glow"
+          >
+            <a href={hero_showcase_url} target="_blank">
+              <img
+                className={`${
+                  masked ? "" : "opacity-0"
+                } max-w-[8rem] lg:max-w-[12rem] transition-all`}
+                src={hero_showcase_masked}
+                alt=""
+              />
+              <img
+                className={`${
+                  masked ? "opacity-0" : ""
+                } max-w-[8rem] lg:max-w-[12rem] absolute top-0 transition-all`}
+                src={hero_showcase_unmasked}
+                alt=""
+              />
+            </a>
+          </div>
+        )
+      )}
+    </div>
   );
 };

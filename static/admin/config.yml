@@ -45,7 +45,6 @@ collections:
               { name: hero_button_url, label: "Hero - Button url" },
             ],
         }
-      - { name: hero_showcase_title, label: "Hero - Showcase title" }
       - {
           name: hero_showcase,
           label: "Hero - Showcase",
@@ -72,6 +71,7 @@ collections:
 
       # City
       - { name: city_title, label: "City - Title" }
+      - { name: city_text, label: "City - Text", widget: text }
       - {
           name: city_members,
           label: "City - Members",
@@ -111,6 +111,7 @@ collections:
 
       # Forest
       - { name: forest_title, label: "Forest - Title" }
+      - { name: forest_text, label: "City - Text", widget: text }
       - {
           name: forest_milestones,
           label: "Forest - Milestones",
@@ -118,52 +119,29 @@ collections:
           fields:
             [
               {
-                name: forest_milestone_direction,
-                label: "Forest - Milestone direction",
-                widget: select,
-                options: [left, right],
-              },
-              {
-                name: forest_milestone_title,
-                label: "Forest - Milestone title",
+                name: forest_milestone_percent,
+                label: "Forest - Milestone Percent",
+                widget: text,
               },
               {
                 name: forest_milestone_text,
                 label: "Forest - Milestone text",
                 widget: text,
               },
+            ],
+        }
+      - {
+          name: forest_showcase,
+          label: "Forest - Showcase",
+          widget: list,
+          fields:
+            [
               {
-                name: forest_milestone_image,
-                label: "Forest - Milestone image",
+                name: forest_showcase_image,
+                label: "Forest - Showcase image",
                 widget: image,
               },
-              {
-                name: forest_milestone_buttons,
-                label: "Forest - Milestone buttons",
-                widget: list,
-                fields:
-                  [
-                    {
-                      name: forest_milestone_button_text,
-                      label: "Forest - Milestone button text",
-                    },
-                    {
-                      name: forest_milestone_button_color,
-                      label: "Forest - Milestone button color",
-                      widget: color,
-                    },
-                    {
-                      name: forest_milestone_button_icon,
-                      label: "Forest - Milestone button icon",
-                      widget: select,
-                      options: [opensea, discord, none],
-                    },
-                    {
-                      name: forest_milestone_button_url,
-                      label: "Forest - Milestone button url",
-                    },
-                  ],
-              },
+              { name: forest_showcase_url, label: "Forest - Showcase url" },
             ],
         }
 
@@ -173,12 +151,16 @@ collections:
 
       # Pool
       - { name: pool_title, label: "Pool - Title" }
-      - name: pool_questions
-        label: "Pool - Questions"
+      - { name: pool_text, label: "Pool - Text", widget: text }
+
+      # FAQ
+      - { name: faq_title, label: "FAQ - Title" }
+      - name: faq_questions
+        label: "FAQ - Questions"
         widget: list
         fields:
-          - { name: pool_question, label: "Pool - Question" }
-          - { name: pool_answer, label: "Pool - Answer", widget: text }
+          - { name: faq_question, label: "FAQ - Question" }
+          - { name: faq_answer, label: "FAQ - Answer", widget: text }
 
       # Mailing
       - { name: mailing_text, label: "Mailing - Text" }

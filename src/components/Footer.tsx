@@ -16,6 +16,8 @@ interface Props {
   opensea_url: string;
   digitalrocket_url: string;
   mailing_text: string;
+
+  landing?: boolean;
 }
 
 export const Footer: React.FC<Props> = ({
@@ -25,6 +27,7 @@ export const Footer: React.FC<Props> = ({
   opensea_url,
   digitalrocket_url,
   mailing_text,
+  landing = true,
 }) => {
   return (
     <>
@@ -35,24 +38,34 @@ export const Footer: React.FC<Props> = ({
         <div className="flex flex-col gap-2 p-12 lg:flex-row lg:justify-around">
           <WMSLogo className="w-24" />
 
-          <a className="text-xl italic font-bold" href="#about">
-            ABOUT
-          </a>
-          <a className="text-xl italic font-bold" href="#team">
-            TEAM
-          </a>
-          <a className="text-xl italic font-bold" href="#roadmap">
-            ROADMAP
-          </a>
-          <a className="text-xl italic font-bold" href="#shop">
-            SHOP
-          </a>
-          <a className="text-xl italic font-bold" href="#faq">
-            FAQ
-          </a>
-          <a className="text-xl italic font-bold" href="#blogs">
-            BLOGS
-          </a>
+          {landing && (
+            <>
+              <a className="text-xl italic font-bold" href="#about">
+                ABOUT
+              </a>
+              <a className="text-xl italic font-bold" href="#team">
+                TEAM
+              </a>
+              <a className="text-xl italic font-bold" href="#">
+                SHOP
+              </a>
+              <a className="text-xl italic font-bold" href="#roadmap">
+                ROADMAP
+              </a>
+              <a className="text-xl italic font-bold" href="#donations">
+                DONATIONS
+              </a>
+              <a className="text-xl italic font-bold" href="#benefits">
+                BENEFITS
+              </a>
+              <a className="text-xl italic font-bold" href="#faq">
+                FAQ
+              </a>
+              <a className="text-xl italic font-bold" href="#blog">
+                BLOG
+              </a>
+            </>
+          )}
 
           <div className="flex flex-row gap-4">
             <a href={twitter_url} target="_blank">

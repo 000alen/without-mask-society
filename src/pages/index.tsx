@@ -1,7 +1,7 @@
+import React from "react";
 import { graphql } from "gatsby";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import React from "react";
 
 import { AboutSection } from "../components/AboutSection";
 import { Blog } from "../components/Blog";
@@ -20,23 +20,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 interface Props {
   data: {
-    allMarkdownRemark: {
-      edges: {
-        node: {
-          frontmatter: LandingFrontmatter;
-        };
-      }[];
+    markdownRemark: {
+      frontmatter: LandingFrontmatter;
     };
   };
 }
 
 export default ({ data }: Props) => {
-  const { allMarkdownRemark } = data;
-
-  const frontmatter = allMarkdownRemark.edges
-    .map(({ node }) => node)
-    .map(({ frontmatter }) => frontmatter)
-    .find((frontmatter: any) => !Object.values(frontmatter).includes(null))!;
+  const { markdownRemark } = data;
+  const { frontmatter } = markdownRemark;
 
   return (
     <div className="scroll-smooth">
@@ -55,7 +47,6 @@ export default ({ data }: Props) => {
       <Hero
         hero_title={frontmatter.hero_title}
         hero_buttons={frontmatter.hero_buttons}
-        hero_showcase_title={frontmatter.hero_showcase_title}
         hero_showcase={frontmatter.hero_showcase}
       />
 
@@ -69,28 +60,37 @@ export default ({ data }: Props) => {
       {/* Team */}
       <City
         city_title={frontmatter.city_title}
+        city_text={frontmatter.city_text}
         city_members={frontmatter.city_members}
       />
 
       {/* Roadmap */}
       <Forest
         forest_title={frontmatter.forest_title}
+        forest_text={frontmatter.forest_text}
         forest_milestones={frontmatter.forest_milestones}
+        forest_showcase={frontmatter.forest_showcase}
       />
 
       <Stars />
 
-      {/* DONATIONS */}
-      <Planets />
+      {/* Donations */}
+      <Planets
+        planets_title={frontmatter.planets_title}
+        planets_text={frontmatter.planets_text}
+      />
 
       {/* Benefits */}
-      <Pool />
+      <Pool
+        pool_title={frontmatter.pool_title}
+        pool_text={frontmatter.pool_text}
+      />
 
       <div className="flex flex-col gap-8 lg:items-start lg:flex-row">
         {/* FAQ */}
         <FAQ
-          pool_title={frontmatter.pool_title}
-          pool_questions={frontmatter.pool_questions}
+          faq_title={frontmatter.faq_title}
+          faq_questions={frontmatter.faq_questions}
         />
 
         {/* Blogs */}
@@ -110,71 +110,67 @@ export default ({ data }: Props) => {
 };
 
 export const pageQuery = graphql`
-  {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            twitter_url
-            instagram_url
-            discord_url
-            opensea_url
-            digitalrocket_url
+  query LandingPageQuery {
+    markdownRemark(frontmatter: { title: { eq: "landing" } }) {
+      frontmatter {
+        twitter_url
+        instagram_url
+        discord_url
+        opensea_url
+        digitalrocket_url
 
-            hero_title
-            hero_buttons {
-              hero_button_color
-              hero_button_icon
-              hero_button_text
-              hero_button_url
-            }
-            hero_showcase_title
-            hero_showcase {
-              hero_showcase_unmasked
-              hero_showcase_masked
-              hero_showcase_url
-            }
+        hero_title
+        hero_buttons {
+          hero_button_icon
+          hero_button_color
+          hero_button_text
+          hero_button_url
+        }
+        hero_showcase {
+          hero_showcase_url
+          hero_showcase_unmasked
+          hero_showcase_masked
+        }
 
-            about_text
-            about_title
+        about_title
+        about_text
 
-            city_title
-            city_members {
-              city_member_avatar
-              city_member_description
-              city_member_name
-              city_member_socials {
-                city_member_social_name
-                city_member_social_url
-              }
-            }
-
-            forest_title
-            forest_milestones {
-              forest_milestone_direction
-              forest_milestone_image
-              forest_milestone_text
-              forest_milestone_title
-              forest_milestone_buttons {
-                forest_milestone_button_icon
-                forest_milestone_button_color
-                forest_milestone_button_text
-                forest_milestone_button_url
-              }
-            }
-
-            planets_text
-            planets_title
-
-            pool_title
-            pool_questions {
-              pool_answer
-              pool_question
-            }
-
-            mailing_text
+        city_title
+        city_text
+        city_members {
+          city_member_avatar
+          city_member_description
+          city_member_name
+          city_member_socials {
+            city_member_social_name
+            city_member_social_url
           }
         }
+
+        forest_title
+        forest_text
+        forest_milestones {
+          forest_milestone_percent
+          forest_milestone_text
+        }
+        forest_showcase {
+          forest_showcase_url
+          forest_showcase_image
+        }
+
+        planets_title
+        planets_text
+
+        pool_title
+        pool_text
+
+        faq_title
+        faq_questions {
+          faq_answer
+          faq_question
+        }
+
+        mailing_text
       }
     }
   }

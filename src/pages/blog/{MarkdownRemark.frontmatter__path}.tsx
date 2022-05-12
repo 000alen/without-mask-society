@@ -79,6 +79,7 @@ export default function Template({ data }: Props) {
       </main>
 
       <Footer
+        landing={false}
         twitter_url="twitter_url"
         instagram_url="instagram_url"
         discord_url="discord_url"

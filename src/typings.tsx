@@ -2,8 +2,6 @@ export type SocialName = "twitter" | "linkedin";
 
 export type ButtonIcon = "opensea" | "discord" | "none";
 
-export type Direction = "left" | "right";
-
 export interface CityMemberSocial {
   city_member_social_name: SocialName;
   city_member_social_url: string;
@@ -24,11 +22,13 @@ export interface ForestMilestoneButton {
 }
 
 export interface ForestMilestone {
-  forest_milestone_image: string;
-  forest_milestone_direction: Direction;
-  forest_milestone_title: string;
+  forest_milestone_percent: string;
   forest_milestone_text: string;
-  forest_milestone_buttons: ForestMilestoneButton[];
+}
+
+export interface ForestShowcase {
+  forest_showcase_image: string;
+  forest_showcase_url: string;
 }
 
 export interface HeroButton {
@@ -38,9 +38,9 @@ export interface HeroButton {
   hero_button_url: string;
 }
 
-export interface PoolQuestion {
-  pool_question: string;
-  pool_answer: string;
+export interface FAQQuestion {
+  faq_question: string;
+  faq_answer: string;
 }
 
 export interface HeroShowcase {
@@ -58,23 +58,28 @@ export interface LandingFrontmatter {
 
   hero_title: string;
   hero_buttons: HeroButton[];
-  hero_showcase_title: string;
   hero_showcase: HeroShowcase[];
 
-  about_text: string;
   about_title: string;
+  about_text: string;
 
   city_title: string;
+  city_text: string;
   city_members: CityMember[];
 
   forest_title: string;
+  forest_text: string;
   forest_milestones: ForestMilestone[];
+  forest_showcase: ForestShowcase[];
 
-  planets_text: string;
   planets_title: string;
+  planets_text: string;
 
   pool_title: string;
-  pool_questions: PoolQuestion[];
+  pool_text: string;
+
+  faq_title: string;
+  faq_questions: FAQQuestion[];
 
   mailing_text: string;
 }

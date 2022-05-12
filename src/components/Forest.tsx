@@ -1,21 +1,27 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { lorem } from "../constants";
 
-import { ForestMilestone } from "../typings";
+import { ForestMilestone, ForestShowcase } from "../typings";
 import { ForestBackground } from "./backgrounds/ForestBackground";
 import { Milestone2 } from "./Milestone2";
 import { Paragraph } from "./Paragraph";
+import { choose } from "./Showcase";
 import { Title } from "./Title";
 
 interface Props {
   forest_title: string;
+  forest_text: string;
   forest_milestones: ForestMilestone[];
+  forest_showcase: ForestShowcase[];
 }
 
 export const Forest: React.FC<Props> = ({
   forest_title,
   forest_milestones,
+  forest_showcase,
 }) => {
+  const [showcase] = useState<ForestShowcase[]>(choose(forest_showcase, 4));
+
   const itemsRef = useRef<Array<HTMLDivElement | null>>(
     Array.from({ length: forest_milestones.length }, () => null)
   );
@@ -37,35 +43,15 @@ export const Forest: React.FC<Props> = ({
             ))}
         </div>
 
-        <div className={`grid grid-cols-2 gap-4`}>
-          <div className="relative transition-all border-2 border-green-400 border-solid rounded hover:glow">
+        <div className="grid max-w-xl grid-cols-2 gap-8">
+          {showcase.map(({ forest_showcase_image }, i) => (
             <img
-              className={`max-w-[8rem] lg:max-w-[12rem] transition-all`}
-              src={forest_milestones[0].forest_milestone_image}
+              key={i}
+              className="w-full transition-all border-2 border-green-400 border-solid rounded hover:glow"
+              src={forest_showcase_image}
               alt=""
             />
-          </div>
-          <div className="relative transition-all border-2 border-green-400 border-solid rounded hover:glow">
-            <img
-              className={`max-w-[8rem] lg:max-w-[12rem] transition-all`}
-              src={forest_milestones[0].forest_milestone_image}
-              alt=""
-            />
-          </div>
-          <div className="relative transition-all border-2 border-green-400 border-solid rounded hover:glow">
-            <img
-              className={`max-w-[8rem] lg:max-w-[12rem] transition-all`}
-              src={forest_milestones[0].forest_milestone_image}
-              alt=""
-            />
-          </div>
-          <div className="relative transition-all border-2 border-green-400 border-solid rounded hover:glow">
-            <img
-              className={`max-w-[8rem] lg:max-w-[12rem] transition-all`}
-              src={forest_milestones[0].forest_milestone_image}
-              alt=""
-            />
-          </div>
+          ))}
         </div>
       </div>
 

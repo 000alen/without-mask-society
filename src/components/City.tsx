@@ -8,6 +8,7 @@ import { useAnimations } from "./useAnimations";
 
 interface Props {
   city_title: string;
+  city_text: string;
   city_members: CityMember[];
 }
 
