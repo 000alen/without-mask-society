@@ -1,9 +1,17 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 
-export const PoolBackground = () => {
+interface Props {
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+export const PoolBackground: React.FC<Props> = ({
+  className = "",
+  style = {},
+}) => {
   return (
-    <>
+    <div className={className} style={style}>
       {/* <StaticImage
         className="!absolute w-[6.3%] left-[40.2%] top-[55.8%]"
         src="../../images/pool/P1.png"
@@ -57,6 +65,6 @@ export const PoolBackground = () => {
         src="../../images/pool/static.png"
         alt=""
       />
-    </>
+    </div>
   );
 };

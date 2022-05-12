@@ -12,13 +12,19 @@ interface Props {
 
 export const Planets: React.FC<Props> = ({ planets_title, planets_text }) => {
   return (
-    <section className="relative" id="shop">
-      <div className="top-[10%] lg:absolute z-10 p-4 inset-x-0 flex flex-col gap-2 items-center">
+    <section className="grid" id="donations">
+      <div
+        className="z-10 flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto h-min"
+        style={{ gridArea: "1/1" }}
+      >
         <Title>{planets_title}</Title>
         <Paragraph>{planets_text}</Paragraph>
       </div>
 
-      <PlanetsBackground />
+      <PlanetsBackground
+        className="mt-16 md:mt-0"
+        style={{ gridArea: "1/1" }}
+      />
     </section>
   );
 };

@@ -12,13 +12,16 @@ interface Props {
 
 export const Pool: React.FC<Props> = ({ pool_title, pool_text }) => {
   return (
-    <section className="relative" id="benefits">
-      <div className="lg:absolute p-4 z-10 w-full top-[10%] flex flex-col items-center">
+    <section className="grid" id="benefits">
+      <div
+        className="z-10 flex flex-col items-center max-w-6xl p-4 mx-auto h-min"
+        style={{ gridArea: "1/1" }}
+      >
         <Title>{pool_title}</Title>
         <Paragraph>{pool_text}</Paragraph>
       </div>
 
-      <PoolBackground />
+      <PoolBackground className="mt-12 md:-mt-12" style={{ gridArea: "1/1" }} />
     </section>
   );
 };

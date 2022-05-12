@@ -70,7 +70,7 @@ export const Blog = () => {
   }, []);
 
   return (
-    <section className="w-full" id="blogs">
+    <section className="w-full" id="blog">
       <div className="flex flex-col items-center gap-2">
         <Title>BLOGS</Title>
 
