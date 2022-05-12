@@ -68,6 +68,9 @@ city_members:
   - city_member_name: Eddy
     city_member_description: International NFT Advisor
     city_member_avatar: /assets/eddie-.png
+  - city_member_name: Alen R
+    city_member_description: Senior Developer
+    city_member_avatar: /assets/alen-r.png
 forest_title: ROADMAP
 forest_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
   magnam similique voluptas rem quaerat! Animi magni explicabo tempore
