@@ -125,32 +125,80 @@ forest_showcase:
   - forest_showcase_image: /assets/a4.png
     forest_showcase_url: https://example.com/
 planets_title: DONATIONS
-planets_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-  Voluptate magnam similique voluptas rem quaerat! Animi magni explicabo tempore
-  exercitationem! Pariatur sapiente dicta, aspernatur beatae illum incidunt
-  molestias alias dolorum non?
+planets_text: >-
+  WE PARTNER WITH NANTEK. LEADING SPANISH COMPANY IN TECHNOLOGICAL SOLUTIONS,
+  INNOVATION AND CIRCULAR ECONOMY.
+
+
+  WITH NANTEK WE WILL BE PART OF A VIRTUOUS SPIRAL.
+
+
+  WITH EACH NFT YOU BUY, YOU WILL BE RECYCLING APPROXIMATELY 6,000 DISUSED MASKS THAT WILL BE CONVERTED INTO APPROXIMATELY 1K OF HYDROGEN FUEL.
+
+  THIS FUEL WILL END UP IN TRANSPORT COMPANIES SUCH AS THE MARITIME INDUSTRY, IN WHICH CURRENT REGULATIONS REQUIRE THE USE OF SULFATE-FREE FUELS AND WHERE HYDROGEN COMES INTO PLAY.
+
+
+  GIVE IT ENERGY!
+
+  BE PART OF THE REVOLUTION!
+
+  JOIN WITHOUT MASK SOCIETY!
 pool_title: BENEFITS
-pool_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
-  magnam similique voluptas rem quaerat! Animi magni explicabo tempore
-  exercitationem! Pariatur sapiente dicta, aspernatur beatae illum incidunt
-  molestias alias dolorum non?
+pool_text: >-
+  WMS EARLY BUYERS WILL GET PRIORITY ACCESS TO DIGITAL ROCKET'S NEXT COLLECTION.
+
+
+  WMS BUYERS WILL GET PRIORITY ACCESS TO THE RARE AND ULTRA RARE WMS VERSION COLLECTION.
+
+
+  WE WILL RAFFLE 20 PERSONALIZED NFTs AMONG OUR HOLDERS.
+
+
+  WE WILL RAFFLE THE NFT WMS CERO IN PHASE EIGHT OF THE ROADMAP.
+
+
+  DRAW OF 1 ETH AMONG THE HOLDERS.
+
+
+  EVERY NFT MINTED WILL HELP RECYCLE OVER 100 MASKS THAT WILL BE TURNED INTO HYDROGEN FUEL.
 faq_title: FAQ
 faq_questions:
-  - faq_question: Why I?
-    faq_answer: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
-      magnam similique voluptas rem quaerat! Animi magni explicabo tempore
-      exercitationem! Pariatur sapiente dicta, aspernatur beatae illum incidunt
-      molestias alias dolorum non?
-  - faq_question: Why II?
-    faq_answer: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
-      magnam similique voluptas rem quaerat! Animi magni explicabo tempore
-      exercitationem! Pariatur sapiente dicta, aspernatur beatae illum incidunt
-      molestias alias dolorum non?
-  - faq_question: Why III?
-    faq_answer: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
-      magnam similique voluptas rem quaerat! Animi magni explicabo tempore
-      exercitationem! Pariatur sapiente dicta, aspernatur beatae illum incidunt
-      molestias alias dolorum non?
+  - faq_question: WHERE CAN I BUY WMS?
+    faq_answer: https://opensea.io/
+  - faq_question: HOW WERE THE WMS CREATED AND THEN HOW WERE THEY DESIGNED?
+    faq_answer: WE WERE INTERESTED IN IMMORTALIZING THE MOST IMPORTANT MILESTONE OF
+      OUR TIME. A PANDEMIC AND A CHANGE IN DAILY LIFE WITH THE USE OF MASKS,
+      THAT WAS THE FIRST ENGINE OF WMS. THEN WE REALIZED THAT WE HAD THE
+      OPPORTUNITY TO SHOW A DIVERSE GROUP OF CHARACTERS, WITH THEIR OWN ART AND
+      WITH A UNIQUE LIFE AND WAY OF EXPRESSING THEMSELVES. FROM THERE BEGAN THE
+      DEVELOPMENT OF OUR WMS 00, DESIGNED BY OUR ART DIRECTOR, IN A PROCESS OF
+      SEVERAL MONTHS UNTIL REACHING WHAT WE HAVE TODAY.
+  - faq_question: HOW MUCH DOES A WMS COST?
+    faq_answer: OUR FLOOR PRICE IS AT 0.06 ETH.
+  - faq_question: HOW MANY WMS WILL THE COLLECTION HAVE?
+    faq_answer: >-
+      WE WILL HAVE A TOTAL OF 2222 NFTS.
+
+      WHEN YOU BUY YOUR NFT WMS WITH A MASK, IT WILL COME WITHOUT A MASK. THAT IS TO SAY YOU GET 2X1.
+  - faq_question: WHAT BENEFITS DO WMS HAVE?
+    faq_answer: >-
+      - OUR NFTS GIVE ACCESS TO EXCLUSIVE BENEFITS FOR FUTURE DIGITAL ROCKET
+      COLLECTIONS.
+
+      - WMS BUYERS WILL GET PRIORITY ACCESS TO RARE WMS NFTs.
+
+      - WE WILL RAFFLE 1 ETH IN PHASE 8 AMONG THE HOLDERS.
+
+      - WE WILL RAFFLE PERSONALIZED NFTs AMONG HOLDERS
+
+      - EVERY NFT MINTED WILL HELP RECYCLE OVER 1000 MASKS, WHICH WILL BE TURNED INTO HYDROGEN FUEL.
+  - faq_question: WHAT IS WMS DONATION TO NANTEK?
+    faq_answer: >-
+      WITH EACH NFT WMS YOU PURCHASE, YOU WILL BE DEPOSITING RESOURCES TO NANTEK
+      TO RECYCLE APPROXIMATELY 6,000 DISUSED SURGICAL MASKS THAT WILL BECOME
+      APPROXIMATELY 1 KG OF HYDROGEN FUEL.
+
+      AS YOU SEE, YOU WILL BE CONTRIBUTING WITH RESOURCES TO ADDRESS CURRENT AND FUTURE PROBLEMS IN RELATION TO THE ENVIRONMENTAL CRISIS.
 mailing_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
   Voluptate magnam similique voluptas rem quaerat!
 ---
