@@ -39,46 +39,35 @@ city_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
   exercitationem! Pariatur sapiente dicta, aspernatur beatae illum incidunt
   molestias alias dolorum non?
 city_members:
-  - city_member_name: Juanito
-    city_member_description: 3D Artist
-    city_member_avatar: /assets/004.png
-    city_member_socials:
-      - city_member_social_name: twitter
-        city_member_social_url: https://example.com/
-      - city_member_social_name: linkedin
-        city_member_social_url: https://example.com/
-  - city_member_name: Marta
-    city_member_description: Blockchain Advisor
-    city_member_avatar: /assets/2.png
-    city_member_socials:
-      - city_member_social_url: https://example.com/
-        city_member_social_name: twitter
-      - city_member_social_name: linkedin
-        city_member_social_url: https://example.com/
-  - city_member_name: Pedro
-    city_member_description: 2D Artist
-    city_member_avatar: /assets/005.png
-    city_member_socials:
-      - city_member_social_url: https://example.com/
-        city_member_social_name: twitter
-      - city_member_social_url: https://example.com/
-        city_member_social_name: linkedin
-  - city_member_name: Hugo
-    city_member_description: 2D Artist
-    city_member_avatar: /assets/1.png
-    city_member_socials:
-      - city_member_social_url: https://example.com/
-        city_member_social_name: twitter
-      - city_member_social_url: https://example.com/
-        city_member_social_name: linkedin
-  - city_member_name: Carlos
-    city_member_description: 3D Artist
-    city_member_avatar: /assets/3.png
-    city_member_socials:
-      - city_member_social_url: https://example.com/
-        city_member_social_name: twitter
-      - city_member_social_url: https://example.com/
-        city_member_social_name: linkedin
+  - city_member_name: Santiago A.
+    city_member_description: Art Director
+    city_member_avatar: /assets/santiago-a.jpg
+    city_member_socials: []
+  - city_member_name: Gonzalo P.
+    city_member_description: Executive Producer
+    city_member_avatar: /assets/gonzalo-p.jpg
+    city_member_socials: []
+  - city_member_name: Ivo V.
+    city_member_description: Executive Director
+    city_member_avatar: /assets/ivo-v.jpg
+    city_member_socials: []
+  - city_member_name: Claudio V.
+    city_member_description: Chief Financial Officer
+    city_member_avatar: /assets/claudio-v.jpg
+    city_member_socials: []
+  - city_member_name: Joaquin M.
+    city_member_description: Creative Director
+    city_member_avatar: /assets/joaquin-m.jpg
+    city_member_socials: []
+  - city_member_name: Karina M.
+    city_member_description: Curator
+    city_member_avatar: /assets/karina-m.jpg
+  - city_member_name: Ed
+    city_member_description: Social Networks Advisor
+    city_member_avatar: /assets/ed.jpg
+  - city_member_name: Eddy
+    city_member_description: International NFT Advisor
+    city_member_avatar: /assets/eddie-.png
 forest_title: ROADMAP
 forest_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
   magnam similique voluptas rem quaerat! Animi magni explicabo tempore
