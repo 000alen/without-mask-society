@@ -20,7 +20,10 @@ export const City: React.FC<Props> = ({ city_title, city_members }) => {
 
   return (
     <section className="grid" id="team">
-      <div className="flex flex-col items-center" style={{ gridArea: "1/1" }}>
+      <div
+        className="flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto"
+        style={{ gridArea: "1/1" }}
+      >
         <Title>{city_title}</Title>
 
         <div className="grid justify-center grid-cols-2 gap-4 md:grid-cols-3">
