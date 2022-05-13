@@ -86,7 +86,7 @@ export default ({ data }: Props) => {
         pool_text={frontmatter.pool_text}
       />
 
-      <div className="flex flex-col gap-8 lg:justify-around lg:items-start lg:flex-row">
+      <div className="flex flex-col gap-8 -mt-96 lg:justify-around lg:items-start lg:flex-row">
         {/* FAQ */}
         <FAQ
           faq_title={frontmatter.faq_title}

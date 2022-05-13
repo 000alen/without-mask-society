@@ -27,7 +27,7 @@ export const Forest: React.FC<Props> = ({
   );
 
   return (
-    <section className="grid" id="roadmap">
+    <section className="grid -mt-72" id="roadmap">
       <div
         className="z-10 flex flex-col items-center h-min max-w-6xl gap-8 p-4 mx-auto pb-96 md:pb-[40rem] lg:pb-[75rem]"
         style={{ gridArea: "1/1" }}

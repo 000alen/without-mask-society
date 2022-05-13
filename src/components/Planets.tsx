@@ -11,7 +11,7 @@ interface Props {
 
 export const Planets: React.FC<Props> = ({ planets_title, planets_text }) => {
   return (
-    <section className="grid" id="donations">
+    <section className="grid -mt-72" id="donations">
       <div
         className="z-10 flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto h-min"
         style={{ gridArea: "1/1" }}

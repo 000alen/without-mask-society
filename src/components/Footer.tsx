@@ -31,7 +31,7 @@ export const Footer: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <div className="mt-24 wave2"></div>
+      <div className="wave2"></div>
       <footer className="bg-[#000067] flex flex-col justify-around gap-6">
         <Mailing text={mailing_text} />
 
