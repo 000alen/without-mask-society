@@ -62,13 +62,13 @@ city_members:
     city_member_description: Executive Director
     city_member_avatar: /assets/ivo-v.jpg
     city_member_socials: []
-  - city_member_name: Claudio V.
+  - city_member_name: Clau V.
     city_member_description: Chief Financial Officer
-    city_member_avatar: /assets/claudio-v.jpg
+    city_member_avatar: /assets/458.png
     city_member_socials: []
-  - city_member_name: Joaquin M.
+  - city_member_name: Jo M.
     city_member_description: Creative Director
-    city_member_avatar: /assets/joaquin-m.jpg
+    city_member_avatar: /assets/360.png
     city_member_socials: []
   - city_member_name: Karina M.
     city_member_description: Curator
@@ -207,6 +207,6 @@ faq_questions:
       APPROXIMATELY 1 KG OF HYDROGEN FUEL.
 
       AS YOU SEE, YOU WILL BE CONTRIBUTING WITH RESOURCES TO ADDRESS CURRENT AND FUTURE PROBLEMS IN RELATION TO THE ENVIRONMENTAL CRISIS.
-mailing_text: Without Mask Society are a collection of 2222 uniquely generated
-  NFTS, all living on the Ethereum Blockchain.
+mailing_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Voluptate magnam similique voluptas rem quaerat!
 ---
