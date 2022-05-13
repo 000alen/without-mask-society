@@ -86,7 +86,7 @@ export default ({ data }: Props) => {
         pool_text={frontmatter.pool_text}
       />
 
-      <div className="flex flex-col gap-8 lg:items-start lg:flex-row">
+      <div className="flex flex-col gap-8 lg:justify-around lg:items-start lg:flex-row">
         {/* FAQ */}
         <FAQ
           faq_title={frontmatter.faq_title}
@@ -141,10 +141,10 @@ export const pageQuery = graphql`
           city_member_avatar
           city_member_description
           city_member_name
-          city_member_socials {
-            city_member_social_name
-            city_member_social_url
-          }
+          # city_member_socials {
+          #   city_member_social_name
+          #   city_member_social_url
+          # }
         }
 
         forest_title

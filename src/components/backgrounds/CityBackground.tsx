@@ -11,7 +11,7 @@ export const CityBackground: React.FC<Props> = ({
   style = {},
 }) => {
   return (
-    <div className={className} style={style}>
+    <div className={`${className} select-none`} style={style}>
       {/* <div>
         <StaticImage
           className="!absolute w-[34.3%] left-[5.9%] top-[60.2%]"

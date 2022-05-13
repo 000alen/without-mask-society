@@ -11,7 +11,7 @@ export const PoolBackground: React.FC<Props> = ({
   style = {},
 }) => {
   return (
-    <div className={className} style={style}>
+    <div className={`${className} select-none`} style={style}>
       {/* <StaticImage
         className="!absolute w-[6.3%] left-[40.2%] top-[55.8%]"
         src="../../images/pool/P1.png"

@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import { v4 as uuid } from "uuid";
 
 interface Props {
@@ -19,7 +20,10 @@ export const Question = React.forwardRef<HTMLDivElement, Props>(
         </label>
         <div className="collapsible-content">
           <div className="content-inner">
-            <p>{answer}</p>
+            {/* <p>{answer}</p> */}
+            <ReactMarkdown className="font-mono prose prose-invert lg:prose-xl">
+              {answer}
+            </ReactMarkdown>
           </div>
         </div>
       </div>

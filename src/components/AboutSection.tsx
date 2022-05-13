@@ -2,6 +2,7 @@ import React from "react";
 import { Paragraph } from "./Paragraph";
 
 import { Title } from "./Title";
+import ReactMarkdown from "react-markdown";
 
 interface Props {
   about_title: string;
@@ -18,7 +19,10 @@ export const AboutSection: React.FC<Props> = ({ about_title, about_text }) => {
         id="about"
       >
         <Title>{about_title}</Title>
-        <Paragraph>{about_text}</Paragraph>
+        {/* <Paragraph>{about_text}</Paragraph> */}
+        <ReactMarkdown className="font-mono prose prose-invert lg:prose-xl">
+          {about_text}
+        </ReactMarkdown>
       </section>
       <div className="wave2 flip"></div>
     </>

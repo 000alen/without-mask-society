@@ -67,11 +67,11 @@ collections:
 
       # About
       - { name: about_title, label: "About - Title" }
-      - { name: about_text, label: "About - Text", widget: text }
+      - { name: about_text, label: "About - Text", widget: markdown }
 
       # City
       - { name: city_title, label: "City - Title" }
-      - { name: city_text, label: "City - Text", widget: text }
+      - { name: city_text, label: "City - Text", widget: markdown }
       - {
           name: city_members,
           label: "City - Members",
@@ -111,7 +111,7 @@ collections:
 
       # Forest
       - { name: forest_title, label: "Forest - Title" }
-      - { name: forest_text, label: "City - Text", widget: text }
+      - { name: forest_text, label: "City - Text", widget: markdown }
       - {
           name: forest_milestones,
           label: "Forest - Milestones",
@@ -121,12 +121,11 @@ collections:
               {
                 name: forest_milestone_percent,
                 label: "Forest - Milestone Percent",
-                widget: text,
               },
               {
                 name: forest_milestone_text,
                 label: "Forest - Milestone text",
-                widget: text,
+                widget: markdown,
               },
             ],
         }
@@ -147,11 +146,11 @@ collections:
 
       # Planets
       - { name: planets_title, label: "Planet - Title" }
-      - { name: planets_text, label: "Planet - Text", widget: text }
+      - { name: planets_text, label: "Planet - Text", widget: markdown }
 
       # Pool
       - { name: pool_title, label: "Pool - Title" }
-      - { name: pool_text, label: "Pool - Text", widget: text }
+      - { name: pool_text, label: "Pool - Text", widget: markdown }
 
       # FAQ
       - { name: faq_title, label: "FAQ - Title" }
@@ -160,7 +159,7 @@ collections:
         widget: list
         fields:
           - { name: faq_question, label: "FAQ - Question" }
-          - { name: faq_answer, label: "FAQ - Answer", widget: text }
+          - { name: faq_answer, label: "FAQ - Answer", widget: markdown }
 
       # Mailing
       - { name: mailing_text, label: "Mailing - Text" }

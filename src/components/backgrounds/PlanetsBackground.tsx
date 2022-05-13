@@ -11,7 +11,7 @@ export const PlanetsBackground: React.FC<Props> = ({
   style = {},
 }) => {
   return (
-    <div className={className} style={style}>
+    <div className={`${className} select-none`} style={style}>
       {/* <StaticImage
         className="!absolute w-[24.5%] left-[7.1%] top-[48.9%]"
         src="../../images/planets/P1.png"

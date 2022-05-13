@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import { lorem } from "../constants";
 
 import { PoolBackground } from "./backgrounds/PoolBackground";
@@ -18,7 +19,11 @@ export const Pool: React.FC<Props> = ({ pool_title, pool_text }) => {
         style={{ gridArea: "1/1" }}
       >
         <Title>{pool_title}</Title>
-        <Paragraph>{pool_text}</Paragraph>
+
+        {/* <Paragraph>{pool_text}</Paragraph> */}
+        <ReactMarkdown className="font-mono prose prose-invert lg:prose-xl">
+          {pool_text}
+        </ReactMarkdown>
       </div>
 
       <PoolBackground className="mt-12 md:-mt-12" style={{ gridArea: "1/1" }} />

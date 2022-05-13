@@ -11,7 +11,7 @@ export const ForestBackground: React.FC<Props> = ({
   style = {},
 }) => {
   return (
-    <div className={className} style={style}>
+    <div className={`${className} select-none`} style={style}>
       {/* <StaticImage
         className="!absolute w-[37.6%] left-0 top-[69.6%]"
         src="../../images/forest/P1.png"

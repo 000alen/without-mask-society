@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import ReactMarkdown from "react-markdown";
 
 import { CityMember } from "../typings";
 import { Avatar } from "./Avatar";
@@ -12,7 +13,11 @@ interface Props {
   city_members: CityMember[];
 }
 
-export const City: React.FC<Props> = ({ city_title, city_members }) => {
+export const City: React.FC<Props> = ({
+  city_title,
+  city_text,
+  city_members,
+}) => {
   const itemsRef = useRef<Array<HTMLDivElement | null>>(
     Array.from({ length: city_members.length }, () => null)
   );
@@ -26,6 +31,10 @@ export const City: React.FC<Props> = ({ city_title, city_members }) => {
         style={{ gridArea: "1/1" }}
       >
         <Title>{city_title}</Title>
+
+        <ReactMarkdown className="font-mono prose prose-invert lg:prose-xl">
+          {city_text}
+        </ReactMarkdown>
 
         <div className="grid justify-center grid-cols-2 gap-4 md:grid-cols-3">
           {city_members &&

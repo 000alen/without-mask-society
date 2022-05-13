@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import ReactMarkdown from "react-markdown";
 import { lorem } from "../constants";
 
 import { ForestMilestone, ForestShowcase } from "../typings";
@@ -17,6 +18,7 @@ interface Props {
 
 export const Forest: React.FC<Props> = ({
   forest_title,
+  forest_text,
   forest_milestones,
   forest_showcase,
 }) => {
@@ -34,13 +36,23 @@ export const Forest: React.FC<Props> = ({
       >
         <Title>{forest_title}</Title>
 
-        <Paragraph>{lorem}</Paragraph>
+        {/* <Paragraph>{lorem}</Paragraph> */}
+
+        <ReactMarkdown className="font-mono prose prose-invert lg:prose-xl">
+          {forest_text}
+        </ReactMarkdown>
 
         <div className="flex flex-col gap-8">
           {forest_milestones &&
-            forest_milestones.map(({ forest_milestone_text: text }, i) => (
-              <Milestone2 key={i} percent="50%" text={text} />
-            ))}
+            forest_milestones.map(
+              (
+                {
+                  forest_milestone_text: text,
+                  forest_milestone_percent: percent,
+                },
+                i
+              ) => <Milestone2 key={i} percent={percent} text={text} />
+            )}
         </div>
 
         <div className="grid max-w-xl grid-cols-2 gap-8">
