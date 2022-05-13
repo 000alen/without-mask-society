@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
-import ReactMarkdown from "react-markdown";
 
 import { CityMember } from "../typings";
 import { Avatar } from "./Avatar";
 import { CityBackground } from "./backgrounds/CityBackground";
+import { Markdown } from "./Markdown";
 import { Title } from "./Title";
 import { useAnimations } from "./useAnimations";
 
@@ -27,14 +27,11 @@ export const City: React.FC<Props> = ({
   return (
     <section className="grid" id="team">
       <div
-        className="flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto"
+        className="flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto pb-96 lg:pb-0"
         style={{ gridArea: "1/1" }}
       >
         <Title>{city_title}</Title>
-
-        <ReactMarkdown className="font-mono prose prose-invert lg:prose-xl">
-          {city_text}
-        </ReactMarkdown>
+        <Markdown>{city_text}</Markdown>
 
         <div className="grid justify-center grid-cols-2 gap-4 md:grid-cols-3">
           {city_members &&
@@ -62,7 +59,7 @@ export const City: React.FC<Props> = ({
       </div>
 
       <CityBackground
-        className="mt-72 md:mt-24 lg:-mt-[60rem]"
+        className="mt-auto mb-0 md:mt-56 lg:-mt-96"
         style={{ gridArea: "1/1" }}
       />
     </section>

@@ -2,9 +2,7 @@ import React from "react";
 
 import { PlanetsBackground } from "./backgrounds/PlanetsBackground";
 import { Title } from "./Title";
-import { Paragraph } from "./Paragraph";
-import { lorem } from "../constants";
-import ReactMarkdown from "react-markdown";
+import { Markdown } from "./Markdown";
 
 interface Props {
   planets_title: string;
@@ -19,11 +17,7 @@ export const Planets: React.FC<Props> = ({ planets_title, planets_text }) => {
         style={{ gridArea: "1/1" }}
       >
         <Title>{planets_title}</Title>
-
-        {/* <Paragraph>{planets_text}</Paragraph> */}
-        <ReactMarkdown className="font-mono prose prose-invert lg:prose-xl">
-          {planets_text}
-        </ReactMarkdown>
+        <Markdown>{planets_text}</Markdown>
       </div>
 
       <PlanetsBackground

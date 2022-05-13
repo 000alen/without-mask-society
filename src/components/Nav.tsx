@@ -33,7 +33,7 @@ const NavLink: React.FC<NavLinkProps> = ({
 }) => {
   return (
     <a
-      className={`${className} text-xl italic font-bold md:transition-all md:hover:text-green-400`}
+      className={`${className} text-xl italic font-bold lg:transition-all lg:hover:text-green-400`}
       href={href}
       onClick={() => onClick && onClick()}
     >
@@ -64,14 +64,14 @@ export const Nav: React.FC<Props> = ({
 
   return (
     <>
-      <nav className="flex flex-row gap-2 p-12 md:ml-12">
+      <nav className="flex flex-row gap-2 p-12 lg:ml-12">
         <div
           className={`${
             isOpen ? "opacity-100" : "opacity-0 invisible"
-          } fixed top-0 left-0 z-40 flex flex-col items-center justify-center w-screen h-screen gap-2 transition-all bg-green-400 md:!opacity-100 md:!visible md:bg-transparent md:h-auto md:w-full md:justify-around md:flex-row md:static`}
+          } fixed top-0 left-0 z-40 flex flex-col items-center justify-center w-screen h-screen gap-2 transition-all bg-green-400 lg:!opacity-100 lg:!visible lg:bg-transparent lg:h-auto lg:w-full lg:justify-around lg:flex-row lg:static`}
         >
           <NavLink
-            className="md:hidden"
+            className="lg:hidden"
             href="#top"
             onClick={() => setIsOpen(false)}
           >
@@ -111,7 +111,7 @@ export const Nav: React.FC<Props> = ({
         </div>
       </nav>
 
-      <div className="fixed top-0 right-0 z-50 p-12 md:hidden">
+      <div className="fixed top-0 right-0 z-50 p-12 lg:hidden">
         <div
           className={`${isOpen ? "checked" : ""} w-6 h-6 hamburger`}
           onClick={() => setIsOpen((p) => !p)}

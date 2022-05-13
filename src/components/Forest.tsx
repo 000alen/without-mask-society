@@ -1,11 +1,9 @@
 import React, { useRef, useState } from "react";
-import ReactMarkdown from "react-markdown";
-import { lorem } from "../constants";
 
 import { ForestMilestone, ForestShowcase } from "../typings";
 import { ForestBackground } from "./backgrounds/ForestBackground";
+import { Markdown } from "./Markdown";
 import { Milestone2 } from "./Milestone2";
-import { Paragraph } from "./Paragraph";
 import { choose } from "./Showcase";
 import { Title } from "./Title";
 
@@ -31,16 +29,11 @@ export const Forest: React.FC<Props> = ({
   return (
     <section className="grid" id="roadmap">
       <div
-        className="z-10 flex flex-col items-center h-min max-w-6xl gap-8 p-4 mx-auto pb-96 md:pb-[40rem] lg:pb-0"
+        className="z-10 flex flex-col items-center h-min max-w-6xl gap-8 p-4 mx-auto pb-96 md:pb-[40rem] lg:pb-[75rem]"
         style={{ gridArea: "1/1" }}
       >
         <Title>{forest_title}</Title>
-
-        {/* <Paragraph>{lorem}</Paragraph> */}
-
-        <ReactMarkdown className="font-mono prose prose-invert lg:prose-xl">
-          {forest_text}
-        </ReactMarkdown>
+        <Markdown>{forest_text}</Markdown>
 
         <div className="flex flex-col gap-8">
           {forest_milestones &&

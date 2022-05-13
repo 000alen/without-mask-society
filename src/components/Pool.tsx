@@ -1,9 +1,7 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
-import { lorem } from "../constants";
 
 import { PoolBackground } from "./backgrounds/PoolBackground";
-import { Paragraph } from "./Paragraph";
+import { Markdown } from "./Markdown";
 import { Title } from "./Title";
 
 interface Props {
@@ -19,11 +17,7 @@ export const Pool: React.FC<Props> = ({ pool_title, pool_text }) => {
         style={{ gridArea: "1/1" }}
       >
         <Title>{pool_title}</Title>
-
-        {/* <Paragraph>{pool_text}</Paragraph> */}
-        <ReactMarkdown className="font-mono prose prose-invert lg:prose-xl">
-          {pool_text}
-        </ReactMarkdown>
+        <Markdown>{pool_text}</Markdown>
       </div>
 
       <PoolBackground className="mt-12 md:-mt-12" style={{ gridArea: "1/1" }} />
