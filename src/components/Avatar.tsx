@@ -5,6 +5,7 @@ import { TwitterIcon } from "./icons/TwitterIcon";
 import { Subtitle } from "./Subtitle";
 
 interface Props {
+  className?: string;
   avatar: string;
   name: string;
   description: string;
@@ -12,9 +13,9 @@ interface Props {
 }
 
 export const Avatar = React.forwardRef<HTMLDivElement, Props>(
-  ({ avatar, name, description, socials }, ref) => {
+  ({ className = "", avatar, name, description, socials }, ref) => {
     return (
-      <div ref={ref} className="flex flex-col items-center">
+      <div ref={ref} className={`${className} flex flex-col items-center`}>
         <div className="relative flex justify-center">
           <div className="-z-10 absolute bottom-0 border-2 border-green-400 w-[80%] h-[70%]"></div>
 
@@ -27,7 +28,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, Props>(
           {name}
         </h1>
 
-        <p className="font-mono italic">{description}</p>
+        <p className="font-mono italic text-center">{description}</p>
         <div className="flex flex-row justify-center gap-2">
           {socials &&
             socials.map(

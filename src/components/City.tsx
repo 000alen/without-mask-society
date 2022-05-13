@@ -33,7 +33,7 @@ export const City: React.FC<Props> = ({
         <Title>{city_title}</Title>
         <Markdown>{city_text}</Markdown>
 
-        <div className="grid justify-center grid-cols-2 gap-4 md:grid-cols-3">
+        <div className="justify-center gap-4 fancy-2grid md:fancy-3grid">
           {city_members &&
             city_members.map(
               (
@@ -48,6 +48,7 @@ export const City: React.FC<Props> = ({
                 <Avatar
                   key={i}
                   ref={(e) => (itemsRef.current[i] = e)}
+                  className="fancy-2item md:fancy-3item"
                   avatar={city_member_avatar}
                   name={city_member_name}
                   description={city_member_description}

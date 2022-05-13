@@ -8,6 +8,15 @@
 @import "collapsible.css";
 @import "glow.css";
 @import "hamburger.css";
+@import "fancy-grid.css";
+
+.prose strong {
+  color: #e41388;
+}
+
+.prose a {
+  color: #e41388;
+}
 
 .rnftg-dark .dark\:rnftg-bg-gray-900 {
   background: transparent !important;
