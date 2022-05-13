@@ -123,13 +123,13 @@ forest_milestones:
   - forest_milestone_percent: 000_ORIGINAL
     forest_milestone_text: NFT WMS ZERO DRAW AMONG HOLDERS.
 forest_showcase:
-  - forest_showcase_image: /assets/a1.png
+  - forest_showcase_image: /assets/473.png
     forest_showcase_url: https://example.com/
-  - forest_showcase_image: /assets/a2.png
+  - forest_showcase_image: /assets/370.png
     forest_showcase_url: https://example.com/
-  - forest_showcase_image: /assets/a3.png
+  - forest_showcase_image: /assets/364.png
     forest_showcase_url: https://example.com/
-  - forest_showcase_image: /assets/a4.png
+  - forest_showcase_image: /assets/143.png
     forest_showcase_url: https://example.com/
 planets_title: DONATIONS
 planets_text: >-
