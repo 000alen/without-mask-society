@@ -207,6 +207,6 @@ faq_questions:
       APPROXIMATELY 1 KG OF HYDROGEN FUEL.
 
       AS YOU SEE, YOU WILL BE CONTRIBUTING WITH RESOURCES TO ADDRESS CURRENT AND FUTURE PROBLEMS IN RELATION TO THE ENVIRONMENTAL CRISIS.
-mailing_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-  Voluptate magnam similique voluptas rem quaerat!
+mailing_text: Without Mask Society are a collection of 2222 uniquely generated
+  NFTS, all living on the Ethereum Blockchain.
 ---
