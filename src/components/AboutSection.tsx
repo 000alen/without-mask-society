@@ -11,7 +11,7 @@ interface Props {
 export const AboutSection: React.FC<Props> = ({ about_title, about_text }) => {
   return (
     <>
-      <div className="wave2 -mt-72"></div>
+      <div className="-mt-12 wave2 md:-mt-36 lg:-mt-72"></div>
 
       <section
         className="bg-[#000067] flex flex-col p-4 items-center gap-2"
@@ -20,7 +20,7 @@ export const AboutSection: React.FC<Props> = ({ about_title, about_text }) => {
         <Title>{about_title}</Title>
         <Markdown>{about_text}</Markdown>
       </section>
-      <div className="wave2 flip -mb-72"></div>
+      <div className="-mb-12 wave2 flip md:-mb-36 lg:-mb-72"></div>
     </>
   );
 };
