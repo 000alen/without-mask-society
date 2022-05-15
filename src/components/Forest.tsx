@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { ForestMilestone, ForestShowcase } from "../typings";
 import { ForestBackground } from "./backgrounds/ForestBackground";
 import { Markdown } from "./Markdown";
-import { Milestone2 } from "./Milestone2";
+import { RoadmapItem } from "./RoadmapItem";
 import { choose } from "./Showcase";
 import { Title } from "./Title";
 
@@ -35,7 +35,7 @@ export const Forest: React.FC<Props> = ({
         <Title>{forest_title}</Title>
         <Markdown>{forest_text}</Markdown>
 
-        <div className="flex flex-col gap-8">
+        <div className="w-full gap-2 timeline">
           {forest_milestones &&
             forest_milestones.map(
               (
@@ -44,20 +44,30 @@ export const Forest: React.FC<Props> = ({
                   forest_milestone_percent: percent,
                 },
                 i
-              ) => <Milestone2 key={i} percent={percent} text={text} />
+              ) => (
+                <RoadmapItem
+                  title={percent}
+                  description={text}
+                  icon="0.05 ETH"
+                />
+              )
             )}
         </div>
 
-        <div className="grid max-w-xl grid-cols-2 gap-8">
-          {showcase.map(({ forest_showcase_image }, i) => (
-            <img
-              key={i}
-              className="w-full transition-all border-2 border-green-400 border-solid rounded hover:glow"
-              src={forest_showcase_image}
-              alt=""
-            />
-          ))}
-        </div>
+        {/* <div className="flex gap-4">
+          <div className="flex flex-col gap-8">
+            <div className="grid max-w-xl grid-cols-2 gap-8">
+              {showcase.map(({ forest_showcase_image }, i) => (
+                <img
+                  key={i}
+                  className="w-full transition-all border-2 border-green-400 border-solid rounded select-none hover:glow"
+                  src={forest_showcase_image}
+                  alt=""
+                />
+              ))}
+            </div>
+          </div>
+        </div> */}
       </div>
 
       <ForestBackground className="mt-auto mb-0" style={{ gridArea: "1/1" }} />

@@ -19,7 +19,11 @@ export const Avatar = React.forwardRef<HTMLDivElement, Props>(
         <div className="relative flex justify-center">
           <div className="-z-10 absolute bottom-0 border-2 border-green-400 w-[80%] h-[70%]"></div>
 
-          <img className="w-32 md:w-48 lg:w-64" src={avatar} alt={name} />
+          <img
+            className="w-32 select-none md:w-48 lg:w-64"
+            src={avatar}
+            alt={name}
+          />
         </div>
 
         <h1

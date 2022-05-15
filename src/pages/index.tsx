@@ -15,6 +15,7 @@ import { Planets } from "../components/Planets";
 import { Pool } from "../components/Pool";
 import { Stars } from "../components/Stars";
 import { LandingFrontmatter } from "../typings";
+import { Helmet } from "react-helmet";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,6 +33,10 @@ export default ({ data }: Props) => {
 
   return (
     <div className="scroll-smooth">
+      <Helmet>
+        <title>Without Mask Society</title>
+      </Helmet>
+
       <Stars />
 
       <a id="top"></a>

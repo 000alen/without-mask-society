@@ -10,6 +10,7 @@ export const Markdown: React.FC<Props> = ({ className = "", children }) => {
   return (
     <ReactMarkdown
       className={`${className} font-mono prose text-white prose-invert lg:prose-xl`}
+      linkTarget="_blank"
     >
       {children}
     </ReactMarkdown>
