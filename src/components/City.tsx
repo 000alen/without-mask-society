@@ -40,7 +40,7 @@ export const City: React.FC<Props> = ({
         scrub: true,
       },
     });
-  }, []);
+  }, [md]);
 
   return md || !isBrowser ? (
     <section className="grid" id="team">

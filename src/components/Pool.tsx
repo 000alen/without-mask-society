@@ -38,7 +38,7 @@ export const Pool: React.FC<Props> = ({ pool_title, pool_text }) => {
         scrub: true,
       },
     });
-  }, []);
+  }, [sm]);
 
   return sm || !isBrowser ? (
     <section className="grid -mt-32 md:-mt-96 lg:mt-[-50rem]" id="benefits">

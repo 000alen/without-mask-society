@@ -27,7 +27,7 @@ export const Planets: React.FC<Props> = ({ planets_title, planets_text }) => {
         scrub: true,
       },
     });
-  }, []);
+  }, [sm]);
 
   return sm || !isBrowser ? (
     <section className="grid -mt-20 md:-mt-36 lg:-mt-72" id="donations">
