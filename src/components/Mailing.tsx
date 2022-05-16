@@ -9,7 +9,6 @@ interface Props {
 
 export const Mailing = React.forwardRef<HTMLDivElement, Props>(
   ({ text }, ref) => {
-    console.log(text);
     return (
       <div
         ref={ref}

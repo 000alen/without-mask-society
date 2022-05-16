@@ -69,12 +69,11 @@ export default ({ data }: Props) => {
         city_members={frontmatter.city_members}
       />
 
-      {/* Roadmap */} 
+      {/* Roadmap */}
       <Forest
         forest_title={frontmatter.forest_title}
         forest_text={frontmatter.forest_text}
         forest_milestones={frontmatter.forest_milestones}
-        forest_showcase={frontmatter.forest_showcase}
       />
 
       <Stars />
@@ -155,10 +154,6 @@ export const pageQuery = graphql`
         forest_milestones {
           forest_milestone_percent
           forest_milestone_text
-        }
-        forest_showcase {
-          forest_showcase_url
-          forest_showcase_image
         }
 
         planets_title

@@ -120,27 +120,18 @@ collections:
             [
               {
                 name: forest_milestone_percent,
-                label: "Forest - Milestone Percent",
+                label: "Forest - Milestone Title",
               },
               {
                 name: forest_milestone_text,
                 label: "Forest - Milestone text",
                 widget: markdown,
               },
-            ],
-        }
-      - {
-          name: forest_showcase,
-          label: "Forest - Showcase",
-          widget: list,
-          fields:
-            [
               {
-                name: forest_showcase_image,
-                label: "Forest - Showcase image",
-                widget: image,
+                name: forest_milestone_icon,
+                label: "Forest - Milestone icon",
+                widget: markdown,
               },
-              { name: forest_showcase_url, label: "Forest - Showcase url" },
             ],
         }
 

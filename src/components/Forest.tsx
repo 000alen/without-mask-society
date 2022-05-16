@@ -11,7 +11,6 @@ interface Props {
   forest_title: string;
   forest_text: string;
   forest_milestones: ForestMilestone[];
-  forest_showcase: ForestShowcase[];
 }
 
 export const Forest: React.FC<Props> = ({

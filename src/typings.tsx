@@ -70,7 +70,6 @@ export interface LandingFrontmatter {
   forest_title: string;
   forest_text: string;
   forest_milestones: ForestMilestone[];
-  forest_showcase: ForestShowcase[];
 
   planets_title: string;
   planets_text: string;
