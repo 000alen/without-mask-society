@@ -9,7 +9,7 @@ interface Props {
 export const Markdown: React.FC<Props> = ({ className = "", children }) => {
   return (
     <ReactMarkdown
-      className={`${className} font-mono prose text-white prose-invert lg:prose-xl`}
+      className={`${className} marker:text-green-400 font-mono prose text-white prose-invert lg:prose-xl`}
       linkTarget="_blank"
     >
       {children}

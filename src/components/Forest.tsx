@@ -1,11 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 
 import { ForestMilestone, ForestShowcase } from "../typings";
 import { ForestBackground } from "./backgrounds/ForestBackground";
 import { Markdown } from "./Markdown";
 import { RoadmapItem } from "./RoadmapItem";
-import { choose } from "./Showcase";
 import { Title } from "./Title";
+import { useAnimations } from "./useAnimations";
 
 interface Props {
   forest_title: string;
@@ -18,16 +18,18 @@ export const Forest: React.FC<Props> = ({
   forest_title,
   forest_text,
   forest_milestones,
-  forest_showcase,
 }) => {
-  const [showcase] = useState<ForestShowcase[]>(choose(forest_showcase, 4));
-
   const itemsRef = useRef<Array<HTMLDivElement | null>>(
     Array.from({ length: forest_milestones.length }, () => null)
   );
 
+  useAnimations<HTMLDivElement>(itemsRef as React.RefObject<HTMLDivElement[]>);
+
   return (
-    <section className="grid -mt-24 md:-mt-36 lg:-mt-72" id="roadmap">
+    <section
+      className="grid -mt-24 overflow-x-hidden md:-mt-36 lg:-mt-72"
+      id="roadmap"
+    >
       <div
         className="z-10 flex flex-col items-center h-min max-w-6xl gap-8 p-4 mx-auto pb-96 md:pb-[40rem] lg:pb-[75rem]"
         style={{ gridArea: "1/1" }}
@@ -46,28 +48,16 @@ export const Forest: React.FC<Props> = ({
                 i
               ) => (
                 <RoadmapItem
+                  key={i}
+                  ref={(e) => (itemsRef.current[i] = e)}
+                  className={i % 2 === 0 ? "gs_fromLeft" : "gs_fromRight"}
                   title={percent}
-                  description={text}
+                  text={text}
                   icon="0.05 ETH"
                 />
               )
             )}
         </div>
-
-        {/* <div className="flex gap-4">
-          <div className="flex flex-col gap-8">
-            <div className="grid max-w-xl grid-cols-2 gap-8">
-              {showcase.map(({ forest_showcase_image }, i) => (
-                <img
-                  key={i}
-                  className="w-full transition-all border-2 border-green-400 border-solid rounded select-none hover:glow"
-                  src={forest_showcase_image}
-                  alt=""
-                />
-              ))}
-            </div>
-          </div>
-        </div> */}
       </div>
 
       <ForestBackground className="mt-auto mb-0" style={{ gridArea: "1/1" }} />

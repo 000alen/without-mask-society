@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 import { CityMember } from "../typings";
 import { Avatar } from "./Avatar";
@@ -6,6 +6,9 @@ import { CityBackground } from "./backgrounds/CityBackground";
 import { Markdown } from "./Markdown";
 import { Title } from "./Title";
 import { useAnimations } from "./useAnimations";
+import { useMediaQuery } from "./useMediaQuery";
+import gsap from "gsap";
+import { StaticImage } from "gatsby-plugin-image";
 
 interface Props {
   city_title: string;
@@ -21,10 +24,24 @@ export const City: React.FC<Props> = ({
   const itemsRef = useRef<Array<HTMLDivElement | null>>(
     Array.from({ length: city_members.length }, () => null)
   );
+  const md = useMediaQuery("(max-width: 1024px)");
 
   useAnimations<HTMLDivElement>(itemsRef as React.RefObject<HTMLDivElement[]>);
 
-  return (
+  useEffect(() => {
+    if (md) return;
+
+    gsap.to(".pImageCity", {
+      yPercent: -25,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".pSectionCity",
+        scrub: true,
+      },
+    });
+  }, []);
+
+  return md ? (
     <section className="grid" id="team">
       <div
         className="flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto pb-96 lg:pb-0"
@@ -62,6 +79,50 @@ export const City: React.FC<Props> = ({
       <CityBackground
         className="mt-auto mb-0 md:mt-56 lg:-mt-96"
         style={{ gridArea: "1/1" }}
+      />
+    </section>
+  ) : (
+    <section className="relative pSectionCity" id="team">
+      <div className="flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto pb-96 lg:pb-0">
+        <Title>{city_title}</Title>
+        <Markdown>{city_text}</Markdown>
+
+        <div className="justify-center gap-4 fancy-2grid md:fancy-3grid">
+          {city_members &&
+            city_members.map(
+              (
+                {
+                  city_member_avatar,
+                  city_member_description,
+                  city_member_name,
+                  city_member_socials,
+                },
+                i
+              ) => (
+                <Avatar
+                  key={i}
+                  ref={(e) => (itemsRef.current[i] = e)}
+                  className="fancy-2item md:fancy-3item"
+                  avatar={city_member_avatar}
+                  name={city_member_name}
+                  description={city_member_description}
+                  socials={city_member_socials}
+                />
+              )
+            )}
+        </div>
+      </div>
+
+      <StaticImage
+        className="absolute top-0 w-full pImageCity -z-10"
+        src="../../images/city/static.png"
+        alt=""
+      />
+
+      <StaticImage
+        className="w-[50%] opacity-0"
+        src="../../images/city/static.png"
+        alt=""
       />
     </section>
   );

@@ -16,6 +16,7 @@ interface Props {
 interface NavLinkProps {
   className?: string;
   href: string;
+  target?: string;
   onClick?: () => void;
   children: string;
 }
@@ -28,6 +29,7 @@ interface NavIconProps {
 const NavLink: React.FC<NavLinkProps> = ({
   className,
   href,
+  target,
   onClick,
   children,
 }) => {
@@ -36,6 +38,7 @@ const NavLink: React.FC<NavLinkProps> = ({
       className={`${className} text-xl italic font-bold lg:transition-all lg:hover:text-green-400`}
       href={href}
       onClick={() => onClick && onClick()}
+      {...(target ? { target } : {})}
     >
       {children}
     </a>
@@ -80,7 +83,11 @@ export const Nav: React.FC<Props> = ({
           <NavLink href="#about" onClick={() => setIsOpen(false)}>
             ABOUT
           </NavLink>
-          <NavLink href="#" onClick={() => setIsOpen(false)}>
+          <NavLink
+            href={opensea_url}
+            target="_blank"
+            onClick={() => setIsOpen(false)}
+          >
             SHOP
           </NavLink>
           <NavLink href="#team" onClick={() => setIsOpen(false)}>

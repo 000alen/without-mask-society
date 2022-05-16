@@ -69,7 +69,7 @@ export default ({ data }: Props) => {
         city_members={frontmatter.city_members}
       />
 
-      {/* Roadmap */}
+      {/* Roadmap */} 
       <Forest
         forest_title={frontmatter.forest_title}
         forest_text={frontmatter.forest_text}
@@ -91,7 +91,7 @@ export default ({ data }: Props) => {
         pool_text={frontmatter.pool_text}
       />
 
-      <div className="flex flex-col gap-8 md:-mt-36 lg:-mt-96 lg:justify-around lg:items-start lg:flex-row">
+      <div className="flex flex-col gap-32 md:-mt-36 lg:-mt-96 lg:justify-around lg:items-start lg:flex-row">
         <FAQ
           faq_title={frontmatter.faq_title}
           faq_questions={frontmatter.faq_questions}
