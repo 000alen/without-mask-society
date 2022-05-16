@@ -27,6 +27,8 @@ interface Props {
   };
 }
 
+export const isBrowser = typeof window !== "undefined";
+
 export default ({ data }: Props) => {
   const { markdownRemark } = data;
   const { frontmatter } = markdownRemark;

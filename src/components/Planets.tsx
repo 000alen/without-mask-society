@@ -6,6 +6,7 @@ import { Markdown } from "./Markdown";
 import gsap from "gsap";
 import { StaticImage } from "gatsby-plugin-image";
 import { useMediaQuery } from "./useMediaQuery";
+import { isBrowser } from "../pages";
 
 interface Props {
   planets_title: string;
@@ -16,7 +17,7 @@ export const Planets: React.FC<Props> = ({ planets_title, planets_text }) => {
   const sm = useMediaQuery("(max-width: 768px)");
 
   useEffect(() => {
-    if (sm) return;
+    // if (sm) return;
 
     gsap.to(".pImagePlanets", {
       yPercent: -50,
@@ -28,8 +29,7 @@ export const Planets: React.FC<Props> = ({ planets_title, planets_text }) => {
     });
   }, []);
 
-  // sm ? (
-  return (
+  return sm || !isBrowser ? (
     <section className="grid -mt-20 md:-mt-36 lg:-mt-72" id="donations">
       <div
         className="z-10 flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto md:mt-56 h-min"
@@ -44,25 +44,24 @@ export const Planets: React.FC<Props> = ({ planets_title, planets_text }) => {
         style={{ gridArea: "1/1" }}
       />
     </section>
+  ) : (
+    <section className="relative pSectionPlanets" id="donations">
+      <div className="relative z-10 flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto pContentPlanets h-min">
+        <Title>{planets_title}</Title>
+        <Markdown className="font-bold">{planets_text}</Markdown>
+      </div>
+
+      <StaticImage
+        className="!absolute top-0 w-full pImagePlanets -z-10"
+        src="../../images/planets/static.png"
+        alt=""
+      />
+
+      <StaticImage
+        className="w-[50%] opacity-0"
+        src="../../images/planets/static.png"
+        alt=""
+      />
+    </section>
   );
-  // ) : (
-  //   <section className="relative pSectionPlanets" id="donations">
-  //     <div className="relative z-10 flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto pContentPlanets h-min">
-  //       <Title>{planets_title}</Title>
-  //       <Markdown className="font-bold">{planets_text}</Markdown>
-  //     </div>
-
-  //     <StaticImage
-  //       className="!absolute top-0 w-full pImagePlanets -z-10"
-  //       src="../../images/planets/static.png"
-  //       alt=""
-  //     />
-
-  //     <StaticImage
-  //       className="w-[50%] opacity-0"
-  //       src="../../images/planets/static.png"
-  //       alt=""
-  //     />
-  //   </section>
-  // );
 };
