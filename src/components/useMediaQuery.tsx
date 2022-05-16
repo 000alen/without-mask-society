@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 
-const isBrowser = typeof window !== "undefined";
+// const isBrowser = typeof window !== "undefined";
 
 export const useMediaQuery = (query: string) => {
-  const [matches, setMatches] = useState(
-    isBrowser ? window.matchMedia(query).matches : false
-  );
+  const [matches, setMatches] = useState<boolean | null>(null);
 
   useEffect(() => {
-    if (!isBrowser) return;
+    setMatches(window.matchMedia(query).matches);
+
     window
       .matchMedia(query)
       .addEventListener("change", (e) => setMatches(e.matches));
