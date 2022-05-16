@@ -114,7 +114,7 @@ export const City: React.FC<Props> = ({
       </div>
 
       <StaticImage
-        className="absolute top-0 w-full pImageCity -z-10"
+        className="!absolute top-0 w-full pImageCity -z-10"
         src="../../images/city/static.png"
         alt=""
       />

@@ -51,7 +51,7 @@ export const Planets: React.FC<Props> = ({ planets_title, planets_text }) => {
       </div>
 
       <StaticImage
-        className="absolute top-0 w-full pImagePlanets -z-10"
+        className="!absolute top-0 w-full pImagePlanets -z-10"
         src="../../images/planets/static.png"
         alt=""
       />

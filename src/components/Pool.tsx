@@ -59,7 +59,7 @@ export const Pool: React.FC<Props> = ({ pool_title, pool_text }) => {
       </div>
 
       <StaticImage
-        className="absolute top-0 w-full pImagePool -z-10"
+        className="!absolute top-0 w-full pImagePool -z-10"
         src="../../images/pool/static.png"
         alt=""
       />
