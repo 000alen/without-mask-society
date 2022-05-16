@@ -39,7 +39,8 @@ export const Pool: React.FC<Props> = ({ pool_title, pool_text }) => {
     });
   }, []);
 
-  return sm ? (
+  // sm ? (
+  return (
     <section className="grid -mt-32 md:-mt-96 lg:mt-[-50rem]" id="benefits">
       <div
         className="z-10 flex flex-col items-center max-w-6xl p-4 mx-auto md:mt-48 h-min"
@@ -51,24 +52,25 @@ export const Pool: React.FC<Props> = ({ pool_title, pool_text }) => {
 
       <PoolBackground className="mt-36 md:-mt-12" style={{ gridArea: "1/1" }} />
     </section>
-  ) : (
-    <section className="relative pSectionPool" id="benefits">
-      <div className="relative z-10 flex flex-col items-center max-w-6xl p-4 mx-auto pContentPool h-min">
-        <Title>{pool_title}</Title>
-        <Markdown className="font-bold">{pool_text}</Markdown>
-      </div>
-
-      <StaticImage
-        className="!absolute top-0 w-full pImagePool -z-10"
-        src="../../images/pool/static.png"
-        alt=""
-      />
-
-      <StaticImage
-        className="w-[50%] opacity-0"
-        src="../../images/pool/static.png"
-        alt=""
-      />
-    </section>
   );
+  // ) : (
+  //   <section className="relative pSectionPool" id="benefits">
+  //     <div className="relative z-10 flex flex-col items-center max-w-6xl p-4 mx-auto pContentPool h-min">
+  //       <Title>{pool_title}</Title>
+  //       <Markdown className="font-bold">{pool_text}</Markdown>
+  //     </div>
+
+  //     <StaticImage
+  //       className="!absolute top-0 w-full pImagePool -z-10"
+  //       src="../../images/pool/static.png"
+  //       alt=""
+  //     />
+
+  //     <StaticImage
+  //       className="w-[50%] opacity-0"
+  //       src="../../images/pool/static.png"
+  //       alt=""
+  //     />
+  //   </section>
+  // );
 };

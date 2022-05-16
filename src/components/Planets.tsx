@@ -28,7 +28,8 @@ export const Planets: React.FC<Props> = ({ planets_title, planets_text }) => {
     });
   }, []);
 
-  return sm ? (
+  // sm ? (
+  return (
     <section className="grid -mt-20 md:-mt-36 lg:-mt-72" id="donations">
       <div
         className="z-10 flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto md:mt-56 h-min"
@@ -43,24 +44,25 @@ export const Planets: React.FC<Props> = ({ planets_title, planets_text }) => {
         style={{ gridArea: "1/1" }}
       />
     </section>
-  ) : (
-    <section className="relative pSectionPlanets" id="donations">
-      <div className="relative z-10 flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto pContentPlanets h-min">
-        <Title>{planets_title}</Title>
-        <Markdown className="font-bold">{planets_text}</Markdown>
-      </div>
-
-      <StaticImage
-        className="!absolute top-0 w-full pImagePlanets -z-10"
-        src="../../images/planets/static.png"
-        alt=""
-      />
-
-      <StaticImage
-        className="w-[50%] opacity-0"
-        src="../../images/planets/static.png"
-        alt=""
-      />
-    </section>
   );
+  // ) : (
+  //   <section className="relative pSectionPlanets" id="donations">
+  //     <div className="relative z-10 flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto pContentPlanets h-min">
+  //       <Title>{planets_title}</Title>
+  //       <Markdown className="font-bold">{planets_text}</Markdown>
+  //     </div>
+
+  //     <StaticImage
+  //       className="!absolute top-0 w-full pImagePlanets -z-10"
+  //       src="../../images/planets/static.png"
+  //       alt=""
+  //     />
+
+  //     <StaticImage
+  //       className="w-[50%] opacity-0"
+  //       src="../../images/planets/static.png"
+  //       alt=""
+  //     />
+  //   </section>
+  // );
 };
