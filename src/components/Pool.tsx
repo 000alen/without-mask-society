@@ -57,7 +57,7 @@ export const Pool: React.FC<Props> = ({ pool_title, pool_text }) => {
     </section>
   ) : (
     <section
-      className="relative -mt-40 lg:-mt-[50rem] pSectionPool"
+      className="relative -mt-80 lg:-mt-[50rem] pSectionPool"
       id="benefits"
     >
       <div className="relative z-10 flex flex-col items-center max-w-6xl gap-8 p-4 mx-auto pContentPool h-min">

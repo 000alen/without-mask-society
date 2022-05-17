@@ -1,5 +1,5 @@
-import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import React from "react";
 
 interface Props {
   className?: string;
@@ -69,7 +69,7 @@ export const ForestBackground: React.FC<Props> = ({
       /> */}
 
       <StaticImage
-        className="w-full -z-10"
+        className="w-full -z-20"
         src="../../images/forest/static2.png"
         alt=""
       />

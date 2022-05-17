@@ -61,7 +61,10 @@ export const Forest: React.FC<Props> = ({
         </div>
       </div>
 
-      <ForestBackground className="mt-auto mb-0" style={{ gridArea: "1/1" }} />
+      <ForestBackground
+        className="mt-auto mb-0 lg:-mt-[12rem]"
+        style={{ gridArea: "1/1" }}
+      />
     </section>
   );
 };
