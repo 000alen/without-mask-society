@@ -13,7 +13,7 @@ export const BlogEntry = React.forwardRef<HTMLAnchorElement, Props>(
     if (!id) id = uuid();
 
     return (
-      <Link innerRef={ref} className="blog-entry" to={url}>
+      <Link className="blog-entry" innerRef={ref} to={url}>
         {title}
       </Link>
     );

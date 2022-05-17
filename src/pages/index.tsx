@@ -92,7 +92,7 @@ export default ({ data }: Props) => {
         pool_text={frontmatter.pool_text}
       />
 
-      <div className="flex flex-col gap-32 md:-mt-36 lg:-mt-96 lg:justify-around lg:items-start lg:flex-row">
+      <div className="z-20 flex flex-col gap-32 lg:justify-around lg:items-start lg:flex-row">
         <FAQ
           faq_title={frontmatter.faq_title}
           faq_questions={frontmatter.faq_questions}
