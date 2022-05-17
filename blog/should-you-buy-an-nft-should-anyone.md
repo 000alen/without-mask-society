@@ -1,5 +1,5 @@
 ---
-path: should-you
+path: should
 date: 2022-05-17T20:20:08.518Z
 title: Should You Buy An NFT? Should Anyone?
 ---
