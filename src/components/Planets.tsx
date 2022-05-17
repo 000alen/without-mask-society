@@ -1,12 +1,12 @@
+import { StaticImage } from "gatsby-plugin-image";
+import gsap from "gsap";
 import React, { useEffect } from "react";
 
-import { PlanetsBackground } from "./backgrounds/PlanetsBackground";
-import { Title } from "./Title";
-import { Markdown } from "./Markdown";
-import gsap from "gsap";
-import { StaticImage } from "gatsby-plugin-image";
-import { useMediaQuery } from "./useMediaQuery";
 import { isBrowser } from "../pages";
+import { PlanetsBackground } from "./backgrounds/PlanetsBackground";
+import { Markdown } from "./Markdown";
+import { Title } from "./Title";
+import { useMediaQuery } from "./useMediaQuery";
 
 interface Props {
   planets_title: string;
@@ -36,7 +36,9 @@ export const Planets: React.FC<Props> = ({ planets_title, planets_text }) => {
         style={{ gridArea: "1/1" }}
       >
         <Title>{planets_title}</Title>
-        <Markdown className="font-bold">{planets_text}</Markdown>
+        <Markdown className="p-4 bg-white rounded !text-black">
+          {planets_text}
+        </Markdown>
       </div>
 
       <PlanetsBackground
@@ -48,7 +50,9 @@ export const Planets: React.FC<Props> = ({ planets_title, planets_text }) => {
     <section className="relative pSectionPlanets" id="donations">
       <div className="relative z-10 flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto pContentPlanets h-min">
         <Title>{planets_title}</Title>
-        <Markdown className="font-bold">{planets_text}</Markdown>
+        <Markdown className="p-4 bg-white rounded !text-black">
+          {planets_text}
+        </Markdown>
       </div>
 
       <StaticImage

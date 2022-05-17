@@ -1,5 +1,8 @@
+import { StaticImage } from "gatsby-plugin-image";
+import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 
+import { isBrowser } from "../pages";
 import { CityMember } from "../typings";
 import { Avatar } from "./Avatar";
 import { CityBackground } from "./backgrounds/CityBackground";
@@ -7,9 +10,6 @@ import { Markdown } from "./Markdown";
 import { Title } from "./Title";
 import { useAnimations } from "./useAnimations";
 import { useMediaQuery } from "./useMediaQuery";
-import gsap from "gsap";
-import { StaticImage } from "gatsby-plugin-image";
-import { isBrowser } from "../pages";
 
 interface Props {
   city_title: string;
@@ -49,7 +49,9 @@ export const City: React.FC<Props> = ({
         style={{ gridArea: "1/1" }}
       >
         <Title>{city_title}</Title>
-        <Markdown>{city_text}</Markdown>
+        <Markdown className="p-4 bg-white rounded !text-black">
+          {city_text}
+        </Markdown>
 
         <div className="justify-center gap-4 fancy-2grid md:fancy-3grid">
           {city_members &&
@@ -78,7 +80,8 @@ export const City: React.FC<Props> = ({
       </div>
 
       <CityBackground
-        className="mt-auto mb-0 md:mt-56 lg:-mt-96"
+        // className="mt-auto mb-0 md:mt-56 lg:-mt-96"
+        className="mt-auto -mb-12"
         style={{ gridArea: "1/1" }}
       />
     </section>
@@ -86,7 +89,9 @@ export const City: React.FC<Props> = ({
     <section className="relative pSectionCity" id="team">
       <div className="flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto pb-96 lg:pb-0">
         <Title>{city_title}</Title>
-        <Markdown>{city_text}</Markdown>
+        <Markdown className="p-4 bg-white rounded !text-black">
+          {city_text}
+        </Markdown>
 
         <div className="justify-center gap-4 fancy-2grid md:fancy-3grid">
           {city_members &&

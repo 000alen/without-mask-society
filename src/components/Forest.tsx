@@ -26,7 +26,7 @@ export const Forest: React.FC<Props> = ({
 
   return (
     <section
-      className="grid -mt-24 overflow-x-hidden md:-mt-36 lg:-mt-72"
+      className="grid -mt-24 overflow-x-hidden md:-mt-36 lg:-mt-[70rem]"
       id="roadmap"
     >
       <div
@@ -34,7 +34,9 @@ export const Forest: React.FC<Props> = ({
         style={{ gridArea: "1/1" }}
       >
         <Title>{forest_title}</Title>
-        <Markdown>{forest_text}</Markdown>
+        <Markdown className="p-4 bg-white rounded !text-black">
+          {forest_text}
+        </Markdown>
 
         <div className="w-full gap-2 timeline">
           {forest_milestones &&

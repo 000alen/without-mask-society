@@ -13,7 +13,7 @@ export const RoadmapItem = React.forwardRef<HTMLDivElement, Props>(
     return (
       <div
         ref={ref}
-        className={`timeline__event overflow-hidden text-ellipsis h-48 max-h-48 ${className}`}
+        className={`timeline__event overflow-hidden text-ellipsis ${className}`}
       >
         <div className="font-mono bg-green-400 timeline__event__icon before:bg-green-400 after:bg-green-400">
           {icon}

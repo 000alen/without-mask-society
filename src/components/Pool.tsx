@@ -1,14 +1,14 @@
+import { StaticImage } from "gatsby-plugin-image";
+import gsap from "gsap";
 import React, { useEffect } from "react";
 
+import { isBrowser } from "../pages";
 import { PoolBackground } from "./backgrounds/PoolBackground";
+import { BenefitsItem } from "./BenefitsItem";
 import { Markdown } from "./Markdown";
+import { RoadmapItem } from "./RoadmapItem";
 import { Title } from "./Title";
 import { useMediaQuery } from "./useMediaQuery";
-import gsap from "gsap";
-import { StaticImage } from "gatsby-plugin-image";
-import { RoadmapItem } from "./RoadmapItem";
-import { BenefitsItem } from "./BenefitsItem";
-import { isBrowser } from "../pages";
 
 interface Props {
   pool_title: string;
@@ -43,11 +43,13 @@ export const Pool: React.FC<Props> = ({ pool_title, pool_text }) => {
   return sm || !isBrowser ? (
     <section className="grid -mt-32 md:-mt-96 lg:mt-[-50rem]" id="benefits">
       <div
-        className="z-10 flex flex-col items-center max-w-6xl p-4 mx-auto md:mt-48 h-min"
+        className="z-10 flex flex-col items-center max-w-6xl p-4 mx-auto -mt-28 h-min"
         style={{ gridArea: "1/1" }}
       >
         <Title>{pool_title}</Title>
-        <Markdown className="font-bold">{pool_text}</Markdown>
+        <Markdown className="p-4 bg-white rounded !text-black">
+          {pool_text}
+        </Markdown>
       </div>
 
       <PoolBackground className="mt-36 md:-mt-12" style={{ gridArea: "1/1" }} />
@@ -56,7 +58,9 @@ export const Pool: React.FC<Props> = ({ pool_title, pool_text }) => {
     <section className="relative pSectionPool" id="benefits">
       <div className="relative z-10 flex flex-col items-center max-w-6xl p-4 mx-auto pContentPool h-min">
         <Title>{pool_title}</Title>
-        <Markdown className="font-bold">{pool_text}</Markdown>
+        <Markdown className="p-4 bg-white rounded !text-black">
+          {pool_text}
+        </Markdown>
       </div>
 
       <StaticImage
