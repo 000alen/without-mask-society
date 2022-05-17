@@ -22,12 +22,12 @@ export const City: React.FC<Props> = ({
   city_text,
   city_members,
 }) => {
-  const itemsRef = useRef<Array<HTMLDivElement | null>>(
-    Array.from({ length: city_members.length }, () => null)
-  );
+  // const itemsRef = useRef<Array<HTMLDivElement | null>>(
+  //   Array.from({ length: city_members.length }, () => null)
+  // );
   const md = useMediaQuery("(max-width: 1024px)");
 
-  useAnimations<HTMLDivElement>(itemsRef as React.RefObject<HTMLDivElement[]>);
+  // useAnimations<HTMLDivElement>(itemsRef as React.RefObject<HTMLDivElement[]>);
 
   useEffect(() => {
     // if (md) return;
@@ -67,7 +67,7 @@ export const City: React.FC<Props> = ({
               ) => (
                 <Avatar
                   key={i}
-                  ref={(e) => (itemsRef.current[i] = e)}
+                  // ref={(e) => (itemsRef.current[i] = e)}
                   className="fancy-2item md:fancy-3item"
                   avatar={city_member_avatar}
                   name={city_member_name}
@@ -103,7 +103,7 @@ export const City: React.FC<Props> = ({
               ) => (
                 <Avatar
                   key={i}
-                  ref={(e) => (itemsRef.current[i] = e)}
+                  // ref={(e) => (itemsRef.current[i] = e)}
                   className="fancy-2item md:fancy-3item"
                   avatar={city_member_avatar}
                   name={city_member_name}

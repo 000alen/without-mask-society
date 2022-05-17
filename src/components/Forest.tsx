@@ -18,11 +18,11 @@ export const Forest: React.FC<Props> = ({
   forest_text,
   forest_milestones,
 }) => {
-  const itemsRef = useRef<Array<HTMLDivElement | null>>(
-    Array.from({ length: forest_milestones.length }, () => null)
-  );
+  // const itemsRef = useRef<Array<HTMLDivElement | null>>(
+  //   Array.from({ length: forest_milestones.length }, () => null)
+  // );
 
-  useAnimations<HTMLDivElement>(itemsRef as React.RefObject<HTMLDivElement[]>);
+  // useAnimations<HTMLDivElement>(itemsRef as React.RefObject<HTMLDivElement[]>);
 
   return (
     <section
@@ -51,7 +51,7 @@ export const Forest: React.FC<Props> = ({
               ) => (
                 <RoadmapItem
                   key={i}
-                  ref={(e) => (itemsRef.current[i] = e)}
+                  // ref={(e) => (itemsRef.current[i] = e)}
                   className={i % 2 === 0 ? "gs_fromLeft" : "gs_fromRight"}
                   title={percent}
                   text={text}
