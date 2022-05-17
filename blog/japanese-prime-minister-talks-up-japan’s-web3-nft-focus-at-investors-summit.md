@@ -3,6 +3,8 @@ path: investors
 date: 2022-05-17T21:02:07.161Z
 title: Japanese Prime Minister Talks up Japan’s Web3, NFT Focus at Investors Summit
 ---
+![Japanese Prime Minister Talks up Japan’s Web3, NFT Focus at Investors Summit](/assets/japanese.jpeg "Japanese Prime Minister Talks up Japan’s Web3, NFT Focus at Investors Summit")
+
 The Japanese Prime Minister Fumio Kishida has stated that Web3-related growth – including metaverse and non-fungible token (NFT)-related developments – will be part of the nation’s growth strategy going forward, and called on British business leaders to back his project.
 Kishida, CoinPost reported, made a speech to bankers and professional investors at London’s Guildhall, where he stated that his government would be making “institutional reforms” that would “create an environment” that “facilitates” the creation of new services – including Web3-related infrastructure.
 
