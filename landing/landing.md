@@ -93,41 +93,40 @@ forest_milestones:
       FIRST 1000 NTFs MINT / FIRST BUYERS WILL GET PRIORITY ACCESS TO DIGITAL
       ROCKET'S NEXT COLLECTION.
 
-      THE PURCHASE OF YOUR NFT WITH A MASK WILL COME PAIRED WITH ANOTHER NFT IN ITS NON-MASK VERSION. ADDITIONALLY WHEN YOU BUY YOUR NFT YOU WILL BE RECYCLING 6,000 DISUSED MASKS, WHICH WILL BECOME 1K OF HYDROGEN FUEL THANKS TO OUR ALLIANCE WITH THE INNOVATIVE SPANISH COMPANY NANTEK.
+      THE PURCHASE OF YOUR NFT WITH A MASK WILL COME PAIRED WITH ANOTHER NFT IN ITS NON-MASK VERSION. ADDITIONALLY WHEN YOU BUY YOUR NFT YOU WILL BE RECYCLING 6,000 DISUSED MASKS, WHICH WILL BECOME 1K OF HYDROGEN FUEL THANKS TO OUR ALLIANCE WITH THE INNOVATIVE SPANISH COMPANY [NANTEK](https://nantek.tech/).
+    forest_milestone_icon: 0.06 ETH
   - forest_milestone_percent: Rare
     forest_milestone_text: >-
       RELEASE OF THE NEXT 100 RARE NTFs. HANDCRAFTED / EARLY BUYERS WILL GET
       PRIORITY ACCESS TO DIGITAL ROCKET'S NEXT COLLECTION.
 
       THE PURCHASE OF YOUR NFT WITH A MASK WILL COME PAIRED WITH ANOTHER NFT IN ITS NON-MASK VERSION. ADDITIONALLY WHEN YOU BUY YOUR NFT YOU WILL BE RECYCLING 12,000 DISUSED MASKS, WHICH WILL BECOME 1K OF HYDROGEN FUEL.
+    forest_milestone_icon: 0.12 ETH
   - forest_milestone_percent: Colonizers
     forest_milestone_text: THIRD RELEASE OF THE NEXT 1000 NTFs / BUYERS WILL GET
       PRIORITY ACCESS TO THE NEXT DIGITAL ROCKET COLLECTION AND THE BENEFITS
       MENTIONED IN PHASE 1.
+    forest_milestone_icon: 0.06 ETH
   - forest_milestone_percent: Customized
     forest_milestone_text: DRAW OF 20 PERSONALIZED NFTS WMS AMONG HOLDERS.
+    forest_milestone_icon: " "
   - forest_milestone_percent: Rare
     forest_milestone_text: LAUNCH OF 100 RARE HANDCRAFTED NFTs/ BUYERS WILL GET
       PRIORITY ACCESS TO THE NEXT DIGITAL ROCKET COLLECTION AND THE BENEFITS
       MENTIONED IN PHASE 2.
+    forest_milestone_icon: 0.12 ETH
   - forest_milestone_percent: Ultra Rare
     forest_milestone_text: >-
       LAUNCH OF 22 ULTRA RARE NFTs.
 
       THE PURCHASE OF YOUR NFT WITH A MASK WILL COME PAIRED WITH ANOTHER NFT IN ITS NON-MASK VERSION. ADDITIONALLY WHEN YOU BUY YOUR NFT YOU WILL BE RECYCLING 24,000 DISUSED MASKS, WHICH WILL BE CONVERTED INTO 4K OF HYDROGEN FUEL.
+    forest_milestone_icon: 0.25 ETH
   - forest_milestone_percent: Raffle
     forest_milestone_text: 1 ETH RAFFLE BETWEEN HOLDERS
+    forest_milestone_icon: " "
   - forest_milestone_percent: 000_ORIGINAL
     forest_milestone_text: NFT WMS ZERO DRAW AMONG HOLDERS.
-forest_showcase:
-  - forest_showcase_image: /assets/473.png
-    forest_showcase_url: https://example.com/
-  - forest_showcase_image: /assets/370.png
-    forest_showcase_url: https://example.com/
-  - forest_showcase_image: /assets/364.png
-    forest_showcase_url: https://example.com/
-  - forest_showcase_image: /assets/143.png
-    forest_showcase_url: https://example.com/
+    forest_milestone_icon: " "
 planets_title: DONATIONS
 planets_text: >-
   WE PARTNER WITH [NANTEK](https://nantek.tech/). **LEADING SPANISH COMPANY IN
@@ -209,4 +208,13 @@ faq_questions:
       AS YOU SEE, YOU WILL BE CONTRIBUTING WITH RESOURCES TO ADDRESS CURRENT AND FUTURE PROBLEMS IN RELATION TO THE ENVIRONMENTAL CRISIS.
 mailing_text: Without Mask Society are a collection of 2222 uniquely generated
   NFTS, all living on the Ethereum Blockchain.
+forest_showcase:
+  - forest_showcase_image: /assets/473.png
+    forest_showcase_url: https://example.com/
+  - forest_showcase_image: /assets/370.png
+    forest_showcase_url: https://example.com/
+  - forest_showcase_image: /assets/364.png
+    forest_showcase_url: https://example.com/
+  - forest_showcase_image: /assets/143.png
+    forest_showcase_url: https://example.com/
 ---
