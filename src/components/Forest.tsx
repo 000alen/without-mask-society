@@ -26,11 +26,11 @@ export const Forest: React.FC<Props> = ({
 
   return (
     <section
-      className="grid -mt-24 overflow-x-hidden md:-mt-36 lg:-mt-[70rem]"
+      className="grid -mt-40 overflow-x-hidden md:-mt-80 lg:-mt-96"
       id="roadmap"
     >
       <div
-        className="z-10 flex flex-col items-center h-min max-w-6xl gap-8 p-4 mx-auto pb-96 md:pb-[40rem] lg:pb-[75rem]"
+        className="z-10 flex flex-col items-center max-w-6xl gap-8 p-4 mx-auto h-min pb-[21rem] md:pb-[40rem] lg:pb-0"
         style={{ gridArea: "1/1" }}
       >
         <Title>{forest_title}</Title>

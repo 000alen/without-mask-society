@@ -17,12 +17,13 @@ interface Props {
 
 export const Pool: React.FC<Props> = ({ pool_title, pool_text }) => {
   const sm = useMediaQuery("(max-width: 768px)");
+  const md = useMediaQuery("(max-width: 1024px)");
 
   useEffect(() => {
     // if (sm) return;
 
     gsap.to(".pContentPool", {
-      yPercent: 50,
+      yPercent: md ? 100 : 250,
       ease: "none",
       scrollTrigger: {
         trigger: ".pSectionPool",
@@ -38,10 +39,10 @@ export const Pool: React.FC<Props> = ({ pool_title, pool_text }) => {
         scrub: true,
       },
     });
-  }, [sm]);
+  }, [sm, md]);
 
   return sm || !isBrowser ? (
-    <section className="grid -mt-32 md:-mt-96 lg:mt-[-50rem]" id="benefits">
+    <section className="grid -mt-20 md:-mt-96 lg:mt-[-50rem]" id="benefits">
       <div
         className="z-10 flex flex-col items-center max-w-6xl p-4 mx-auto -mt-28 h-min"
         style={{ gridArea: "1/1" }}
@@ -55,8 +56,11 @@ export const Pool: React.FC<Props> = ({ pool_title, pool_text }) => {
       <PoolBackground className="mt-36 md:-mt-12" style={{ gridArea: "1/1" }} />
     </section>
   ) : (
-    <section className="relative pSectionPool" id="benefits">
-      <div className="relative z-10 flex flex-col items-center max-w-6xl p-4 mx-auto pContentPool h-min">
+    <section
+      className="relative -mt-40 lg:-mt-[50rem] pSectionPool"
+      id="benefits"
+    >
+      <div className="relative z-10 flex flex-col items-center max-w-6xl gap-8 p-4 mx-auto pContentPool h-min">
         <Title>{pool_title}</Title>
         <Markdown className="p-4 bg-white rounded !text-black">
           {pool_text}

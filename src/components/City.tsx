@@ -45,7 +45,7 @@ export const City: React.FC<Props> = ({
   return md || !isBrowser ? (
     <section className="grid" id="team">
       <div
-        className="flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto pb-96 lg:pb-0"
+        className="flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto pb-[26rem] md:pb-[52rem]"
         style={{ gridArea: "1/1" }}
       >
         <Title>{city_title}</Title>
@@ -79,15 +79,11 @@ export const City: React.FC<Props> = ({
         </div>
       </div>
 
-      <CityBackground
-        // className="mt-auto mb-0 md:mt-56 lg:-mt-96"
-        className="mt-auto -mb-12"
-        style={{ gridArea: "1/1" }}
-      />
+      <CityBackground className="mt-auto mb-0" style={{ gridArea: "1/1" }} />
     </section>
   ) : (
     <section className="relative pSectionCity" id="team">
-      <div className="flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto pb-96 lg:pb-0">
+      <div className="flex flex-col items-center max-w-6xl gap-8 p-4 mx-auto">
         <Title>{city_title}</Title>
         <Markdown className="p-4 bg-white rounded !text-black">
           {city_text}
@@ -120,13 +116,13 @@ export const City: React.FC<Props> = ({
       </div>
 
       <StaticImage
-        className="!absolute top-0 w-full pImageCity -z-10"
+        className="!absolute -top-96 w-full pImageCity -z-10"
         src="../../images/city/static.png"
         alt=""
       />
 
       <StaticImage
-        className="w-[50%] opacity-0"
+        className="w-[20%] opacity-0"
         src="../../images/city/static.png"
         alt=""
       />
