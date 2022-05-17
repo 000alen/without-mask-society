@@ -1,7 +1,8 @@
-import React from "react";
 import { graphql } from "gatsby";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import React from "react";
+import { Helmet } from "react-helmet";
 
 import { AboutSection } from "../components/AboutSection";
 import { Blog } from "../components/Blog";
@@ -15,7 +16,6 @@ import { Planets } from "../components/Planets";
 import { Pool } from "../components/Pool";
 import { Stars } from "../components/Stars";
 import { LandingFrontmatter } from "../typings";
-import { Helmet } from "react-helmet";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -156,6 +156,7 @@ export const pageQuery = graphql`
         forest_milestones {
           forest_milestone_percent
           forest_milestone_text
+          forest_milestone_icon
         }
 
         planets_title

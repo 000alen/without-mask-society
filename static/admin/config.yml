@@ -127,11 +127,7 @@ collections:
                 label: "Forest - Milestone text",
                 widget: markdown,
               },
-              {
-                name: forest_milestone_icon,
-                label: "Forest - Milestone icon",
-                widget: markdown,
-              },
+              { name: forest_milestone_icon, label: "Forest - Milestone icon" },
             ],
         }
 

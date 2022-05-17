@@ -45,6 +45,7 @@ export const Forest: React.FC<Props> = ({
                 {
                   forest_milestone_text: text,
                   forest_milestone_percent: percent,
+                  forest_milestone_icon: icon,
                 },
                 i
               ) => (
@@ -54,7 +55,7 @@ export const Forest: React.FC<Props> = ({
                   className={i % 2 === 0 ? "gs_fromLeft" : "gs_fromRight"}
                   title={percent}
                   text={text}
-                  icon="0.05 ETH"
+                  icon={icon}
                 />
               )
             )}

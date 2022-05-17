@@ -24,6 +24,7 @@ export interface ForestMilestoneButton {
 export interface ForestMilestone {
   forest_milestone_percent: string;
   forest_milestone_text: string;
+  forest_milestone_icon: string;
 }
 
 export interface ForestShowcase {
