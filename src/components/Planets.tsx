@@ -41,20 +41,20 @@ export const Planets: React.FC<Props> = ({
         </div>
 
         <StaticImage
-          className="!absolute h-80 -bottom-[2%] lg:hidden w-full -z-[9]"
+          className="!absolute h-80 -bottom-[2%] lg:!hidden w-full -z-[9]"
           src="../images/planets/sm_P.png"
           objectFit="contain"
           alt=""
         />
 
         <StaticImage
-          className="!absolute hidden lg:block w-96 rotate-45 -left-24 bottom-0 -z-[9]"
+          className="!absolute !hidden lg:!block w-96 rotate-45 -left-24 bottom-0 -z-[9]"
           src="../images/planets/lg_P1.png"
           alt=""
         />
 
         <StaticImage
-          className="!absolute -scale-x-100 hidden lg:block w-96 -rotate-45 -right-36 bottom-96 -z-[9]"
+          className="!absolute -scale-x-100 !hidden lg:!block w-96 -rotate-45 -right-36 bottom-96 -z-[9]"
           src="../images/planets/lg_P2.png"
           alt=""
         />
