@@ -1,7 +1,5 @@
 import React, { PropsWithChildren } from "react";
 
-import { OpenseaIcon } from "./icons/OpenseaIcon";
-
 interface Props {
   className?: string;
   label: string;
