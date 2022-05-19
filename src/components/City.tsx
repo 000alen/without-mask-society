@@ -53,7 +53,7 @@ export const City: React.FC<Props> = ({
         </div>
 
         <StaticImage
-          className="!absolute w-full -bottom-[20%] -z-10"
+          className="!absolute w-full -bottom-[10%] lg:-bottom-[20%] -z-10"
           src="../images/city/sm_empty.png"
           alt=""
         />

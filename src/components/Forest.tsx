@@ -28,7 +28,7 @@ export const Forest: React.FC<Props> = ({
       </Blob>
 
       <section className="relative">
-        <div className="z-10 flex flex-col items-center max-w-6xl gap-8 p-4 mx-auto h-min">
+        <div className="z-10 flex flex-col items-center max-w-6xl gap-8 p-4 mx-auto pb-96 md:pb-0 h-min">
           <div className="w-full gap-2 timeline">
             {forest_milestones &&
               forest_milestones.map(
@@ -53,7 +53,13 @@ export const Forest: React.FC<Props> = ({
         </div>
 
         <StaticImage
-          className="!absolute -bottom-[20%] w-full -z-10"
+          className="!absolute h-80 -bottom-[2%] md:hidden w-full -z-[9]"
+          src="../images/forest/sm_P.png"
+          alt=""
+        />
+
+        <StaticImage
+          className="!absolute -bottom-[10%] lg:-bottom-[20%] w-full -z-10"
           src="../images/forest/sm_empty.png"
           alt=""
         />
