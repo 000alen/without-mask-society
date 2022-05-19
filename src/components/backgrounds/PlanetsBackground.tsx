@@ -42,9 +42,15 @@ export const PlanetsBackground: React.FC<Props> = ({
         alt=""
       /> */}
 
-      <StaticImage
+      {/* <StaticImage
         className="w-full -z-10"
         src="../../images/planets/static.png"
+        alt=""
+      /> */}
+
+      <StaticImage
+        className="w-full -z-10"
+        src="../../images/planets/empty.png"
         alt=""
       />
     </div>

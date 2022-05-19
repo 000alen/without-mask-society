@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import { isBrowser } from "../pages";
 import { PoolBackground } from "./backgrounds/PoolBackground";
 import { BenefitsItem } from "./BenefitsItem";
+import { Blob } from "./Blob";
 import { Markdown } from "./Markdown";
 import { RoadmapItem } from "./RoadmapItem";
 import { Title } from "./Title";
@@ -19,65 +20,69 @@ export const Pool: React.FC<Props> = ({ pool_title, pool_text }) => {
   const sm = useMediaQuery("(max-width: 768px)");
   const md = useMediaQuery("(max-width: 1024px)");
 
-  useEffect(() => {
-    // if (sm) return;
+  // useEffect(() => {
+  //   gsap.to(".pContentPool", {
+  //     yPercent: md ? 100 : 250,
+  //     ease: "none",
+  //     scrollTrigger: {
+  //       trigger: ".pSectionPool",
+  //       scrub: true,
+  //     },
+  //   });
 
-    gsap.to(".pContentPool", {
-      yPercent: md ? 100 : 250,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".pSectionPool",
-        scrub: true,
-      },
-    });
+  //   gsap.to(".pImagePool", {
+  //     yPercent: -50,
+  //     ease: "none",
+  //     scrollTrigger: {
+  //       trigger: ".pSectionPool",
+  //       scrub: true,
+  //     },
+  //   });
+  // }, [sm, md]);
 
-    gsap.to(".pImagePool", {
-      yPercent: -50,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".pSectionPool",
-        scrub: true,
-      },
-    });
-  }, [sm, md]);
+  return (
+    <>
+      <Blob id="benefits">
+        <Title>{pool_title}</Title>
+        <Markdown>{pool_text}</Markdown>
+      </Blob>
 
-  return sm || !isBrowser ? (
-    <section className="grid -mt-20 md:-mt-96 lg:mt-[-50rem]" id="benefits">
-      <div
-        className="z-10 flex flex-col items-center max-w-6xl p-4 mx-auto -mt-28 h-min"
-        style={{ gridArea: "1/1" }}
+      <section
+        className={
+          sm || !isBrowser
+            ? "grid -mt-20 md:-mt-96 lg:mt-[-50rem]"
+            : "relative -mt-80 lg:-mt-[50rem] pSectionPool"
+        }
       >
-        <Title>{pool_title}</Title>
-        <Markdown className="p-4 bg-white rounded !text-black">
-          {pool_text}
-        </Markdown>
-      </div>
+        {/* <div
+          className={`z-10 flex flex-col items-center max-w-6xl gap-8 p-4 mx-auto h-min ${
+            sm || !isBrowser ? "-mt-28" : "pContentPool"
+          } `}
+          {...(md || !isBrowser ? { style: { gridArea: "1/1" } } : {})}
+        >
+        </div> */}
 
-      <PoolBackground className="mt-36 md:-mt-12" style={{ gridArea: "1/1" }} />
-    </section>
-  ) : (
-    <section
-      className="relative -mt-80 lg:-mt-[50rem] pSectionPool"
-      id="benefits"
-    >
-      <div className="relative z-10 flex flex-col items-center max-w-6xl gap-8 p-4 mx-auto pContentPool h-min">
-        <Title>{pool_title}</Title>
-        <Markdown className="p-4 bg-white rounded !text-black">
-          {pool_text}
-        </Markdown>
-      </div>
+        {sm || !isBrowser ? (
+          <PoolBackground
+            className="mt-36 md:-mt-12"
+            style={{ gridArea: "1/1" }}
+          />
+        ) : (
+          <>
+            <StaticImage
+              className="!absolute top-0 w-full pImagePool -z-10"
+              src="../images/pool/empty.png"
+              alt=""
+            />
 
-      <StaticImage
-        className="!absolute top-0 w-full pImagePool -z-10"
-        src="../../images/pool/static.png"
-        alt=""
-      />
-
-      <StaticImage
-        className="w-[50%] opacity-0"
-        src="../../images/pool/static.png"
-        alt=""
-      />
-    </section>
+            <StaticImage
+              className="w-[50%] opacity-0"
+              src="../images/pool/empty.png"
+              alt=""
+            />
+          </>
+        )}
+      </section>
+    </>
   );
 };

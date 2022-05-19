@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Title } from "./Title";
+import { Blob } from "./Blob";
 import { Markdown } from "./Markdown";
+import { Title } from "./Title";
 
 interface Props {
   about_title: string;
@@ -10,17 +11,9 @@ interface Props {
 
 export const AboutSection: React.FC<Props> = ({ about_title, about_text }) => {
   return (
-    <>
-      <div className="-mt-12 wave2 md:-mt-36 lg:-mt-72"></div>
-
-      <section
-        className="bg-[#000067] flex flex-col p-4 items-center gap-2"
-        id="about"
-      >
-        <Title>{about_title}</Title>
-        <Markdown>{about_text}</Markdown>
-      </section>
-      <div className="-mb-12 wave2 flip md:-mb-36 lg:-mb-72"></div>
-    </>
+    <Blob id="about">
+      <Title>{about_title}</Title>
+      <Markdown>{about_text}</Markdown>
+    </Blob>
   );
 };

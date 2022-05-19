@@ -5,6 +5,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 import { AboutSection } from "../components/AboutSection";
+import { Blob } from "../components/Blob";
 import { Blog } from "../components/Blog";
 import { City } from "../components/City";
 import { FAQ } from "../components/FAQ";
@@ -92,14 +93,16 @@ export default ({ data }: Props) => {
         pool_text={frontmatter.pool_text}
       />
 
-      <div className="z-20 flex flex-col gap-32 lg:justify-around lg:items-start lg:flex-row">
+      {/* <div className="z-20 flex flex-col gap-32 lg:justify-around lg:items-start lg:flex-row"> */}
+      <Blob>
         <FAQ
           faq_title={frontmatter.faq_title}
           faq_questions={frontmatter.faq_questions}
         />
 
         <Blog />
-      </div>
+      </Blob>
+      {/* </div> */}
 
       <Footer
         twitter_url={frontmatter.twitter_url}

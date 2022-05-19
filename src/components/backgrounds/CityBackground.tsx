@@ -1,5 +1,5 @@
-import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import React from "react";
 
 interface Props {
   className?: string;
@@ -87,9 +87,15 @@ export const CityBackground: React.FC<Props> = ({
         data-depth="0.1"
       /> */}
 
-      <StaticImage
+      {/* <StaticImage
         className="w-full -z-10"
         src="../../images/city/static.png"
+        alt=""
+      /> */}
+
+      <StaticImage
+        className="w-full -z-10"
+        src="../../images/city/empty.png"
         alt=""
       />
     </div>

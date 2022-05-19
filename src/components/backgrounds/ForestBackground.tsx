@@ -68,9 +68,15 @@ export const ForestBackground: React.FC<Props> = ({
         alt=""
       /> */}
 
-      <StaticImage
+      {/* <StaticImage
         className="w-full -z-20"
         src="../../images/forest/static2.png"
+        alt=""
+      /> */}
+
+      <StaticImage
+        className="w-full -z-20"
+        src="../../images/forest/empty.png"
         alt=""
       />
     </div>

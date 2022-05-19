@@ -60,9 +60,15 @@ export const PoolBackground: React.FC<Props> = ({
         alt=""
       /> */}
 
-      <StaticImage
+      {/* <StaticImage
         className="w-full -z-10"
         src="../../images/pool/static.png"
+        alt=""
+      /> */}
+
+      <StaticImage
+        className="w-full -z-10"
+        src="../../images/pool/empty.png"
         alt=""
       />
     </div>
