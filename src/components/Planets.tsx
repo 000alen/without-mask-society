@@ -30,6 +30,7 @@ export const Planets: React.FC<Props> = ({
 
       <section id="benefits" className="relative">
         <div className="z-10 flex flex-col items-center max-w-6xl gap-8 p-4 mx-auto pb-96 lg:pb-0 h-min">
+          <Title>BENEFITS</Title>
           <div className="flex flex-col w-full gap-2">
             {benefits &&
               benefits.map(

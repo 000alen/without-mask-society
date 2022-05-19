@@ -26,11 +26,13 @@ export const City: React.FC<Props> = ({
   return (
     <>
       <Blob>
-        <div className="flex flex-col gap-4 p-4 md:flex-row">
+        <div className="flex flex-col items-center gap-8 p-4 md:flex-row">
           <div id="about">
             <Title>{about_title}</Title>
             <Markdown>{about_text}</Markdown>
           </div>
+
+          <div className="w-full h-2 bg-green-400 rounded md:w-2 md:h-48"></div>
 
           <div id="team">
             <Title>{team_title}</Title>
