@@ -58,11 +58,8 @@ export const Mailing = React.forwardRef<HTMLDivElement, Props>(
     const postUrl = `https://gmail.us11.list-manage.com/subscribe/post?u=${"6199c04658e592bafab08cbd8"}&id=${"5a8cb64ae9"}`;
 
     return (
-      <div
-        ref={ref}
-        className="flex flex-col items-center gap-2 p-2 lg:flex-row lg:gap-4 lg:justify-center"
-      >
-        <Paragraph>{text}</Paragraph>
+      <div className="flex flex-col items-center gap-2 p-2 lg:justify-center lg:flex-row lg:gap-4">
+        <Paragraph className="font-semibold">{text}</Paragraph>
 
         <MailchimpSubscribe
           url={postUrl}

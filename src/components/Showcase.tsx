@@ -33,7 +33,7 @@ export const Showcase: React.FC<Props> = ({
     null
   );
   const [timerEnded, setTimerEnded] = useState<boolean | null>(null);
-  const [masked, setMasked] = useState<boolean>(false);
+  const [counter, setCounter] = useState<number>(0);
 
   useEffect(() => {
     // @ts-ignore
@@ -48,9 +48,10 @@ export const Showcase: React.FC<Props> = ({
     if (timerShouldStart && !timerIdRef.current) {
       // @ts-ignore
       timerIdRef.current = setTimeout(() => {
-        setMasked((p) => !p);
+        // setMasked((p) => !p);
+        setCounter((p) => p + 1);
         setTimerEnded(true);
-      }, 5000);
+      }, 1000);
       setTimerShouldStart(false);
       setTimerEnded(false);
     } else if (timerEnded) {
@@ -64,36 +65,33 @@ export const Showcase: React.FC<Props> = ({
   return (
     <div className={`${className} grid grid-cols-2 md:grid-cols-4 gap-4 px-4`}>
       {showcase.map(
-        (
-          {
-            showcase_masked: hero_showcase_masked,
-            showcase_unmasked: hero_showcase_unmasked,
-            showcase_url: hero_showcase_url,
-          },
-          i
-        ) => (
-          <div
-            key={i}
-            className="relative transition-all border-2 border-green-400 border-solid rounded hover:glow"
-          >
-            <a href={hero_showcase_url} target="_blank">
-              <img
-                className={`${
-                  masked ? "" : "opacity-0"
-                } max-w-[8rem] lg:max-w-[12rem] transition-all`}
-                src={hero_showcase_masked}
-                alt=""
-              />
-              <img
-                className={`${
-                  masked ? "opacity-0" : ""
-                } max-w-[8rem] lg:max-w-[12rem] absolute top-0 transition-all`}
-                src={hero_showcase_unmasked}
-                alt=""
-              />
-            </a>
-          </div>
-        )
+        ({ showcase_masked, showcase_unmasked, showcase_url }, i) => {
+          const masked = i <= counter % 8 && counter % 8 <= i + 3;
+
+          return (
+            <div
+              key={i}
+              className="relative transition-all border-2 border-green-400 border-solid rounded hover:glow"
+            >
+              <a href={showcase_url} target="_blank">
+                <img
+                  className={`${
+                    masked ? "" : "opacity-0"
+                  } max-w-[8rem] lg:max-w-[12rem] transition-all`}
+                  src={showcase_masked}
+                  alt=""
+                />
+                <img
+                  className={`${
+                    masked ? "opacity-0" : ""
+                  } max-w-[8rem] lg:max-w-[12rem] absolute top-0 transition-all`}
+                  src={showcase_unmasked}
+                  alt=""
+                />
+              </a>
+            </div>
+          );
+        }
       )}
     </div>
   );

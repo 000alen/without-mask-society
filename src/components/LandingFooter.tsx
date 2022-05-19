@@ -96,7 +96,7 @@ export const LandingFooter: React.FC<Props> = ({
       </div>
 
       <StaticImage
-        className="!absolute bottom-0 w-full opacity-50 -z-40"
+        className="!absolute bottom-0 w-full opacity-30 -z-40"
         src="../images/pool/sm_empty.png"
         alt=""
       />
