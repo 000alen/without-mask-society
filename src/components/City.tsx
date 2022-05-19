@@ -25,16 +25,16 @@ export const City: React.FC<Props> = ({
 }) => {
   const md = useMediaQuery("(max-width: 1024px)");
 
-  useEffect(() => {
-    gsap.to(".pImageCity", {
-      yPercent: -25,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".pSectionCity",
-        scrub: true,
-      },
-    });
-  }, [md]);
+  // useEffect(() => {
+  //   gsap.to(".pImageCity", {
+  //     yPercent: -50,
+  //     ease: "none",
+  //     scrollTrigger: {
+  //       trigger: ".pSectionCity",
+  //       scrub: true,
+  //     },
+  //   });
+  // }, [md]);
 
   return (
     <>
@@ -43,13 +43,8 @@ export const City: React.FC<Props> = ({
         <Markdown>{city_text}</Markdown>
       </Blob>
 
-      <section className={md || !isBrowser ? "grid" : "relative pSectionCity"}>
-        <div
-          className={`${
-            md || !isBrowser ? "pb-[26rem] md:pb-[52rem]" : ""
-          } flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto pb-[26rem] md:pb-[52rem]`}
-          {...(md || !isBrowser ? { style: { gridArea: "1/1" } } : {})}
-        >
+      <section className="relative pSectionCity">
+        <div className="flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto">
           <div className="justify-center gap-4 fancy-2grid md:fancy-3grid">
             {city_members &&
               city_members.map(
@@ -76,23 +71,20 @@ export const City: React.FC<Props> = ({
         </div>
 
         {md || !isBrowser ? (
-          <CityBackground
-            className="mt-auto mb-0"
-            style={{ gridArea: "1/1" }}
-          />
+          <CityBackground className="mt-auto mb-0" />
         ) : (
           <>
             <StaticImage
-              className="!absolute -top-96 w-full pImageCity -z-10"
+              className="!absolute w-full bottom-0 -z-10 pImageCity"
               src="../images/city/empty.png"
               alt=""
             />
 
-            <StaticImage
-              className="w-[20%] opacity-0"
+            {/* <StaticImage
+              className="w-[50%] opacity-0 -z-10"
               src="../images/city/empty.png"
               alt=""
-            />
+            /> */}
           </>
         )}
       </section>
