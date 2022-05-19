@@ -53,6 +53,10 @@
   transform: translateY(-2px);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   color: white;
   overflow-x: hidden;
