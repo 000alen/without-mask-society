@@ -8,12 +8,17 @@ import { Markdown } from "./Markdown";
 import { Title } from "./Title";
 
 interface Props {
+  about_title: string;
+  about_text: string;
+
   city_title: string;
   city_text: string;
   city_members: CityMember[];
 }
 
 export const City: React.FC<Props> = ({
+  about_title,
+  about_text,
   city_title,
   city_text,
   city_members,
@@ -21,8 +26,17 @@ export const City: React.FC<Props> = ({
   return (
     <>
       <Blob id="team">
-        <Title>{city_title}</Title>
-        <Markdown>{city_text}</Markdown>
+        <div className="flex flex-col gap-4 p-4 md:flex-row">
+          <div>
+            <Title>{about_title}</Title>
+            <Markdown>{about_text}</Markdown>
+          </div>
+
+          <div>
+            <Title>{city_title}</Title>
+            <Markdown>{city_text}</Markdown>
+          </div>
+        </div>
       </Blob>
 
       <section className="relative">

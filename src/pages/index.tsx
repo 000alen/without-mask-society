@@ -58,15 +58,12 @@ export default ({ data }: Props) => {
         hero_showcase={frontmatter.hero_showcase}
       />
 
-      <AboutSection
-        about_title={frontmatter.about_title}
-        about_text={frontmatter.about_text}
-      />
-
       <Stars />
 
-      {/* Team */}
+      {/* About & Team */}
       <City
+        about_title={frontmatter.about_title}
+        about_text={frontmatter.about_text}
         city_title={frontmatter.city_title}
         city_text={frontmatter.city_text}
         city_members={frontmatter.city_members}

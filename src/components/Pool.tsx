@@ -32,7 +32,7 @@ export const Pool: React.FC<Props> = ({ faq_title, faq_questions }) => {
         </div>
 
         {/* <StaticImage
-          className="!absolute -bottom-[200%] w-full -z-10"
+          className="!absolute -bottom-[25%] md:-bottom-[75%] lg:-bottom-[200%] w-full -z-10"
           src="../images/pool/sm_empty.png"
           alt=""
         /> */}
