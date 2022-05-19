@@ -1,6 +1,6 @@
 import React from "react";
 
-import { CityMemberSocial } from "../typings";
+import { Social } from "../typings";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
 import { TwitterIcon } from "./icons/TwitterIcon";
 
@@ -9,7 +9,7 @@ interface Props {
   avatar: string;
   name: string;
   description: string;
-  socials: CityMemberSocial[];
+  socials: Social[];
 }
 
 export const Avatar = React.forwardRef<HTMLDivElement, Props>(
@@ -37,7 +37,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, Props>(
           <div className="flex flex-row justify-center gap-2">
             {socials.map(
               (
-                { city_member_social_name: name, city_member_social_url: url },
+                { social_name: name, social_url: url },
                 i
               ) =>
                 name === "twitter" ? (

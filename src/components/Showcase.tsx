@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { HeroShowcase } from "../typings";
 
-import { Title } from "./Title";
+import { Showcase as IShowcase } from "../typings";
 
 interface Props {
   className?: string;
-  hero_showcase: HeroShowcase[];
+  hero_showcase: IShowcase[];
 }
 
 export const choose = <T,>(list: T[], n: number): T[] => {
@@ -27,7 +26,7 @@ export const Showcase: React.FC<Props> = ({
   className = "",
   hero_showcase,
 }) => {
-  const [showcase] = useState<HeroShowcase[]>(choose(hero_showcase, 4));
+  const [showcase] = useState<IShowcase[]>(choose(hero_showcase, 4));
 
   const timerIdRef = useRef<number>(null);
   const [timerShouldStart, setTimerShouldStart] = useState<boolean | null>(
@@ -66,7 +65,11 @@ export const Showcase: React.FC<Props> = ({
     <div className={`${className} grid grid-cols-2 md:grid-cols-4 gap-4 px-4`}>
       {showcase.map(
         (
-          { hero_showcase_masked, hero_showcase_unmasked, hero_showcase_url },
+          {
+            showcase_masked: hero_showcase_masked,
+            showcase_unmasked: hero_showcase_unmasked,
+            showcase_url: hero_showcase_url,
+          },
           i
         ) => (
           <div

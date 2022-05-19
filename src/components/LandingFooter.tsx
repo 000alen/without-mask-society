@@ -1,3 +1,4 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 
 import { DRLogo } from "./DRLogo";
@@ -20,7 +21,7 @@ interface Props {
   landing?: boolean;
 }
 
-export const Footer: React.FC<Props> = ({
+export const LandingFooter: React.FC<Props> = ({
   twitter_url,
   instagram_url,
   discord_url,
@@ -30,9 +31,8 @@ export const Footer: React.FC<Props> = ({
   landing = true,
 }) => {
   return (
-    <>
-      <div className="wave2"></div>
-      <footer className="bg-[#000067] flex flex-col justify-around gap-6">
+    <footer className="relative flex flex-col justify-end gap-6 mt-48">
+      <div>
         <Mailing text={mailing_text} />
 
         <div className="flex flex-col gap-2 p-12 lg:flex-row lg:justify-around">
@@ -93,7 +93,13 @@ export const Footer: React.FC<Props> = ({
             <DRLogo className="w-24" />
           </a>
         </div>
-      </footer>
-    </>
+      </div>
+
+      <StaticImage
+        className="!absolute bottom-0 w-full opacity-50 -z-40"
+        src="../images/pool/sm_empty.png"
+        alt=""
+      />
+    </footer>
   );
 };

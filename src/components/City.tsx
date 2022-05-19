@@ -2,7 +2,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 
 import { Blob } from "../components/Blob";
-import { CityMember } from "../typings";
+import { Member } from "../typings";
 import { Avatar } from "./Avatar";
 import { Markdown } from "./Markdown";
 import { Title } from "./Title";
@@ -11,30 +11,30 @@ interface Props {
   about_title: string;
   about_text: string;
 
-  city_title: string;
-  city_text: string;
-  city_members: CityMember[];
+  team_title: string;
+  team_text: string;
+  team: Member[];
 }
 
 export const City: React.FC<Props> = ({
   about_title,
   about_text,
-  city_title,
-  city_text,
-  city_members,
+  team_title,
+  team_text,
+  team,
 }) => {
   return (
     <>
-      <Blob id="team">
+      <Blob>
         <div className="flex flex-col gap-4 p-4 md:flex-row">
-          <div>
+          <div id="about">
             <Title>{about_title}</Title>
             <Markdown>{about_text}</Markdown>
           </div>
 
-          <div>
-            <Title>{city_title}</Title>
-            <Markdown>{city_text}</Markdown>
+          <div id="team">
+            <Title>{team_title}</Title>
+            <Markdown>{team_text}</Markdown>
           </div>
         </div>
       </Blob>
@@ -42,24 +42,24 @@ export const City: React.FC<Props> = ({
       <section className="relative">
         <div className="flex flex-col items-center max-w-6xl gap-2 p-4 mx-auto">
           <div className="justify-center gap-4 fancy-2grid md:fancy-3grid">
-            {city_members &&
-              city_members.map(
+            {team &&
+              team.map(
                 (
                   {
-                    city_member_avatar,
-                    city_member_description,
-                    city_member_name,
-                    city_member_socials,
+                    member_avatar: avatar,
+                    member_description: description,
+                    member_name: city_member_name,
+                    member_socials: socials,
                   },
                   i
                 ) => (
                   <Avatar
                     key={i}
                     className="fancy-2item md:fancy-3item"
-                    avatar={city_member_avatar}
+                    avatar={avatar}
                     name={city_member_name}
-                    description={city_member_description}
-                    socials={city_member_socials}
+                    description={description}
+                    socials={socials}
                   />
                 )
               )}

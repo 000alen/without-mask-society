@@ -15,7 +15,7 @@ collections:
     fields:
       - { name: title, widget: hidden, default: "landing" }
 
-      # Nav
+      # Navigation
       - { name: twitter_url, label: "Twitter url" }
       - { name: instagram_url, label: "Instagram url" }
       - { name: discord_url, label: "Discord url" }
@@ -23,133 +23,121 @@ collections:
       - { name: digitalrocket_url, label: "DigitalRocket url" }
 
       # Hero
-      - { name: hero_title, label: "Hero - Title", widget: text }
+      - { name: hero_title, label: "Hero Title", widget: text }
       - {
           name: hero_buttons,
-          label: "Hero - Buttons",
+          label: "Hero Buttons",
           widget: list,
           fields:
             [
-              { name: hero_button_text, label: "Hero - Button text" },
+              { name: button_text, label: "Button Text" },
+              { name: button_color, label: "Button Color", widget: color },
               {
-                name: hero_button_color,
-                label: "Hero - Button color",
-                widget: color,
-              },
-              {
-                name: hero_button_icon,
-                label: "Hero - Button icon",
+                name: button_icon,
+                label: "Button Icon",
                 widget: select,
                 options: [opensea, discord, none],
               },
-              { name: hero_button_url, label: "Hero - Button url" },
+              { name: button_url, label: "Button url" },
             ],
         }
       - {
           name: hero_showcase,
-          label: "Hero - Showcase",
+          label: "Hero Showcase",
           widget: list,
           fields:
             [
               {
-                name: hero_showcase_unmasked,
-                label: "Hero - Showcase unmasked",
+                name: showcase_unmasked,
+                label: "Showcase unmasked",
                 widget: image,
               },
               {
-                name: hero_showcase_masked,
-                label: "Hero - Showcase masked",
+                name: showcase_masked,
+                label: "Showcase masked",
                 widget: image,
               },
-              { name: hero_showcase_url, label: "Hero - Url" },
+              { name: showcase_url, label: "Showcase Url" },
             ],
         }
 
-      # About
-      - { name: about_title, label: "About - Title" }
-      - { name: about_text, label: "About - Text", widget: markdown }
-
-      # City
-      - { name: city_title, label: "City - Title" }
-      - { name: city_text, label: "City - Text", widget: markdown }
+      # About & Team
+      - { name: about_title, label: "About Title" }
+      - { name: about_text, label: "About Text", widget: markdown }
+      - { name: team_title, label: "Team Title" }
+      - { name: team_text, label: "Team Text", widget: markdown }
       - {
-          name: city_members,
-          label: "City - Members",
+          name: team,
+          label: "Team",
           widget: list,
           fields:
             [
-              { name: city_member_name, label: "City - Member name" },
+              { name: member_name, label: "Member Name" },
+              { name: member_description, label: "Member Description" },
+              { name: member_avatar, label: "Member Avatar", widget: image },
               {
-                name: city_member_description,
-                label: "City - Member description",
-              },
-              {
-                name: city_member_avatar,
-                label: "City - Member avatar",
-                widget: image,
-              },
-              {
-                name: city_member_socials,
-                label: "City - Member socials",
+                name: member_socials,
+                label: "Member Socials",
                 widget: list,
                 fields:
                   [
                     {
-                      name: city_member_social_name,
-                      label: "City - Social name",
+                      name: social_name,
+                      label: "Social Name",
                       widget: select,
                       options: [twitter, linkedin],
                     },
-                    {
-                      name: city_member_social_url,
-                      label: "City - Social url",
-                    },
+                    { name: social_url, label: "Social url" },
                   ],
               },
             ],
         }
 
-      # Forest
-      - { name: forest_title, label: "Forest - Title" }
-      - { name: forest_text, label: "City - Text", widget: markdown }
+      # Roadmap
+      - { name: roadmap_title, label: "Roadmap Title" }
+      - { name: roadmap_text, label: "Roadmap Text", widget: markdown }
       - {
-          name: forest_milestones,
-          label: "Forest - Milestones",
+          name: roadmap,
+          label: "Roadmap",
           widget: list,
           fields:
             [
+              { name: milestone_percent, label: "Milestone Title" },
               {
-                name: forest_milestone_percent,
-                label: "Forest - Milestone Title",
-              },
-              {
-                name: forest_milestone_text,
-                label: "Forest - Milestone text",
+                name: milestone_text,
+                label: "Milestone Text",
                 widget: markdown,
               },
-              { name: forest_milestone_icon, label: "Forest - Milestone icon" },
+              { name: milestone_icon, label: "Milestone Icon" },
             ],
         }
 
-      # Planets
-      - { name: planets_title, label: "Planet - Title" }
-      - { name: planets_text, label: "Planet - Text", widget: markdown }
-
-      # Pool
-      - { name: pool_title, label: "Pool - Title" }
-      - { name: pool_text, label: "Pool - Text", widget: markdown }
+      # Donations & Benefits
+      - { name: donations_title, label: "Donations Title" }
+      - { name: donations_text, label: "Donations Text", widget: markdown }
+      - { name: benefits_title, label: "Benefits Title" }
+      - {
+          name: benefits,
+          label: "Benefits",
+          widget: list,
+          fields:
+            [
+              { name: benefit_title, label: "Benefit Title" },
+              { name: benefit_text, label: "Benefit Text", widget: markdown },
+            ],
+        }
 
       # FAQ
-      - { name: faq_title, label: "FAQ - Title" }
+      - { name: faq_title, label: "FAQ Title" }
       - name: faq_questions
-        label: "FAQ - Questions"
+        label: "FAQ Questions"
         widget: list
         fields:
-          - { name: faq_question, label: "FAQ - Question" }
-          - { name: faq_answer, label: "FAQ - Answer", widget: markdown }
+          - { name: question, label: "Question" }
+          - { name: answer, label: "Answer", widget: markdown }
 
       # Mailing
-      - { name: mailing_text, label: "Mailing - Text" }
+      - { name: mailing_text, label: "Mailing Text" }
 
   - name: blog
     label: Blog

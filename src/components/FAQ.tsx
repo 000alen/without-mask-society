@@ -1,12 +1,12 @@
 import React from "react";
 
-import { FAQQuestion } from "../typings";
+import { Question as IQuestion } from "../typings";
 import { Question } from "./Question";
 import { Title } from "./Title";
 
 interface Props {
   faq_title: string;
-  faq_questions: FAQQuestion[];
+  faq_questions: IQuestion[];
 }
 
 export const FAQ: React.FC<Props> = ({ faq_title, faq_questions }) => {
@@ -17,8 +17,8 @@ export const FAQ: React.FC<Props> = ({ faq_title, faq_questions }) => {
 
         <div className="flex flex-col gap-4">
           {faq_questions &&
-            faq_questions.map(({ faq_question, faq_answer }, i) => (
-              <Question key={i} question={faq_question} answer={faq_answer} />
+            faq_questions.map(({ question, answer }, i) => (
+              <Question key={i} question={question} answer={answer} />
             ))}
         </div>
       </div>

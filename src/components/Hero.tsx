@@ -1,6 +1,6 @@
 import React from "react";
 
-import { HeroButton, HeroShowcase } from "../typings";
+import { Button, Showcase as IShowcase } from "../typings";
 import { FancyButton } from "./FancyButton";
 import { DiscordIcon } from "./icons/DiscordIcon";
 import { OpenseaIcon } from "./icons/OpenseaIcon";
@@ -10,8 +10,8 @@ import { WMSLogo } from "./WMSLogo";
 
 interface Props {
   hero_title: string;
-  hero_buttons: HeroButton[];
-  hero_showcase: HeroShowcase[];
+  hero_buttons: Button[];
+  hero_showcase: IShowcase[];
 }
 
 export const Hero: React.FC<Props> = ({
@@ -34,10 +34,10 @@ export const Hero: React.FC<Props> = ({
           hero_buttons.map(
             (
               {
-                hero_button_color: button_color,
-                hero_button_icon: button_icon,
-                hero_button_text: button_text,
-                hero_button_url: button_url,
+                button_color: button_color,
+                button_icon: button_icon,
+                button_text: button_text,
+                button_url: button_url,
               },
               i
             ) => (

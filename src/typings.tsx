@@ -2,52 +2,45 @@ export type SocialName = "twitter" | "linkedin";
 
 export type ButtonIcon = "opensea" | "discord" | "none";
 
-export interface CityMemberSocial {
-  city_member_social_name: SocialName;
-  city_member_social_url: string;
+export interface Social {
+  social_name: SocialName;
+  social_url: string;
 }
 
-export interface CityMember {
-  city_member_avatar: string;
-  city_member_description: string;
-  city_member_name: string;
-  city_member_socials: CityMemberSocial[];
+export interface Member {
+  member_avatar: string;
+  member_description: string;
+  member_name: string;
+  member_socials: Social[];
 }
 
-export interface ForestMilestoneButton {
-  forest_milestone_button_color: string;
-  forest_milestone_button_icon: ButtonIcon;
-  forest_milestone_button_text: string;
-  forest_milestone_button_url: string;
+export interface Milestone {
+  milestone_percent: string;
+  milestone_text: string;
+  milestone_icon: string;
 }
 
-export interface ForestMilestone {
-  forest_milestone_percent: string;
-  forest_milestone_text: string;
-  forest_milestone_icon: string;
+export interface Button {
+  button_color: string;
+  button_icon: ButtonIcon;
+  button_text: string;
+  button_url: string;
 }
 
-export interface ForestShowcase {
-  forest_showcase_image: string;
-  forest_showcase_url: string;
+export interface Question {
+  question: string;
+  answer: string;
 }
 
-export interface HeroButton {
-  hero_button_color: string;
-  hero_button_icon: ButtonIcon;
-  hero_button_text: string;
-  hero_button_url: string;
+export interface Showcase {
+  showcase_unmasked: string;
+  showcase_masked: string;
+  showcase_url: string;
 }
 
-export interface FAQQuestion {
-  faq_question: string;
-  faq_answer: string;
-}
-
-export interface HeroShowcase {
-  hero_showcase_unmasked: string;
-  hero_showcase_masked: string;
-  hero_showcase_url: string;
+export interface Benefit {
+  benefit_title: string;
+  benefit_text: string;
 }
 
 export interface LandingFrontmatter {
@@ -58,28 +51,26 @@ export interface LandingFrontmatter {
   digitalrocket_url: string;
 
   hero_title: string;
-  hero_buttons: HeroButton[];
-  hero_showcase: HeroShowcase[];
+  hero_buttons: Button[];
+  hero_showcase: Showcase[];
 
   about_title: string;
   about_text: string;
+  team_title: string;
+  team_text: string;
+  team: Member[];
 
-  city_title: string;
-  city_text: string;
-  city_members: CityMember[];
+  roadmap_title: string;
+  roadmap_text: string;
+  roadmap: Milestone[];
 
-  forest_title: string;
-  forest_text: string;
-  forest_milestones: ForestMilestone[];
-
-  planets_title: string;
-  planets_text: string;
-
-  pool_title: string;
-  pool_text: string;
+  donations_title: string;
+  donations_text: string;
+  benefits_title: string;
+  benefits: Benefit[];
 
   faq_title: string;
-  faq_questions: FAQQuestion[];
+  faq_questions: Question[];
 
   mailing_text: string;
 }

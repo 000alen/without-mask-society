@@ -4,14 +4,10 @@ import { ScrollTrigger } from "gsap/all";
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import { AboutSection } from "../components/AboutSection";
-import { Blob } from "../components/Blob";
-import { Blog } from "../components/Blog";
 import { City } from "../components/City";
-import { FAQ } from "../components/FAQ";
-import { Footer } from "../components/Footer";
 import { Forest } from "../components/Forest";
 import { Hero } from "../components/Hero";
+import { LandingFooter } from "../components/LandingFooter";
 import { Nav } from "../components/Nav";
 import { Planets } from "../components/Planets";
 import { Pool } from "../components/Pool";
@@ -64,25 +60,26 @@ export default ({ data }: Props) => {
       <City
         about_title={frontmatter.about_title}
         about_text={frontmatter.about_text}
-        city_title={frontmatter.city_title}
-        city_text={frontmatter.city_text}
-        city_members={frontmatter.city_members}
+        team_title={frontmatter.team_title}
+        team_text={frontmatter.team_text}
+        team={frontmatter.team}
       />
 
       {/* Roadmap */}
       <Forest
-        forest_title={frontmatter.forest_title}
-        forest_text={frontmatter.forest_text}
-        forest_milestones={frontmatter.forest_milestones}
+        roadmap_title={frontmatter.roadmap_title}
+        roadmap_text={frontmatter.roadmap_text}
+        roadmap={frontmatter.roadmap}
       />
 
       <Stars />
 
       {/* Donations & Benefits */}
       <Planets
-        planets_title={frontmatter.planets_title}
-        planets_text={frontmatter.planets_text}
-        forest_milestones={frontmatter.forest_milestones}
+        donations_title={frontmatter.donations_title}
+        donations_text={frontmatter.donations_text}
+        benefits_title={frontmatter.benefits_title}
+        benefits={frontmatter.benefits}
       />
 
       {/* FAQ & Blogs */}
@@ -91,7 +88,7 @@ export default ({ data }: Props) => {
         faq_questions={frontmatter.faq_questions}
       />
 
-      <Footer
+      <LandingFooter
         twitter_url={frontmatter.twitter_url}
         instagram_url={frontmatter.instagram_url}
         discord_url={frontmatter.discord_url}
@@ -115,50 +112,51 @@ export const pageQuery = graphql`
 
         hero_title
         hero_buttons {
-          hero_button_icon
-          hero_button_color
-          hero_button_text
-          hero_button_url
+          button_icon
+          button_color
+          button_text
+          button_url
         }
         hero_showcase {
-          hero_showcase_url
-          hero_showcase_unmasked
-          hero_showcase_masked
+          showcase_url
+          showcase_unmasked
+          showcase_masked
         }
 
         about_title
         about_text
-
-        city_title
-        city_text
-        city_members {
-          city_member_avatar
-          city_member_description
-          city_member_name
-          # city_member_socials {
-          #   city_member_social_name
-          #   city_member_social_url
+        team_title
+        team_text
+        team {
+          member_avatar
+          member_description
+          member_name
+          # member_socials {
+          #   social_name
+          #   social_url
           # }
         }
 
-        forest_title
-        forest_text
-        forest_milestones {
-          forest_milestone_percent
-          forest_milestone_text
-          forest_milestone_icon
+        roadmap_title
+        roadmap_text
+        roadmap {
+          milestone_percent
+          milestone_text
+          milestone_icon
         }
 
-        planets_title
-        planets_text
-
-        pool_title
-        pool_text
+        donations_title
+        donations_text
+        benefits_title
+        benefits {
+          benefit_title
+          benefit_text
+        }
 
         faq_title
         faq_questions {
-          faq_answer
-          faq_question
+          answer
+          question
         }
 
         mailing_text
