@@ -1,43 +1,23 @@
 import { StaticImage } from "gatsby-plugin-image";
-import gsap from "gsap";
-import React, { useEffect } from "react";
+import React from "react";
 
-import { isBrowser } from "../pages";
-import { PlanetsBackground } from "./backgrounds/PlanetsBackground";
+import { ForestMilestone } from "../typings";
 import { Blob } from "./Blob";
 import { Markdown } from "./Markdown";
+import { RoadmapItem } from "./RoadmapItem";
 import { Title } from "./Title";
-import { useMediaQuery } from "./useMediaQuery";
 
 interface Props {
   planets_title: string;
   planets_text: string;
+  forest_milestones: ForestMilestone[];
 }
 
-export const Planets: React.FC<Props> = ({ planets_title, planets_text }) => {
-  const sm = useMediaQuery("(max-width: 768px)");
-  const md = useMediaQuery("(max-width: 1024px)");
-
-  // useEffect(() => {
-  //   gsap.to(".pContentPlanets", {
-  //     yPercent: md ? 50 : 200,
-  //     ease: "none",
-  //     scrollTrigger: {
-  //       trigger: ".pSectionPlanets",
-  //       scrub: true,
-  //     },
-  //   });
-
-  //   gsap.to(".pImagePlanets", {
-  //     yPercent: -50,
-  //     ease: "none",
-  //     scrollTrigger: {
-  //       trigger: ".pSectionPlanets",
-  //       scrub: true,
-  //     },
-  //   });
-  // }, [sm, md]);
-
+export const Planets: React.FC<Props> = ({
+  planets_title,
+  planets_text,
+  forest_milestones,
+}) => {
   return (
     <>
       <Blob id="donations">
@@ -45,41 +25,36 @@ export const Planets: React.FC<Props> = ({ planets_title, planets_text }) => {
         <Markdown>{planets_text}</Markdown>
       </Blob>
 
-      <section
-        className={
-          sm || !isBrowser
-            ? "grid -mt-20 md:-mt-36 lg:-mt-72"
-            : "relative -mt-36 lg:-mt-96 pSectionPlanets"
-        }
-      >
-        {/* <div
-        className={`z-10 flex flex-col items-center max-w-6xl gap-8 p-4 mx-auto ${
-          sm || !isBrowser ? "md:mt-56 h-min" : "pContentPlanets h-min"
-        }`}
-        {...(sm || !isBrowser ? { style: { gridArea: "1/1" } } : {})}
-      >
-      </div> */}
+      <section className="relative">
+        <div className="z-10 flex flex-col items-center max-w-6xl gap-8 p-4 mx-auto h-min">
+          <div className="w-full gap-2 timeline">
+            {forest_milestones &&
+              forest_milestones.map(
+                (
+                  {
+                    forest_milestone_text: text,
+                    forest_milestone_percent: percent,
+                    forest_milestone_icon: icon,
+                  },
+                  i
+                ) => (
+                  <RoadmapItem
+                    key={i}
+                    className={i % 2 === 0 ? "gs_fromLeft" : "gs_fromRight"}
+                    title={percent}
+                    text={text}
+                    icon={icon}
+                  />
+                )
+              )}
+          </div>
+        </div>
 
-        {sm || !isBrowser ? (
-          <PlanetsBackground
-            className="mt-64 md:mt-0"
-            style={{ gridArea: "1/1" }}
-          />
-        ) : (
-          <>
-            <StaticImage
-              className="!absolute top-0 w-full pImagePlanets -z-10"
-              src="../images/planets/empty.png"
-              alt=""
-            />
-
-            <StaticImage
-              className="w-[50%] opacity-0"
-              src="../images/planets/empty.png"
-              alt=""
-            />
-          </>
-        )}
+        <StaticImage
+          className="!absolute -bottom-[20%] w-full -z-10"
+          src="../images/planets/sm_empty.png"
+          alt=""
+        />
       </section>
     </>
   );

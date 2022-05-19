@@ -3,85 +3,39 @@ import gsap from "gsap";
 import React, { useEffect } from "react";
 
 import { isBrowser } from "../pages";
+import { FAQQuestion } from "../typings";
 import { PoolBackground } from "./backgrounds/PoolBackground";
 import { BenefitsItem } from "./BenefitsItem";
 import { Blob } from "./Blob";
+import { Blog } from "./Blog";
+import { FAQ } from "./FAQ";
 import { Markdown } from "./Markdown";
 import { RoadmapItem } from "./RoadmapItem";
 import { Title } from "./Title";
 import { useMediaQuery } from "./useMediaQuery";
 
 interface Props {
-  pool_title: string;
-  pool_text: string;
+  faq_title: string;
+  faq_questions: FAQQuestion[];
 }
 
-export const Pool: React.FC<Props> = ({ pool_title, pool_text }) => {
-  const sm = useMediaQuery("(max-width: 768px)");
-  const md = useMediaQuery("(max-width: 1024px)");
-
-  // useEffect(() => {
-  //   gsap.to(".pContentPool", {
-  //     yPercent: md ? 100 : 250,
-  //     ease: "none",
-  //     scrollTrigger: {
-  //       trigger: ".pSectionPool",
-  //       scrub: true,
-  //     },
-  //   });
-
-  //   gsap.to(".pImagePool", {
-  //     yPercent: -50,
-  //     ease: "none",
-  //     scrollTrigger: {
-  //       trigger: ".pSectionPool",
-  //       scrub: true,
-  //     },
-  //   });
-  // }, [sm, md]);
-
+export const Pool: React.FC<Props> = ({ faq_title, faq_questions }) => {
   return (
     <>
       <Blob id="benefits">
-        <Title>{pool_title}</Title>
-        <Markdown>{pool_text}</Markdown>
+        <FAQ faq_title={faq_title} faq_questions={faq_questions} />
       </Blob>
 
-      <section
-        className={
-          sm || !isBrowser
-            ? "grid -mt-20 md:-mt-96 lg:mt-[-50rem]"
-            : "relative -mt-80 lg:-mt-[50rem] pSectionPool"
-        }
-      >
-        {/* <div
-          className={`z-10 flex flex-col items-center max-w-6xl gap-8 p-4 mx-auto h-min ${
-            sm || !isBrowser ? "-mt-28" : "pContentPool"
-          } `}
-          {...(md || !isBrowser ? { style: { gridArea: "1/1" } } : {})}
-        >
-        </div> */}
+      <section className="relative">
+        <div className="z-10 flex flex-col items-center max-w-6xl gap-8 p-4 mx-auto h-min">
+          <Blog />
+        </div>
 
-        {sm || !isBrowser ? (
-          <PoolBackground
-            className="mt-36 md:-mt-12"
-            style={{ gridArea: "1/1" }}
-          />
-        ) : (
-          <>
-            <StaticImage
-              className="!absolute top-0 w-full pImagePool -z-10"
-              src="../images/pool/empty.png"
-              alt=""
-            />
-
-            <StaticImage
-              className="w-[50%] opacity-0"
-              src="../images/pool/empty.png"
-              alt=""
-            />
-          </>
-        )}
+        {/* <StaticImage
+          className="!absolute -bottom-[200%] w-full -z-10"
+          src="../images/pool/sm_empty.png"
+          alt=""
+        /> */}
       </section>
     </>
   );

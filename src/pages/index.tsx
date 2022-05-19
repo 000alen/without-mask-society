@@ -81,28 +81,18 @@ export default ({ data }: Props) => {
 
       <Stars />
 
-      {/* Donations */}
+      {/* Donations & Benefits */}
       <Planets
         planets_title={frontmatter.planets_title}
         planets_text={frontmatter.planets_text}
+        forest_milestones={frontmatter.forest_milestones}
       />
 
-      {/* Benefits */}
+      {/* FAQ & Blogs */}
       <Pool
-        pool_title={frontmatter.pool_title}
-        pool_text={frontmatter.pool_text}
+        faq_title={frontmatter.faq_title}
+        faq_questions={frontmatter.faq_questions}
       />
-
-      {/* <div className="z-20 flex flex-col gap-32 lg:justify-around lg:items-start lg:flex-row"> */}
-      <Blob>
-        <FAQ
-          faq_title={frontmatter.faq_title}
-          faq_questions={frontmatter.faq_questions}
-        />
-
-        <Blog />
-      </Blob>
-      {/* </div> */}
 
       <Footer
         twitter_url={frontmatter.twitter_url}
