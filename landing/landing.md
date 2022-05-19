@@ -166,6 +166,22 @@ pool_text: >-
 
 
   * EVERY NFT MINTED WILL HELP RECYCLE OVER 100 MASKS THAT WILL BE TURNED INTO HYDROGEN FUEL.
+benefits:
+  - benefit_text: WMS EARLY BUYERS WILL GET PRIORITY ACCESS TO DIGITAL ROCKET'S NEXT
+      COLLECTION.
+    benefit_title: Early access
+  - benefit_text: WMS BUYERS WILL GET PRIORITY ACCESS TO THE RARE AND ULTRA RARE WMS
+      VERSION COLLECTION.
+    benefit_title: Ultra rare
+  - benefit_text: WE WILL RAFFLE 20 PERSONALIZED NFTs AMONG OUR HOLDERS.
+    benefit_title: NFT Raffle
+  - benefit_text: WE WILL RAFFLE THE NFT WMS CERO IN PHASE EIGHT OF THE ROADMAP.
+    benefit_title: NFT Zero Raffle
+  - benefit_text: DRAW OF 1 ETH AMONG THE HOLDERS.
+    benefit_title: 1 ETH Draw
+  - benefit_text: EVERY NFT MINTED WILL HELP RECYCLE OVER 100 MASKS THAT WILL BE
+      TURNED INTO HYDROGEN FUEL.
+    benefit_title: Recycling & Hydrogen fuel
 faq_title: FAQ
 faq_questions:
   - faq_question: WHERE CAN I BUY WMS?
