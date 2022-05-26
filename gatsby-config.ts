@@ -13,6 +13,18 @@ const config: GatsbyConfig = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Without Mask Society",
+        short_name: "WMS",
+        start_url: "/",
+        background_color: "#000000",
+        theme_color: "#4ade80",
+        display: "standalone",
+        icon: "src/images/favicon.jpg",
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "blog",
