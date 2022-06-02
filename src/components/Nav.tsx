@@ -57,6 +57,19 @@ const NavIcon: React.FC<NavIconProps> = ({ href, IconComponent }) => {
   );
 };
 
+// query={graphql`
+// query LayoutQuery {
+//   site {
+//     siteMetadata {
+//       languages {
+//         defaultLangKey
+//         langs
+//       }
+//     }
+//   }
+// }
+// `}
+
 export const Nav: React.FC<Props> = ({
   twitter_url,
   instagram_url,
@@ -108,6 +121,18 @@ export const Nav: React.FC<Props> = ({
           <NavLink href="#blog" onClick={() => setIsOpen(false)}>
             BLOG
           </NavLink>
+
+          {/* TODO: Use static query instead of hardcoding it */}
+          <div
+            className="flex flex-row items-center justify-center gap-2"
+          >
+            <NavLink className="lg:text-green-400 !not-italic" href="/" onClick={() => setIsOpen(false)}>
+              EN
+            </NavLink>
+            <NavLink className="lg:text-green-400 !not-italic" href="/es/" onClick={() => setIsOpen(false)}>
+              ES
+            </NavLink>
+          </div>
         </div>
 
         <div className="flex flex-row gap-4">
