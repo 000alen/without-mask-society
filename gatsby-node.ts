@@ -28,7 +28,7 @@ export const createPages = async ({ graphql, actions }) => {
         context: {
           // Pass the path to the page component
           _path: node.frontmatter.path,
-        }
+        },
       });
     }
   });

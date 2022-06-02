@@ -1,4 +1,4 @@
-import { graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 import React from "react";
 
 import { Footer } from "../components/Footer";
@@ -10,31 +10,22 @@ import { Title } from "../components/Title";
 import { WMSLogo } from "../components/WMSLogo";
 
 interface Props {
-  data: {
-    allMarkdownRemark: {
-      edges: {
-        node: {
-          frontmatter: {
-            twitter_url: string;
-            instagram_url: string;
-            discord_url: string;
-            opensea_url: string;
-            digitalrocket_url: string;
-            mailing_text: string;
-          };
-        };
-      }[];
-    };
-  };
+  twitter_url: string;
+  instagram_url: string;
+  discord_url: string;
+  opensea_url: string;
+  digitalrocket_url: string;
+  mailing_text: string;
 }
 
-export default function Template({ data }: Props) {
-  const { allMarkdownRemark } = data;
-  const globalFrontmatter = allMarkdownRemark.edges
-    .map(({ node }) => node)
-    .map(({ frontmatter }) => frontmatter)
-    .find((frontmatter: any) => !Object.values(frontmatter).includes(null))!;
-
+export const NotFoundLayout = ({
+  twitter_url,
+  instagram_url,
+  discord_url,
+  opensea_url,
+  digitalrocket_url,
+  mailing_text,
+}: Props) => {
   return (
     <div>
       <div className="flex flex-col items-end gap-2 p-12 lg:flex-row lg:justify-around">
@@ -43,16 +34,16 @@ export default function Template({ data }: Props) {
         </Link>
 
         <div className="flex flex-row gap-4">
-          <a href={globalFrontmatter.twitter_url} target="_blank">
+          <a href={twitter_url} target="_blank">
             <TwitterIcon />
           </a>
-          <a href={globalFrontmatter.instagram_url} target="_blank">
+          <a href={instagram_url} target="_blank">
             <InstagramIcon />
           </a>
-          <a href={globalFrontmatter.discord_url} target="_blank">
+          <a href={discord_url} target="_blank">
             <DiscordIcon />
           </a>
-          <a href={globalFrontmatter.opensea_url}>
+          <a href={opensea_url}>
             <OpenseaIcon />
           </a>
         </div>
@@ -68,16 +59,16 @@ export default function Template({ data }: Props) {
 
       <Footer
         landing={false}
-        twitter_url={globalFrontmatter.twitter_url}
-        instagram_url={globalFrontmatter.instagram_url}
-        discord_url={globalFrontmatter.discord_url}
-        opensea_url={globalFrontmatter.opensea_url}
-        digitalrocket_url={globalFrontmatter.digitalrocket_url}
-        mailing_text={globalFrontmatter.mailing_text}
+        twitter_url={twitter_url}
+        instagram_url={instagram_url}
+        discord_url={discord_url}
+        opensea_url={opensea_url}
+        digitalrocket_url={digitalrocket_url}
+        mailing_text={mailing_text}
       />
     </div>
   );
-}
+};
 
 // export const pageQuery = graphql`
 //   query {
