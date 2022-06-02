@@ -1,5 +1,6 @@
 import { graphql, Link } from "gatsby";
 import React from "react";
+
 import { Footer } from "../components/Footer";
 import { DiscordIcon } from "../components/icons/DiscordIcon";
 import { InstagramIcon } from "../components/icons/InstagramIcon";
@@ -78,21 +79,21 @@ export default function Template({ data }: Props) {
   );
 }
 
-export const pageQuery = graphql`
-  query {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            twitter_url
-            instagram_url
-            discord_url
-            opensea_url
-            digitalrocket_url
-            mailing_text
-          }
-        }
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query {
+//     allMarkdownRemark {
+//       edges {
+//         node {
+//           frontmatter {
+//             twitter_url
+//             instagram_url
+//             discord_url
+//             opensea_url
+//             digitalrocket_url
+//             mailing_text
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;

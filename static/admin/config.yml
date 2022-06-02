@@ -13,6 +13,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - { name: language, label: "Language", widget: select, options: ["en", "es"] }
       - { name: title, widget: hidden, default: "landing" }
 
       # Navigation
@@ -144,6 +145,7 @@ collections:
     folder: blog
     create: true
     fields:
+      - { name: language, label: "Language", widget: select, options: ["en", "es"] }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }

@@ -1,12 +1,13 @@
 import { graphql, Link } from "gatsby";
 import React from "react";
-import { Footer } from "../../components/Footer";
-import { DiscordIcon } from "../../components/icons/DiscordIcon";
-import { InstagramIcon } from "../../components/icons/InstagramIcon";
-import { OpenseaIcon } from "../../components/icons/OpenseaIcon";
-import { TwitterIcon } from "../../components/icons/TwitterIcon";
-import { Title } from "../../components/Title";
-import { WMSLogo } from "../../components/WMSLogo";
+
+import { Footer } from "../components/Footer";
+import { DiscordIcon } from "../components/icons/DiscordIcon";
+import { InstagramIcon } from "../components/icons/InstagramIcon";
+import { OpenseaIcon } from "../components/icons/OpenseaIcon";
+import { TwitterIcon } from "../components/icons/TwitterIcon";
+import { Title } from "../components/Title";
+import { WMSLogo } from "../components/WMSLogo";
 
 interface Props {
   data: {
@@ -92,8 +93,8 @@ export default function Template({ data }: Props) {
   );
 }
 
-export const pageQuery = graphql`
-  query ($id: String!) {
+export const query = graphql`
+  query ($_path: String!) {
     allMarkdownRemark {
       edges {
         node {
@@ -108,7 +109,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark (frontmatter: { path: { eq: $_path } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")

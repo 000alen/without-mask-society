@@ -1,9 +1,11 @@
 import type { GatsbyConfig } from "gatsby";
+import languages from "./src/data/languages";
 
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Without Mask Society`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://without-mask-society.netlify.app/`,
+    languages,
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
@@ -12,6 +14,7 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
+    "gatsby-transformer-remark",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -38,7 +41,31 @@ const config: GatsbyConfig = {
         path: `${__dirname}/landing`,
       },
     },
-    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyForNull: "any",
+        langKeyDefault: languages.defaultLangKey,
+        useLangKeyLayout: true,
+        prefixDefault: false,
+        markdownRemark: {
+          postPage: "src/templates/blog.tsx",
+          query: `
+          {
+            allMarkdownRemark {
+              edges {
+                node {
+                  frontmatter {
+                    path,
+                  }
+                }
+              }
+            }
+          }
+          `,
+        },
+      },
+    },
   ],
 };
 
