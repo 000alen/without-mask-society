@@ -1,4 +1,5 @@
 ---
+language: en
 title: landing
 twitter_url: http://twitter.com/wms_nft
 instagram_url: http://www.instagram.com/wms_nft/
