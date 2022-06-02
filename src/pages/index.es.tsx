@@ -20,15 +20,16 @@ export default ({ data }: Props) => {
 };
 
 export const pageQuery = graphql`
-  query {
-    markdownRemark(frontmatter: { title: { eq: "landing" } }) {
+  {
+    markdownRemark(
+      frontmatter: { title: { eq: "landing" }, language: { eq: "es" } }
+    ) {
       frontmatter {
         twitter_url
         instagram_url
         discord_url
         opensea_url
         digitalrocket_url
-
         hero_title
         hero_buttons {
           button_icon
@@ -41,7 +42,6 @@ export const pageQuery = graphql`
           showcase_unmasked
           showcase_masked
         }
-
         about_title
         about_text
         team_title
@@ -50,12 +50,7 @@ export const pageQuery = graphql`
           member_avatar
           member_description
           member_name
-          # member_socials {
-          #   social_name
-          #   social_url
-          # }
         }
-
         roadmap_title
         roadmap_text
         roadmap {
@@ -63,7 +58,6 @@ export const pageQuery = graphql`
           milestone_text
           milestone_icon
         }
-
         donations_title
         donations_text
         benefits_title
@@ -71,13 +65,11 @@ export const pageQuery = graphql`
           benefit_title
           benefit_text
         }
-
         faq_title
         faq_questions {
           answer
           question
         }
-
         mailing_text
       }
     }
