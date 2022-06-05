@@ -19,7 +19,7 @@ export const isBrowser = typeof window !== "undefined";
 
 export const IndexLayout = (frontmatter: LandingFrontmatter) => {
   return (
-    <div className="scroll-smooth">
+    <div>
       <Helmet>
         <title>Without Mask Society</title>
       </Helmet>
