@@ -5,7 +5,7 @@ twitter_url: http://twitter.com/wms_nft
 instagram_url: http://www.instagram.com/wms_nft/
 discord_url: https://example.com/
 opensea_url: https://example.com/
-digitalrocket_url: https://example.com/
+digitalrocket_url: https://digitalrocketstudios.io/
 hero_title: THE NFTS THAT CLEAN THE WORLD
 hero_buttons:
   - button_text: Buy in OpenSea
