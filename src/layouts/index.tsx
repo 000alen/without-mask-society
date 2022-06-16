@@ -19,14 +19,12 @@ export const isBrowser = typeof window !== "undefined";
 
 export const IndexLayout = (frontmatter: LandingFrontmatter) => {
   return (
-    <div>
+    <div id="top">
       <Helmet>
         <title>Without Mask Society</title>
       </Helmet>
 
       <Stars />
-
-      <a id="top"></a>
 
       <Nav
         twitter_url={frontmatter.twitter_url}
