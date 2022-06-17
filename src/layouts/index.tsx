@@ -53,21 +53,21 @@ export const IndexLayout = (frontmatter: LandingFrontmatter) => {
         team={frontmatter.team}
       />
 
-      {/* Roadmap */}
-      <Forest
-        roadmap_title={frontmatter.roadmap_title}
-        roadmap_text={frontmatter.roadmap_text}
-        roadmap={frontmatter.roadmap}
-      />
-
-      <Stars />
-
       {/* Donations & Benefits */}
       <Planets
         donations_title={frontmatter.donations_title}
         donations_text={frontmatter.donations_text}
         benefits_title={frontmatter.benefits_title}
         benefits={frontmatter.benefits}
+      />
+
+      <Stars />
+
+      {/* Roadmap */}
+      <Forest
+        roadmap_title={frontmatter.roadmap_title}
+        roadmap_text={frontmatter.roadmap_text}
+        roadmap={frontmatter.roadmap}
       />
 
       {/* FAQ & Blogs */}
