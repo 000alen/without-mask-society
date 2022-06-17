@@ -3,19 +3,19 @@ language: en
 title: landing
 twitter_url: http://twitter.com/wms_nft
 instagram_url: http://www.instagram.com/wms_nft/
-discord_url: https://example.com/
-opensea_url: https://example.com/
+discord_url: https://discord.gg/DYwPPPQDRh
+opensea_url: https://opensea.io
 digitalrocket_url: https://digitalrocketstudios.io/
 hero_title: THE NFTS THAT CLEAN THE WORLD
 hero_buttons:
   - button_text: Buy in OpenSea
     button_color: "#e41388"
     button_icon: opensea
-    button_url: https://example.com/
+    button_url: https://opensea.io
   - button_text: Go to Discord
     button_color: "#5865f2"
     button_icon: discord
-    button_url: https://example.com/
+    button_url: https://discord.gg/DYwPPPQDRh
 hero_showcase:
   - showcase_unmasked: /assets/370.png
     showcase_masked: /assets/473.png
@@ -29,7 +29,7 @@ hero_showcase:
   - showcase_unmasked: /assets/360.png
     showcase_masked: /assets/364.png
     showcase_url: https://example.com/
-welcome_title: Take Off Your Mask. Take A Deep Breath.
+welcome_title: TAKE OFF YOUR MASK. TAKE A DEEP BREATH.
 welcome_text: >-
   THE PANDEMIC IMPLANTED A MASK WITH WHICH WE FEEL PROTECTED, BUT WHICH AT THE
   SAME TIME TRAPPED US INTO OURSELVES... ALTHOUGH IT WAS ALSO THANKS TO IT THAT
@@ -50,14 +50,13 @@ about_text: >-
 
   WE FORM A CONSCIOUS AND RESPONSIBLE SOCIETY OF OUR ACTIONS, THEREFORE, WHEN PURCHASING AN NFT WMS WE WILL BE HELPING TO RECOVER DISUSED MASKS TO CONVERT THEM INTO ENERGY.
 team_title: TEAM
-team_text: >-
+team_text: >
   WE GO TO BED DREAMING OF A WORLD FULL OF GOLDEN STARS.
-
 
   WE LOOK FOR THEM NO MATTER HOW FAR WE HAVE TO TRAVEL TO FIND THEM.
 
 
-  …WE ARE ALSO A GROUP OF 5 FRIENDS WHO LIKE NEW CHALLENGES. THAT WE ARE LOOKING FOR NEW HORIZONS THAT MAKE US VIBRATE AT NIGHT AND DREAM BY DAY...
+  …WE ARE ALSO A GROUP OF FRIENDS WHO LIKE NEW CHALLENGES, WHO ARE LOOKING FOR NEW HORIZONS THAT MAKE US VIBRATE AT NIGHT AND DREAM BY DAY…
 team:
   - member_name: Santiago A.
     member_description: Art Director
@@ -77,12 +76,12 @@ team:
   - member_name: Karina M.
     member_description: Curator
     member_avatar: /assets/karina-m.jpg
-  - member_name: Ed
+  - member_name: "Miguel "
     member_description: Social Networks Advisor
     member_avatar: /assets/ed.jpg
   - member_name: Eddy
     member_description: International NFT Advisor
-    member_avatar: /assets/eddie-.png
+    member_avatar: /assets/kiwi.jpeg
   - member_name: Alen R.
     member_description: Senior Developer
     member_avatar: /assets/alen-r.png
@@ -95,48 +94,44 @@ roadmap_text: DIGITAL ROCKET WAS BORN FROM THE INTEREST OF
   CONSCIOUS ALTERNATIVE IN THE BLOCKCHAIN, OFFERING PROJECTS THAT IMPREGNATE A
   SOCIAL VISION AND A UNIQUE MISSION AT EVERY STEP.
 roadmap:
-  - milestone_percent: Founders
-    milestone_text: >-
-      FIRST 1000 NTFs MINT/ FIRST BUYERS WILL GET PRIORITY ACCESS TO DIGITAL
-      ROCKET'S NEXT COLLECTION.
-
-
-      THE PURCHASE OF YOUR NFT WITH A MASK WILL COME PAIRED WITH ANOTHER NFT IN ITS NON-MASK VERSION. ADDITIONALLY WHEN YOU BUY YOUR NFT YOU WILL BE RECYCLING 6,000 DISUSED MASKS, WHICH WILL BECOME 1K OF HYDROGEN FUEL THANKS TO OUR ALLIANCE WITH THE INNOVATIVE SPANISH COMPANY [NANTEK](https://nantek.tech/).
-    milestone_icon: 0.06 ETH
-  - milestone_percent: Rare
-    milestone_text: >-
-      RELEASE OF THE NEXT 100 RARE NTFs. HANDCRAFTED / EARLY BUYERS WILL GET
-      PRIORITY ACCESS TO DIGITAL ROCKET'S NEXT COLLECTION.
-
-
-      THE PURCHASE OF YOUR NFT WITH A MASK WILL COME PAIRED WITH ANOTHER NFT IN ITS NON-MASK VERSION. ADDITIONALLY WHEN YOU BUY YOUR NFT YOU WILL BE RECYCLING 12,000 DISUSED MASKS, WHICH WILL BECOME 1K OF HYDROGEN FUEL.
-    milestone_icon: 0.12 ETH
-  - milestone_percent: Colonizers
-    milestone_text: THIRD RELEASE OF THE NEXT 1000 NTFs / BUYERS WILL GET PRIORITY
-      ACCESS TO THE NEXT DIGITAL ROCKET COLLECTION AND THE BENEFITS MENTIONED IN
-      PHASE 1.
-    milestone_icon: 0.06 ETH
-  - milestone_percent: Customized
-    milestone_text: DRAW OF 20 PERSONALIZED NFTS WMS AMONG HOLDERS.
+  - milestone_percent: PHASE 00
+    milestone_text: >
+      CREATION AND LAUNCH OF THE DISCORD, SOCIAL NETWORKS AND WEB PAGE.
+      PRESENTATION OF THE PROJECT TO OUR FIRST CREW MEMBERS WHO WILL GET ACCESS
+      TO THE SPECIAL FOUNDERS MINT.
     milestone_icon: " "
-  - milestone_percent: Rare
-    milestone_text: LAUNCH OF 100 RARE HANDCRAFTED NFTs/ BUYERS WILL GET PRIORITY
-      ACCESS TO THE NEXT DIGITAL ROCKET COLLECTION AND THE BENEFITS MENTIONED IN
-      PHASE 2.
-    milestone_icon: 0.12 ETH
-  - milestone_percent: Ultra Rare
-    milestone_text: >-
-      LAUNCH OF 22 ULTRA RARE NFTs.
+  - milestone_percent: PHASE 01
+    milestone_text: >
+      MARKETING CAMPAIGN START. WE WILL REVEAL THE FIRST POSTON/DG PRESENTATION
+      TALK WITH OUR DIGITAL ART EXPERTS AND OUR ART DIRECTOR. DRAWS FROM OUR
+      WHITE LIST.
+    milestone_icon: " "
+  - milestone_percent: PHASE 02
+    milestone_text: |
+      MINT OF THE FIRST WMS
+    milestone_icon: "375 MATIC "
+  - milestone_percent: PHASE 03
+    milestone_text: |
+      TALK WITH OUR EXPERT IN BLOCKCHAIN ​​FOR OUR HOLDERS.
+      WL GIVEAWAY FOR ARTISAN WMS DURING THESE EVENTS
+    milestone_icon: "  "
+  - milestone_percent: PHASE 04
+    milestone_text: MINT OF ARTISAN WMS. PRIORITY ACCESS TO THE HOLDERS OF THE FIRST
+      COLLECTION.
+    milestone_icon: " "
+  - milestone_percent: PHASE 05
+    milestone_text: |
+      WMS DRAW 00. 
+      1 ETH DRAW AND OTHERS TO BE ANNOUNCED.
+    milestone_icon: " "
+  - milestone_text: >
+      LET'S GROW TOGETHER! SHOW OFF YOUR SKILLS AND WORK WITH US ON OUR UPCOMING
+      DIGITAL ROCKET COLLECTION (FOR HOLDERS ONLY).
 
 
-      THE PURCHASE OF YOUR NFT WITH A MASK WILL COME PAIRED WITH ANOTHER NFT IN ITS NON MASK VERSION. ADDITIONALLY WHEN YOU BUY YOUR NFT YOU WILL BE RECYCLING 24,000 DISUSED MASKS, WHICH WILL BE CONVERTED INTO 4K OF HYDROGEN FUEL.
-    milestone_icon: 0.25 ETH
-  - milestone_text: 1 ETH RAFFLE BETWEEN HOLDERS
-    milestone_percent: Raffle
-    milestone_icon: " "
-  - milestone_text: NFT WMS ZERO DRAW AMONG HOLDERS.
-    milestone_percent: 000 Original
-    milestone_icon: " "
+      OUR COLLECTION WILL LIVE ON THE POLYGON MATIC BLOCKCHAIN. OUR REASONS: PROOF OF STAKE AND ECO FRIENDLY STEERING.
+    milestone_percent: PHASE 06
+    milestone_icon: "  "
 donations_title: DONATIONS
 donations_text: >-
   WE PARTNER WITH [NANTEK](https://nantek.tech/). LEADING SPANISH COMPANY IN
@@ -156,23 +151,30 @@ donations_text: >-
   BE PART OF THE REVOLUTION!
 
   JOIN WITHOUT MASK SOCIETY!
+
+
+  [NANTEK](http://www.nantek.tech/)
 benefits_title: Benefits
 benefits:
   - benefit_text: WMS EARLY BUYERS WILL GET PRIORITY ACCESS TO DIGITAL ROCKET'S NEXT
       COLLECTION.
-    benefit_title: Early Access
+    benefit_title: " PRIORITY"
   - benefit_text: WMS BUYERS WILL GET PRIORITY ACCESS TO THE RARE AND ULTRA RARE WMS
       VERSION COLLECTION.
-    benefit_title: Ultra Rare
+    benefit_title: " TOTAL ACCESS"
   - benefit_text: WE WILL RAFFLE 20 PERSONALIZED NFTs AMONG OUR HOLDERS.
-    benefit_title: NFT Raffle
+    benefit_title: NFT RAFFLE
   - benefit_text: WE WILL RAFFLE THE NFT WMS CERO IN PHASE EIGHT OF THE ROADMAP.
-    benefit_title: WMS Zero Raffle
+    benefit_title: WMS ZERO RAFFLE
   - benefit_text: DRAW OF 1 ETH AMONG THE HOLDERS.
-    benefit_title: ETH Draw
-  - benefit_text: EVERY NFT MINTED WILL HELP RECYCLE OVER 100 MASKS THAT WILL BE
+    benefit_title: ETH DRAW
+  - benefit_text: EVERY NFT MINTED WILL HELP RECYCLE OVER 6000 MASKS THAT WILL BE
       TURNED INTO HYDROGEN FUEL.
-    benefit_title: Recycling & Hydrogen Fuel
+    benefit_title: RECYCLING AND HYDROGEN FUEL
+  - benefit_title: DISCORD AND TALKS
+    benefit_text: THE DISCORD TALKS GIVEN BY OPINION LEADERS IN THE AREAS OF
+      BLOCKCHAIN, SUSTAINABILITY, CLIMATE CRISIS, AUDIOVISUAL PRODUCTION, AMONG
+      OTHER COMMUNITY INTERESTS.
 faq_title: FAQ
 faq_questions:
   - question: WHERE CAN I BUY WMS?
@@ -186,7 +188,7 @@ faq_questions:
       DEVELOPMENT OF OUR WMS 00, DESIGNED BY OUR ART DIRECTOR, IN A PROCESS OF
       SEVERAL MONTHS UNTIL REACHING WHAT WE HAVE TODAY.
   - question: HOW MUCH DOES A WMS COST?
-    answer: OUR FLOOR PRICE IS AT 0.06 ETH.
+    answer: "OUR FLOOR PRICE IS AT 375 MATIC. "
   - question: HOW MANY WMS WILL THE COLLECTION HAVE?
     answer: >-
       WE WILL HAVE A TOTAL OF 2222 NFTS.
