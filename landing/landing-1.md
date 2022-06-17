@@ -6,7 +6,10 @@ instagram_url: http://www.instagram.com/wms_nft/
 discord_url: https://discord.gg/DYwPPPQDRh
 opensea_url: https://opensea.io
 digitalrocket_url: https://digitalrocketstudios.io/
-hero_title: "LOS NFTS QUE LIMPIAN EL MUNDO - MINTING SOON "
+hero_title: |
+  LOS NFTS QUE LIMPIAN EL MUNDO   
+  MINTING SOON 
+  STAY ALERT 
 hero_buttons:
   - button_text: Comprar en OpenSea
     button_color: "#e41388"
