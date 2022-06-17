@@ -17,14 +17,14 @@ hero_buttons:
     button_icon: discord
     button_url: https://discord.gg/DYwPPPQDRh
 hero_showcase:
-  - showcase_unmasked: /assets/370.png
-    showcase_masked: /assets/473.png
+  - showcase_unmasked: /assets/66.png
+    showcase_masked: /assets/68.png
     showcase_url: https://example.com/
-  - showcase_unmasked: /assets/473.png
-    showcase_masked: /assets/458.png
+  - showcase_unmasked: /assets/71.png
+    showcase_masked: /assets/76.png
     showcase_url: https://example.com/
-  - showcase_unmasked: /assets/458.png
-    showcase_masked: /assets/360.png
+  - showcase_unmasked: /assets/81.png
+    showcase_masked: /assets/336.png
     showcase_url: https://example.com/
   - showcase_unmasked: /assets/360.png
     showcase_masked: /assets/364.png
