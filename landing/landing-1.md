@@ -103,10 +103,10 @@ roadmap:
   - milestone_percent: "FASE 01 "
     milestone_text: INICIO CAMPAÑA DE MARKETING. REVELAREMOS LA PRIMERA CHARLA DE
       PRESENTACIÓN DE POSTON / DG CON NUESTROS EXPERTOS EN ARTE DIGITAL Y
-      NUESTRO DIRECTOR DE ARTE. SORTEOS DE NUESTRA WITHLIST.
+      NUESTRO DIRECTOR DE ARTE. SORTEOS DE NUESTRA WHITE LIST.
     milestone_icon: " "
   - milestone_percent: "FASE 02 "
-    milestone_text: MINTEO DE LOS PRIMEROS WMS
+    milestone_text: MINTEO DE LOS PRIMEROS WMS.
     milestone_icon: "375 MATIC "
   - milestone_percent: FASE 03
     milestone_text: |-
@@ -152,9 +152,7 @@ donations_text: >-
 
   SÉ PARTE DE LA REVOLUCIÓN!
 
-
   ÚNETE A WITHOUT MASK SOCIETY!
-
 
   [NANTEK](http://www.nantek.tech/)
 benefits_title: BENEFICIOS
