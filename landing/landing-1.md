@@ -74,7 +74,7 @@ team:
     member_avatar: /assets/claudio-v.jpg
   - member_name: Joaquin M.
     member_description: Director Creativo
-    member_avatar: /assets/joaquin-m.jpg
+    member_avatar: /assets/photo-2022-06-17-19-03-27.jpg
   - member_name: Karina M.
     member_description: Curadora
     member_avatar: /assets/karina-m.jpg
