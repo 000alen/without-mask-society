@@ -42,6 +42,8 @@ export const pageQuery = graphql`
           showcase_unmasked
           showcase_masked
         }
+        welcome_title
+        welcome_text
         about_title
         about_text
         team_title

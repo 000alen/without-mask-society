@@ -54,6 +54,8 @@ export interface LandingFrontmatter {
   hero_buttons: Button[];
   hero_showcase: Showcase[];
 
+  welcome_title: string;
+  welcome_text: string;
   about_title: string;
   about_text: string;
   team_title: string;

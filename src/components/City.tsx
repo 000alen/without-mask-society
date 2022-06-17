@@ -11,12 +11,16 @@ interface Props {
   about_title: string;
   about_text: string;
 
+  welcome_title: string;
+  welcome_text: string;
   team_title: string;
   team_text: string;
   team: Member[];
 }
 
 export const City: React.FC<Props> = ({
+  welcome_title,
+  welcome_text,
   about_title,
   about_text,
   team_title,
@@ -26,17 +30,26 @@ export const City: React.FC<Props> = ({
   return (
     <>
       <Blob>
-        <div className="flex flex-col items-center gap-8 p-4 md:flex-row">
-          <div id="about">
-            <Title>{about_title}</Title>
-            <Markdown>{about_text}</Markdown>
+        <div className="flex flex-col items-center gap-8 p-4">
+          <div id="welcome">
+            <Title>{welcome_title}</Title>
+            <Markdown className="text-center">{welcome_text}</Markdown>
           </div>
 
-          <div className="w-full h-2 bg-green-400 rounded md:w-2 md:h-48"></div>
+          <div className="w-full h-2 bg-green-400 rounded"></div>
 
-          <div id="team">
-            <Title>{team_title}</Title>
-            <Markdown>{team_text}</Markdown>
+          <div className="flex flex-col items-center gap-8 md:flex-row">
+            <div id="about">
+              <Title>{about_title}</Title>
+              <Markdown className="text-center">{about_text}</Markdown>
+            </div>
+
+            <div className="w-full h-2 bg-green-400 rounded md:w-2 md:h-48"></div>
+
+            <div id="team">
+              <Title>{team_title}</Title>
+              <Markdown className="text-center">{team_text}</Markdown>
+            </div>
           </div>
         </div>
       </Blob>

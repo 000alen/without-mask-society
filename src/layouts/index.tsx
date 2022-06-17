@@ -44,6 +44,8 @@ export const IndexLayout = (frontmatter: LandingFrontmatter) => {
 
       {/* About & Team */}
       <City
+        welcome_title={frontmatter.welcome_title}
+        welcome_text={frontmatter.welcome_text}
         about_title={frontmatter.about_title}
         about_text={frontmatter.about_text}
         team_title={frontmatter.team_title}

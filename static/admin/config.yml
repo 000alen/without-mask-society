@@ -13,7 +13,12 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { name: language, label: "Language", widget: select, options: ["en", "es"] }
+      - {
+          name: language,
+          label: "Language",
+          widget: select,
+          options: ["en", "es"],
+        }
       - { name: title, widget: hidden, default: "landing" }
 
       # Navigation
@@ -63,6 +68,8 @@ collections:
         }
 
       # About & Team
+      - { name: welcome_title, label: "Welcome Title" }
+      - { name: welcome_text, label: "Welcome Text", widget: markdown }
       - { name: about_title, label: "About Title" }
       - { name: about_text, label: "About Text", widget: markdown }
       - { name: team_title, label: "Team Title" }
@@ -145,7 +152,12 @@ collections:
     folder: blog
     create: true
     fields:
-      - { name: language, label: "Language", widget: select, options: ["en", "es"] }
+      - {
+          name: language,
+          label: "Language",
+          widget: select,
+          options: ["en", "es"],
+        }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
