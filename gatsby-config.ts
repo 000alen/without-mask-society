@@ -42,6 +42,13 @@ const config: GatsbyConfig = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "showcase",
+        path: `${__dirname}/showcase`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-i18n",
       options: {
         langKeyForNull: "any",

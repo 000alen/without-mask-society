@@ -165,3 +165,28 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+
+  - name: nft_showcase
+    label: Showcase
+    folder: showcase
+    create: true
+    fields:
+      - {
+          name: nft_showcase_list,
+          label: "Showcase",
+          widget: list,
+          fields:
+            [
+              {
+                name: nft_showcase_unmasked,
+                label: "Showcase unmasked",
+                widget: image,
+              },
+              {
+                name: nft_showcase_masked,
+                label: "Showcase masked",
+                widget: image,
+              },
+              { name: nft_showcase_url, label: "Showcase Url" },
+            ],
+        }
