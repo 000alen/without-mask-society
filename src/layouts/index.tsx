@@ -27,11 +27,12 @@ export const IndexLayout = (frontmatter: LandingFrontmatter) => {
       <Stars />
 
       <Nav
-        twitter_url={frontmatter.twitter_url}
-        instagram_url={frontmatter.instagram_url}
-        discord_url={frontmatter.discord_url}
-        opensea_url={frontmatter.opensea_url}
-        digitalrocket_url={frontmatter.digitalrocket_url}
+        {...frontmatter}
+        // twitter_url={frontmatter.twitter_url}
+        // instagram_url={frontmatter.instagram_url}
+        // discord_url={frontmatter.discord_url}
+        // opensea_url={frontmatter.opensea_url}
+        // digitalrocket_url={frontmatter.digitalrocket_url}
       />
 
       <Hero

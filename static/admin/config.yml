@@ -147,6 +147,9 @@ collections:
       # Mailing
       - { name: mailing_text, label: "Mailing Text" }
 
+      - { name: shop_nav_title, label: "Shop Nav Title" }
+      - { name: blog_nav_title, label: "Blog Nav Title" }
+
   - name: blog
     label: Blog
     folder: blog

@@ -75,6 +75,8 @@ export interface LandingFrontmatter {
   faq_questions: Question[];
 
   mailing_text: string;
+  shop_nav_title: string;
+  blog_nav_title: string;
 }
 
 export interface BlogEntryFrontmatter {

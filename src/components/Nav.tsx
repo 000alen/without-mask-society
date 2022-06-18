@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import { LandingFrontmatter } from "../typings";
 import { DiscordIcon } from "./icons/DiscordIcon";
 import { InstagramIcon } from "./icons/InstagramIcon";
 import { OpenseaIcon } from "./icons/OpenseaIcon";
@@ -57,25 +58,7 @@ const NavIcon: React.FC<NavIconProps> = ({ href, IconComponent }) => {
   );
 };
 
-// query={graphql`
-// query LayoutQuery {
-//   site {
-//     siteMetadata {
-//       languages {
-//         defaultLangKey
-//         langs
-//       }
-//     }
-//   }
-// }
-// `}
-
-export const Nav: React.FC<Props> = ({
-  twitter_url,
-  instagram_url,
-  discord_url,
-  opensea_url,
-}) => {
+export const Nav: React.FC<LandingFrontmatter> = (frontmatter) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -94,52 +77,74 @@ export const Nav: React.FC<Props> = ({
             TOP
           </NavLink>
           <NavLink href="#about" onClick={() => setIsOpen(false)}>
-            ABOUT
+            {/* ABOUT */}
+            {frontmatter.about_title}
           </NavLink>
           <NavLink
-            href={opensea_url}
+            href={frontmatter.opensea_url}
             target="_blank"
             onClick={() => setIsOpen(false)}
           >
-            SHOP
+            {/* SHOP */}
+            {frontmatter.shop_nav_title}
           </NavLink>
           <NavLink href="#team" onClick={() => setIsOpen(false)}>
-            TEAM
+            {/* TEAM */}
+            {frontmatter.team_title}
           </NavLink>
           <NavLink href="#roadmap" onClick={() => setIsOpen(false)}>
-            ROADMAP
+            {/* ROADMAP */}
+            {frontmatter.roadmap_title}
           </NavLink>
           <NavLink href="#donations" onClick={() => setIsOpen(false)}>
-            DONATIONS
+            {/* DONATIONS */}
+            {frontmatter.donations_title}
           </NavLink>
           <NavLink href="#benefits" onClick={() => setIsOpen(false)}>
-            BENEFITS
+            {/* BENEFITS */}
+            {frontmatter.benefits_title}
           </NavLink>
           <NavLink href="#faq" onClick={() => setIsOpen(false)}>
-            FAQ
+            {/* FAQ */}
+            {frontmatter.faq_title}
           </NavLink>
           <NavLink href="#blog" onClick={() => setIsOpen(false)}>
-            BLOG
+            {/* BLOG */}
+            {frontmatter.blog_nav_title}
           </NavLink>
 
-          {/* TODO: Use static query instead of hardcoding it */}
-          <div
-            className="flex flex-row items-center justify-center gap-2"
-          >
-            <NavLink className="lg:text-green-400 !not-italic" href="/" onClick={() => setIsOpen(false)}>
+          <div className="flex flex-row items-center justify-center gap-2">
+            <NavLink
+              className="lg:text-green-400 !not-italic"
+              href="/"
+              onClick={() => {
+                setIsOpen(false);
+                localStorage.setItem("preferredLangKey", "en");
+              }}
+            >
               EN
             </NavLink>
-            <NavLink className="lg:text-green-400 !not-italic" href="/es/" onClick={() => setIsOpen(false)}>
+            <NavLink
+              className="lg:text-green-400 !not-italic"
+              href="/es/"
+              onClick={() => {
+                setIsOpen(false);
+                localStorage.setItem("preferredLangKey", "es");
+              }}
+            >
               ES
             </NavLink>
           </div>
         </div>
 
         <div className="flex flex-row gap-4">
-          <NavIcon href={twitter_url} IconComponent={TwitterIcon} />
-          <NavIcon href={instagram_url} IconComponent={InstagramIcon} />
-          <NavIcon href={discord_url} IconComponent={DiscordIcon} />
-          <NavIcon href={opensea_url} IconComponent={OpenseaIcon} />
+          <NavIcon href={frontmatter.twitter_url} IconComponent={TwitterIcon} />
+          <NavIcon
+            href={frontmatter.instagram_url}
+            IconComponent={InstagramIcon}
+          />
+          <NavIcon href={frontmatter.discord_url} IconComponent={DiscordIcon} />
+          <NavIcon href={frontmatter.opensea_url} IconComponent={OpenseaIcon} />
         </div>
       </nav>
 

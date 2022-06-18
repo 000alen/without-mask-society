@@ -1,6 +1,7 @@
 import { graphql } from "gatsby";
 import React from "react";
 
+import { usePreferredLanguage } from "../components/usePreferredLanguage";
 import { NotFoundLayout } from "../layouts/404";
 
 interface Props {
@@ -21,6 +22,8 @@ interface Props {
 export default function Template({ data }: Props) {
   const { markdownRemark } = data;
   const { frontmatter } = markdownRemark;
+
+  usePreferredLanguage();
 
   return <NotFoundLayout {...frontmatter} />;
 }
