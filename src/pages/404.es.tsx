@@ -23,7 +23,7 @@ export default function Template({ data }: Props) {
   const { markdownRemark } = data;
   const { frontmatter } = markdownRemark;
 
-  usePreferredLanguage();
+  // usePreferredLanguage();
 
   return <NotFoundLayout {...frontmatter} />;
 }

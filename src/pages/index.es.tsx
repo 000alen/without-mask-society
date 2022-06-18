@@ -17,7 +17,7 @@ export default ({ data }: Props) => {
   const { markdownRemark } = data;
   const { frontmatter } = markdownRemark;
 
-  usePreferredLanguage();
+  // usePreferredLanguage();
 
   return <IndexLayout {...frontmatter} />;
 };
