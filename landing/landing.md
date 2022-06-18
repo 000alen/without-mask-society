@@ -217,4 +217,6 @@ faq_questions:
       AS YOU SEE, YOU WILL BE CONTRIBUTING WITH RESOURCES TO ADDRESS CURRENT AND FUTURE PROBLEMS IN RELATION TO THE ENVIRONMENTAL CRISIS.
 mailing_text: Without Mask Society is a collection of 2222 uniquely generated
   NFTS, all living on the Ethereum Blockchain.
+shop_nav_title: SHOP
+blog_nav_title: BLOG
 ---
