@@ -38,7 +38,6 @@ export const IndexLayout = (frontmatter: LandingFrontmatter) => {
       <Hero
         hero_title={frontmatter.hero_title}
         hero_buttons={frontmatter.hero_buttons}
-        hero_showcase={frontmatter.hero_showcase}
       />
 
       <Stars />

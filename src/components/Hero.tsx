@@ -1,24 +1,18 @@
 import React from "react";
 
-import { Button, Showcase as IShowcase } from "../typings";
+import { Button } from "../typings";
 import { FancyButton } from "./FancyButton";
 import { DiscordIcon } from "./icons/DiscordIcon";
 import { OpenseaIcon } from "./icons/OpenseaIcon";
 import { Showcase } from "./Showcase";
-import { Title } from "./Title";
 import { WMSLogo } from "./WMSLogo";
 
 interface Props {
   hero_title: string;
   hero_buttons: Button[];
-  hero_showcase: IShowcase[];
 }
 
-export const Hero: React.FC<Props> = ({
-  hero_title,
-  hero_buttons,
-  hero_showcase,
-}) => {
+export const Hero: React.FC<Props> = ({ hero_title, hero_buttons }) => {
   return (
     <section id="hero" className="flex flex-col items-center gap-8 p-4">
       <WMSLogo className="w-[80%] lg:w-[45%]" />
@@ -27,7 +21,7 @@ export const Hero: React.FC<Props> = ({
         {hero_title}
       </h1>
 
-      <Showcase hero_showcase={hero_showcase} />
+      <Showcase />
 
       <div className="flex flex-col items-center justify-center gap-x-24 gap-y-2 md:flex-row">
         {hero_buttons &&
