@@ -1,3 +1,4 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
 
 import { LandingFrontmatter } from "../typings";
@@ -69,6 +70,8 @@ export const Nav: React.FC<LandingFrontmatter> = (frontmatter) => {
             isOpen ? "opacity-100" : "opacity-0 invisible"
           } fixed top-0 left-0 z-40 flex flex-col items-center justify-center w-screen h-screen gap-2 transition-all bg-green-400 lg:!opacity-100 lg:!visible lg:bg-transparent lg:h-auto lg:w-full lg:justify-around lg:flex-row lg:static`}
         >
+          <StaticImage className="w-32 h-auto" src="../images/WMSLogo.png" alt="" />
+
           <NavLink
             className="lg:hidden"
             href="#top"
