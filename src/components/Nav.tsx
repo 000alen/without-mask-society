@@ -36,7 +36,7 @@ const NavLink: React.FC<NavLinkProps> = ({
 }) => {
   return (
     <a
-      className={`${className} text-xl italic font-bold lg:transition-all lg:hover:text-green-400`}
+      className={`${className} text-xl italic font-bold uppercase lg:transition-all lg:hover:text-green-400`}
       href={href}
       onClick={() => onClick && onClick()}
       {...(target ? { target } : {})}
