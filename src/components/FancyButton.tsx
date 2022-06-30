@@ -1,3 +1,4 @@
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import React, { PropsWithChildren } from "react";
 
 interface Props {
@@ -16,8 +17,7 @@ export const FancyButton = React.forwardRef<
   };
 
   return (
-    <a
-      ref={ref}
+    <OutboundLink
       className={`${className} px-6 py-4 space-x-2 rounded-full hover:opacity-70 transition-all`}
       style={style}
       href={url}
@@ -25,6 +25,6 @@ export const FancyButton = React.forwardRef<
     >
       <span className="font-semibold">{label}</span>
       {children}
-    </a>
+    </OutboundLink>
   );
 });

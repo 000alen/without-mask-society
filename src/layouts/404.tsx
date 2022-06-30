@@ -1,4 +1,5 @@
 import { Link } from "gatsby";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import React from "react";
 
 import { Footer } from "../components/Footer";
@@ -34,18 +35,18 @@ export const NotFoundLayout = ({
         </Link>
 
         <div className="flex flex-row gap-4">
-          <a href={twitter_url} target="_blank">
+          <OutboundLink href={twitter_url} target="_blank">
             <TwitterIcon />
-          </a>
-          <a href={instagram_url} target="_blank">
+          </OutboundLink>
+          <OutboundLink href={instagram_url} target="_blank">
             <InstagramIcon />
-          </a>
-          <a href={discord_url} target="_blank">
+          </OutboundLink>
+          <OutboundLink href={discord_url} target="_blank">
             <DiscordIcon />
-          </a>
-          <a href={opensea_url}>
+          </OutboundLink>
+          <OutboundLink href={opensea_url}>
             <OpenseaIcon />
-          </a>
+          </OutboundLink>
         </div>
       </div>
 

@@ -1,4 +1,5 @@
 import { graphql, Link } from "gatsby";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import React from "react";
 
 import { Footer } from "../components/Footer";
@@ -54,18 +55,18 @@ export default function Template({ data }: Props) {
         </Link>
 
         <div className="flex flex-row gap-4">
-          <a href={globalFrontmatter.twitter_url} target="_blank">
+          <OutboundLink href={globalFrontmatter.twitter_url} target="_blank">
             <TwitterIcon />
-          </a>
-          <a href={globalFrontmatter.instagram_url} target="_blank">
+          </OutboundLink>
+          <OutboundLink href={globalFrontmatter.instagram_url} target="_blank">
             <InstagramIcon />
-          </a>
-          <a href={globalFrontmatter.discord_url} target="_blank">
+          </OutboundLink>
+          <OutboundLink href={globalFrontmatter.discord_url} target="_blank">
             <DiscordIcon />
-          </a>
-          <a href={globalFrontmatter.opensea_url}>
+          </OutboundLink>
+          <OutboundLink href={globalFrontmatter.opensea_url}>
             <OpenseaIcon />
-          </a>
+          </OutboundLink>
         </div>
       </div>
 

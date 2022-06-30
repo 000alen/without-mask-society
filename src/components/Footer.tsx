@@ -1,3 +1,4 @@
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import React from "react";
 
 import { DRLogo } from "./DRLogo";
@@ -40,58 +41,58 @@ export const Footer: React.FC<Props> = ({
 
           {landing && (
             <>
-              <a className="text-xl italic font-bold" href="#about">
+              <OutboundLink className="text-xl italic font-bold" href="#about">
                 ABOUT
-              </a>
-              <a className="text-xl italic font-bold" href="#team">
+              </OutboundLink>
+              <OutboundLink className="text-xl italic font-bold" href="#team">
                 TEAM
-              </a>
-              <a
+              </OutboundLink>
+              <OutboundLink
                 className="text-xl italic font-bold"
                 href={opensea_url}
                 target="_blank"
               >
                 SHOP
-              </a>
-              <a className="text-xl italic font-bold" href="#roadmap">
+              </OutboundLink>
+              <OutboundLink className="text-xl italic font-bold" href="#roadmap">
                 ROADMAP
-              </a>
-              <a className="text-xl italic font-bold" href="#donations">
+              </OutboundLink>
+              <OutboundLink className="text-xl italic font-bold" href="#donations">
                 DONATIONS
-              </a>
-              <a className="text-xl italic font-bold" href="#benefits">
+              </OutboundLink>
+              <OutboundLink className="text-xl italic font-bold" href="#benefits">
                 BENEFITS
-              </a>
-              <a className="text-xl italic font-bold" href="#faq">
+              </OutboundLink>
+              <OutboundLink className="text-xl italic font-bold" href="#faq">
                 FAQ
-              </a>
-              <a className="text-xl italic font-bold" href="#blog">
+              </OutboundLink>
+              <OutboundLink className="text-xl italic font-bold" href="#blog">
                 BLOG
-              </a>
+              </OutboundLink>
             </>
           )}
 
           <div className="flex flex-row gap-4">
-            <a href={twitter_url} target="_blank">
+            <OutboundLink href={twitter_url} target="_blank">
               <TwitterIcon />
-            </a>
-            <a href={instagram_url} target="_blank">
+            </OutboundLink>
+            <OutboundLink href={instagram_url} target="_blank">
               <InstagramIcon />
-            </a>
-            <a href={discord_url} target="_blank">
+            </OutboundLink>
+            <OutboundLink href={discord_url} target="_blank">
               <DiscordIcon />
-            </a>
-            <a href={opensea_url} target="_blank">
+            </OutboundLink>
+            <OutboundLink href={opensea_url} target="_blank">
               <OpenseaIcon />
-            </a>
+            </OutboundLink>
           </div>
         </div>
 
         <div className="flex flex-row items-center justify-center pb-24">
           <span>Brought to you by</span>
-          <a href={digitalrocket_url} target="_blank">
+          <OutboundLink href={digitalrocket_url} target="_blank">
             <DRLogo className="w-24" />
-          </a>
+          </OutboundLink>
         </div>
       </footer>
     </>

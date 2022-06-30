@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import React, { useEffect, useRef, useState } from "react";
 
 interface Props {
@@ -96,7 +97,7 @@ export const Showcase: React.FC<Props> = ({ className = "" }) => {
               key={i}
               className="relative transition-all border-2 border-green-400 border-solid rounded hover:glow"
             >
-              <a href={nft_showcase_url} target="_blank">
+              <OutboundLink href={nft_showcase_url} target="_blank">
                 <img
                   className={`${
                     masked ? "" : "opacity-0"
@@ -111,7 +112,7 @@ export const Showcase: React.FC<Props> = ({ className = "" }) => {
                   src={nft_showcase_unmasked}
                   alt=""
                 />
-              </a>
+              </OutboundLink>
             </div>
           );
         }

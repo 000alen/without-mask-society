@@ -1,3 +1,4 @@
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import React from "react";
 
 import { Social } from "../typings";
@@ -37,13 +38,13 @@ export const Avatar = React.forwardRef<HTMLDivElement, Props>(
           <div className="flex flex-row justify-center gap-2">
             {socials.map(({ social_name: name, social_url: url }, i) =>
               name === "twitter" ? (
-                <a key={i} href={url} target="_blank">
+                <OutboundLink key={i} href={url} target="_blank">
                   <TwitterIcon className="w-4 h-4" />
-                </a>
+                </OutboundLink>
               ) : name === "linkedin" ? (
-                <a key={i} href={url} target="_blank">
+                <OutboundLink key={i} href={url} target="_blank">
                   <LinkedinIcon className="w-4 h-4" />
-                </a>
+                </OutboundLink>
               ) : null
             )}
           </div>

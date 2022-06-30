@@ -49,6 +49,12 @@ const config: GatsbyConfig = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-HG5RTYTJWH"],
+      },
+    },
+    {
       resolve: "gatsby-plugin-i18n",
       options: {
         langKeyForNull: "any",
