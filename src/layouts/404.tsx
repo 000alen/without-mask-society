@@ -41,9 +41,9 @@ export const NotFoundLayout = ({
           <OutboundLink href={instagram_url} target="_blank">
             <InstagramIcon />
           </OutboundLink>
-          <OutboundLink href={discord_url} target="_blank">
+          {/* <OutboundLink href={discord_url} target="_blank">
             <DiscordIcon />
-          </OutboundLink>
+          </OutboundLink> */}
           <OutboundLink href={opensea_url}>
             <OpenseaIcon />
           </OutboundLink>

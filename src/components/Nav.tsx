@@ -151,7 +151,7 @@ export const Nav: React.FC<LandingFrontmatter> = (frontmatter) => {
             href={frontmatter.instagram_url}
             IconComponent={InstagramIcon}
           />
-          <NavIcon href={frontmatter.discord_url} IconComponent={DiscordIcon} />
+          {/* <NavIcon href={frontmatter.discord_url} IconComponent={DiscordIcon} /> */}
           <NavIcon href={frontmatter.opensea_url} IconComponent={OpenseaIcon} />
         </div>
       </nav>

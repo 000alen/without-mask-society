@@ -61,9 +61,9 @@ export default function Template({ data }: Props) {
           <OutboundLink href={globalFrontmatter.instagram_url} target="_blank">
             <InstagramIcon />
           </OutboundLink>
-          <OutboundLink href={globalFrontmatter.discord_url} target="_blank">
+          {/* <OutboundLink href={globalFrontmatter.discord_url} target="_blank">
             <DiscordIcon />
-          </OutboundLink>
+          </OutboundLink> */}
           <OutboundLink href={globalFrontmatter.opensea_url}>
             <OpenseaIcon />
           </OutboundLink>
