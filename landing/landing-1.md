@@ -13,10 +13,6 @@ hero_buttons:
     button_color: "#e41388"
     button_icon: opensea
     button_url: https://opensea.io
-  - button_text: Ir a Discord
-    button_color: "#5865f2"
-    button_icon: discord
-    button_url: https://discord.gg/DYwPPPQDRh
 hero_showcase:
   - showcase_unmasked: /assets/66.png
     showcase_masked: /assets/68.png
