@@ -1,4 +1,4 @@
 export default {
-  langs: ["en", "es"],
-  defaultLangKey: "en",
+  langs: ["es"],
+  defaultLangKey: "es",
 };
