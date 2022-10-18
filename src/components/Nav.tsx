@@ -145,7 +145,7 @@ export const Nav: React.FC<LandingFrontmatter> = (frontmatter) => {
           </div> */}
         </div>
 
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row items-center gap-4">
           <NavIcon href={frontmatter.twitter_url} IconComponent={TwitterIcon} />
           <NavIcon
             href={frontmatter.instagram_url}
