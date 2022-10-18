@@ -121,7 +121,7 @@ export const Nav: React.FC<LandingFrontmatter> = (frontmatter) => {
             {frontmatter.blog_nav_title}
           </NavLink>
 
-          <div className="flex flex-row items-center justify-center gap-2">
+          {/* <div className="flex flex-row items-center justify-center gap-2">
             <NavLink
               className="lg:text-green-400 !not-italic"
               href="/"
@@ -142,7 +142,7 @@ export const Nav: React.FC<LandingFrontmatter> = (frontmatter) => {
             >
               ES
             </NavLink>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-row gap-4">
